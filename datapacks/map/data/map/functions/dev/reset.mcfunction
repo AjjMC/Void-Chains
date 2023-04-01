@@ -57,8 +57,8 @@ worldborder damage amount 100
 worldborder damage buffer 0
 
 kill @e[type=minecraft:marker,tag=arena]
-execute in map:arena positioned 0 62 0 run forceload add ~-47 ~-47 ~47 ~47
-execute in map:arena run summon minecraft:marker 0 62 0 {Tags:["arena"]}
+execute positioned 0 62 1000 run forceload add ~-47 ~-47 ~47 ~47
+execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["arena"]}
 execute at @e[type=minecraft:marker,tag=arena] run fill ~-51 ~ ~-51 ~51 ~ ~51 minecraft:barrier
 execute at @e[type=minecraft:marker,tag=arena] run fill ~-47 ~ ~-47 ~47 ~ ~47 minecraft:air
 execute at @e[type=minecraft:marker,tag=arena] run worldborder center ~ ~
