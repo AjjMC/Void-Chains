@@ -1,0 +1,3 @@
+execute if entity @s[tag=speed_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"white"},{"text":"Speed Powerup","color":"gold"}]
+execute if entity @s[tag=knockback_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"white"},{"text":"Knockback Powerup","color":"gold"}]
+execute if entity @s[tag=bridge_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"white"},{"text":"Bridge Powerup","color":"gold"}]

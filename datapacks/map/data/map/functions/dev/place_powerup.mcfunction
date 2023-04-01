@@ -1,0 +1,1 @@
+execute at @e[type=minecraft:marker,tag=arena] run function map:game/create_powerup

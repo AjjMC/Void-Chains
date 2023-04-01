@@ -1,0 +1,3 @@
+function map:lobby/reset_general_settings
+function map:lobby/reset_anchor_settings
+function map:lobby/reset_powerup_settings
