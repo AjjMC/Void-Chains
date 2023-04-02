@@ -66,4 +66,7 @@ execute at @e[type=minecraft:marker,tag=arena] run worldborder center ~ ~
 execute positioned 20 62 0 as @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] run data modify entity @s data.GUI[0] set from storage map:reset_guis Stats
 execute positioned 0 62 20 run scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
 
+execute positioned 20 62 0 run forceload add ~ ~
+execute positioned 0 62 20 run forceload add ~ ~
+
 function map:lobby/reset_all_settings
