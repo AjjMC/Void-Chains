@@ -14,4 +14,4 @@
 
 > *	There is a world border around the arena that begins to shrink after some time, destroying all anchor platforms it touches and forcing players to fight in a smaller area while watching their step.
 
-> *	A powerup periodically appears at random places close to the arena's center, giving players different abilities for an amount of time. This powerup is available for a limited amount of time and is destroyed if not activated on time.
+> *	A powerup periodically appears at random places close to the arena's center, giving players different abilities for an amount of time. This powerup is available for a limited duration and is destroyed if not activated on time.
