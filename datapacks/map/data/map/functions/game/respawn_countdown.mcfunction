@@ -1,4 +1,4 @@
-title @s subtitle [{"text":"Respawning in ","color":"yellow"},{"score":{"name":"@s","objective":"countdown_seconds"}}]
+title @s subtitle [{"text":"RESPAWNING IN ","bold":"true"},{"score":{"name":"@s","objective":"countdown_seconds"}}]
 
 scoreboard players add @s countdown_ticks 1
 

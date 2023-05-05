@@ -1,12 +1,12 @@
-title @a times 10 40 10
+title @s times 10 40 10
 
 execute as @e[type=minecraft:item,tag=powerup] at @s run function map:game/destroy_powerup
 scoreboard players set #active_game global 0
-execute as @a run function map:events/reset_player
+function map:events/reset_player
 
-title @a[team=guest] title [{"text":"Blue Team ","color":"blue"},{"text":"Won!","color":"white"}]
-title @a[team=red] title {"text":"Your Team Lost!","color":"red"}
-title @a[team=blue] title {"text":"Your Team Won!","color":"gold"}
+title @s[team=guest] title [{"text":"BLUE TEAM ","color":"blue","bold":"true"},{"text":"WON!","color":"white"}]
+title @s[team=red] title {"text":"YOUR TEAM LOST!","bold":"true","color":"gray"}
+title @s[team=blue] title {"text":"YOUR TEAM WON!","bold":"true","color":"gold"}
 
 scoreboard players set #game_winner global 2
 

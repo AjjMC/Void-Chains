@@ -29,7 +29,7 @@ execute as @a[team=!guest] run function map:game/check_powerup
 
 execute as @e[type=minecraft:marker,tag=anchor] at @s run function map:game/world_border_destroy_anchors
 
-execute if entity @a[team=blue] unless entity @e[type=minecraft:marker,tag=red_anchor] unless entity @a[team=red,tag=!dead] run function map:events/blue_team_win
-execute if entity @a[team=red] unless entity @e[type=minecraft:marker,tag=blue_anchor] unless entity @a[team=blue,tag=!dead] run function map:events/red_team_win
+execute unless entity @e[type=minecraft:marker,tag=red_anchor] unless entity @a[team=red,tag=!dead] as @a run function map:events/blue_team_win
+execute unless entity @e[type=minecraft:marker,tag=blue_anchor] unless entity @a[team=blue,tag=!dead] as @a run function map:events/red_team_win
 
-execute if entity @a[team=guest] unless entity @a[team=!guest] run function map:events/draw
+execute unless entity @a[team=!guest] as @a run function map:events/draw
