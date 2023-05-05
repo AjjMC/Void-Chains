@@ -5,8 +5,8 @@ scoreboard players set #active_game global 0
 function map:events/reset_player
 
 title @s[team=guest] title [{"text":"BLUE TEAM ","color":"blue","bold":"true"},{"text":"WON!","color":"white"}]
-title @s[team=red] title {"text":"YOUR TEAM LOST!","bold":"true","color":"gray"}
-title @s[team=blue] title {"text":"YOUR TEAM WON!","bold":"true","color":"gold"}
+title @s[team=red] title {"text":"YOUR TEAM LOST!","color":"red","bold":"true"}
+title @s[team=blue] title {"text":"YOUR TEAM WON!","color":"gold","bold":"true"}
 
 scoreboard players set #game_winner global 2
 

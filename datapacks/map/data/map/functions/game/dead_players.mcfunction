@@ -1,4 +1,4 @@
-title @s title {"text":"YOU DIED!","color":"gray","bold":"true"}
+title @s title {"text":"YOU DIED!","color":"red","bold":"true"}
 
 execute if entity @s[team=red] unless entity @e[type=minecraft:marker,tag=red_anchor] run tag @s add no_respawn
 execute if entity @s[team=red] if entity @e[type=minecraft:marker,tag=red_anchor] run tag @s remove no_respawn
