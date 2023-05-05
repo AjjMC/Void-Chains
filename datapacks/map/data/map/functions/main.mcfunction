@@ -1,5 +1,5 @@
 execute as @a if score @s hunger matches ..19 run effect give @s minecraft:saturation 1 0 true
-execute at @e[type=minecraft:marker,tag=arena] run spawnpoint @a ~ 127 ~
+execute at @e[type=minecraft:marker,tag=arena] run spawnpoint @a ~ 128 ~
 team join guest @a[team=]
 
 execute as @e[type=minecraft:falling_block] at @s positioned ~-47.5 ~4 ~-47.5 if entity @e[type=minecraft:marker,tag=arena,dx=94,dy=62,dz=94] run kill @s
