@@ -1,7 +1,7 @@
 # Void Chains
 
 <p align = "center">
-  <img src="thumbnail.jpg" width="350">
+  <img src="thumbnail.jpg" width="600">
 </p>
 
 <p align = "center">
