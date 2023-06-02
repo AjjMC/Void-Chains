@@ -1,4 +1,12 @@
-# How to Play
+# Void Chains
+
+Void Chains is a strategic PvP-based minigame inspired by several elements of King of Hill gamemodes, Splatoon, and Spleef. As the name suggests, the action takes place in a void-based world, with two teams exploiting unique mechanics to eliminate their opponents and conquer the entire arena. A short gallery of pictures and GIFs of some of the minigame's features can be found [here](https://github.com/AjjMC/Void-Chains-Gallery).
+
+## Downloading and Playing
+
+The minigame can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the world. The "PLAY" barrel in the lobby is used to adjust the game's settings, join a team and start the game.
+
+## Gameplay
 
 > *	Two teams begin with a number of anchor platforms assigned to each, suspended at random places over the void, which serve as potential respawn points for players.
 
