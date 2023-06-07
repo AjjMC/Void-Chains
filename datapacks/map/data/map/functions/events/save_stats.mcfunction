@@ -37,11 +37,11 @@ execute as @a run function map:events/reset_stats
 data modify block 0 55 1 Items set value []
 data modify block 0 55 -1 Items set value []
 
-fill 1 55 1 9 57 1 minecraft:air
-fill 1 55 1 9 57 1 minecraft:oak_sign
+fill 1 55 1 9 55 1 minecraft:air
+fill 1 55 1 9 55 1 minecraft:oak_sign
 
-fill 1 55 -1 9 57 -1 minecraft:air
-fill 1 55 -1 9 57 -1 minecraft:oak_sign[rotation=8]
+fill 1 55 -1 9 55 -1 minecraft:air
+fill 1 55 -1 9 55 -1 minecraft:oak_sign[rotation=8]
 
 setblock 10 55 0 minecraft:air
 setblock 10 55 0 minecraft:oak_sign[rotation=12]
