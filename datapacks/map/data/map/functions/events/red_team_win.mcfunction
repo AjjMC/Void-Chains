@@ -1,4 +1,4 @@
-title @s times 10 40 10
+title @s times 10t 40t 10t
 
 execute as @e[type=minecraft:item,tag=powerup] at @s run function map:game/destroy_powerup
 scoreboard players set #active_game global 0
