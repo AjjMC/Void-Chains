@@ -9,3 +9,4 @@ tag @s remove dead
 scoreboard players set @s charge_ticks 0
 scoreboard players set @s charge_seconds 0
 title @s clear
+title @s actionbar {"text":""}

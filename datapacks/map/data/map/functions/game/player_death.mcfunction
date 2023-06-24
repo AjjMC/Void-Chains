@@ -1,5 +1,6 @@
 gamemode spectator @s
 title @s times 0 5 0
+title @s actionbar {"text":""}
 tag @s add dead
 
 execute at @e[type=minecraft:marker,tag=arena] run tp @s ~ ~20 ~
