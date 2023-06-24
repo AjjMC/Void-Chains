@@ -2,7 +2,7 @@ execute as @a if score @s hunger matches ..19 run effect give @s minecraft:satur
 execute at @e[type=minecraft:marker,tag=arena] run spawnpoint @a ~ 128 ~
 team join guest @a[team=]
 
-execute as @e[type=minecraft:falling_block] at @s positioned ~-47.5 ~4 ~-47.5 if entity @e[type=minecraft:marker,tag=arena,dx=94,dy=62,dz=94] run kill @s
+execute as @e[type=minecraft:falling_block] at @s positioned ~-47.5 ~4 ~-47.5 if entity @e[type=minecraft:marker,tag=arena,dx=94,dy=64,dz=94] run kill @s
 kill @e[type=minecraft:item,nbt={Item:{tag:{map:{Equipment:1b}}}}]
 
 scoreboard players add @a tp_count 0
