@@ -24,8 +24,11 @@ execute as @a[tag=active_powerup] run function map:game/powerup_countdown
 
 execute as @a unless predicate map:game/charging_anchor run function map:game/reset_charge
 execute as @a if score @s death matches 1.. run function map:game/player_death
-execute as @a[team=!guest,tag=!dead] at @s positioned ~-47.5 ~16 ~-47.5 if entity @e[type=minecraft:marker,tag=arena,dx=94,dy=62,dz=94] run kill @s
+execute as @a[team=!guest,tag=!dead] at @s positioned ~-47.5 ~16 ~-47.5 if entity @e[type=minecraft:marker,tag=arena,dx=94,dy=64,dz=94] run kill @s
 execute as @a[team=!guest] run function map:game/check_powerup
+
+execute as @e[gamemode=spectator] at @s positioned ~-47.5 ~-64 ~-47.5 unless entity @e[type=minecraft:marker,tag=arena,dx=94,dy=64,dz=94] run spectate
+execute as @e[gamemode=spectator] at @s positioned ~-47.5 ~-64 ~-47.5 unless entity @e[type=minecraft:marker,tag=arena,dx=94,dy=64,dz=94] at @e[type=minecraft:marker,tag=arena] run tp @s ~ ~20 ~
 
 execute as @e[type=minecraft:marker,tag=anchor] at @s run function map:game/world_border_destroy_anchors
 
