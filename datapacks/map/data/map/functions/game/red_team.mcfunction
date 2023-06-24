@@ -23,7 +23,7 @@ execute if score #anchor_generation global matches 1 if predicate map:game/stepp
 execute if score #anchor_generation global matches 1 if predicate map:game/stepping_on_red_wool if predicate map:game/charging_anchor align xyz positioned ~0.5 ~-1 ~0.5 positioned ~-46.5 ~-0.5 ~-46.5 unless entity @e[type=minecraft:marker,tag=arena,dx=92,dy=1,dz=92] run title @s actionbar {"text":"Cannot generate anchor too close to the edge"}
 execute if score #anchor_generation global matches 1 if predicate map:game/stepping_on_red_wool if predicate map:game/charging_anchor align xyz positioned ~0.5 ~-1 ~0.5 positioned ~-46.5 ~-0.5 ~-46.5 unless entity @e[type=minecraft:marker,tag=arena,dx=92,dy=1,dz=92] run function map:game/reset_charge
 execute if score #anchor_generation global matches 1 if predicate map:game/stepping_on_blue_wool if predicate map:game/charging_anchor run title @s actionbar {"text":"Cannot generate anchor on enemy territory"}
-execute if score #anchor_generation global matches 1 if entity @s[tag=generate_anchor] unless predicate map:game/stepping_on_red_wool run function map:game/reset_charge
+execute if score #anchor_generation global matches 1 if entity @s[tag=generate_anchor] unless predicate map:game/stepping_on_red_wool if predicate map:game/charging_anchor run function map:game/reset_charge
 
 execute if score #anchor_generation global matches 0 if predicate map:game/stepping_on_blue_wool run title @s actionbar {"text":"You are now on enemy territory"}
 execute if score #anchor_generation global matches 1 if predicate map:game/stepping_on_blue_wool unless predicate map:game/charging_anchor run title @s actionbar {"text":"You are now on enemy territory"}
