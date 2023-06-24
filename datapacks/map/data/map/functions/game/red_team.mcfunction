@@ -22,5 +22,5 @@ execute if score #anchor_generation global matches 1 if predicate map:game/stepp
 execute if score #anchor_generation global matches 1 if entity @s[tag=generate_anchor] unless predicate map:game/stepping_on_red_wool run function map:game/reset_charge
 
 execute if score #anchor_generation global matches 1 if predicate map:game/stepping_on_blue_wool unless predicate map:game/charging_anchor run title @s actionbar {"text":""}
-execute if score #anchor_generation global matches 0 if predicate map:game/stepping_on_red run title @s actionbar {"text":"Sprint to create bridge"}
 execute if score #anchor_generation global matches 0 if predicate map:game/stepping_on_blue_wool run title @s actionbar {"text":""}
+execute if score #anchor_generation global matches 0 if predicate map:game/stepping_on_red run title @s actionbar {"text":"Sprint to create bridge"}
