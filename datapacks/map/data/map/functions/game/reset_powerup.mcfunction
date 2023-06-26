@@ -1,3 +1,4 @@
+effect clear @s minecraft:glowing
 effect clear @s minecraft:speed
 item modify entity @s hotbar.0 map:game/remove_enchantments
 
