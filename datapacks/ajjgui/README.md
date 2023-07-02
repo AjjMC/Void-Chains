@@ -44,7 +44,7 @@ The datapack can be downloaded from this repository by clicking on "Code" and th
 
 The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command, and the previous one generated is automatically removed. The datapack can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world, *including any GUIs made with it*.
 
-## Widgets
+## GUI Widgets
 
 Every item in a GUI corresponds to a user interface element with a predefined functionality. This is referred to as a *widget*. Depending on their type, widgets exhibit different properties when interacted with (e.g., the *button* widget may change the GUI page and run commands).
 
@@ -63,7 +63,7 @@ There are 8 types of widgets available:
 
 An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:_manual``.
 
-## List of Widgets
+## List of GUI Widgets
 
 > **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using command blocks.
 
@@ -116,7 +116,7 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 
 #### Examples
 
-> **NOTE:** Examples for [changing GUI pages](#changing-gui-pages) and [running commands](#running-commands-and-accessing-data).
+More information about [changing GUI pages](#changing-gui-pages) and [running commands](#running-commands-and-accessing-data).
 
 ### Counter
 
@@ -417,7 +417,7 @@ Each of the above widgets, excluding the *placeholder*, can be made to change th
   <img src="assets/button.gif" width="350">
 </p>
 
-## Fixed Widgets
+## Fixed GUI Widgets
 
 Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
@@ -429,7 +429,7 @@ A *button* staying fixed in its slot when the GUI page is changed:
 /give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Fixed:1b},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
 ```
 
-## Running Commands and Accessing Data
+## Running GUI Commands and Accessing Data
 
 Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by an external command block instead of the player themselves. The ``"ajjgui.user"`` scoreboard tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
 
@@ -456,8 +456,6 @@ A *switch* running a function as the player that pressed it:
 /give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
 ```
 
-> **NOTE:** Command blocks need to be enabled on the server in order to use this feature.
-
 ## Manually Modifying GUIs
 
 For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
@@ -481,42 +479,6 @@ For every GUI compiled, there is a marker entity located at the container's coor
 > **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when manually modifying NBT.
 
 > **NOTE:** Decompiling a GUI reverts any NBT changes to widgets, manual or not.
-
-## Frequently Asked Questions
-
-> **Q:** Is the datapack multiplayer-friendly?
-
-> **A:** It depends on the exact use. Being restricted to block entities, the datapack has the following:
->
-> Multiplayer Features
->
-> * Multiple GUIs around the world can be used by different players simultaneously with no issues
-> * The same GUI can be used by different players simultaneously with no issues
-> * Widget commands can be executed as the player triggering a GUI widget
->
-> Multiplayer Limitations
->
-> * Players using the same GUI all see the same page
-> * Changes to a widget's state in a GUI are seen by all players using this GUI
->
-> In other words, pages and widget states in a GUI are not personalized. Moving to a different page or enabling a *switch* widget, for instance, changes the page or the widget's state for everyone using this GUI. That said, commands themselves can be personalized to the player triggering a GUI widget.
-
-> **Q:** Are there any other limitations?
-
-> **A:** The following:
->
-> * A limit has been enforced on how close GUIs can be placed to each other to ensure robustness
-> * Bundles are not supported due to their unique behavior in the GUI
-> * Large chests are not supported as GUI containers
-> * Hoppers can interact with GUI containers
-
-> **Q:** What version is the datapack made for?
-
-> **A:** It is meant to be used in the latest Minecraft release and will be updated to be compatible with newer game versions once they are out. Newer versions of the datapack are not compatible with older versions of the game.
-
-> **Q:** How do I install an updated version of the datapack?
-
-> **A:** I cannot guarantee that later versions of this datapack will not break any GUIs previously created. In order to update the datapack, simply replace the existing one with the newer version in the datapacks folder, and, after doing ``/reload``, run ``/function ajjgui:_install``. *Do not uninstall the datapack unless you are okay with removing any existing GUIs from your world!*
 
 ## Copyright
 
