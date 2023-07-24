@@ -8,22 +8,20 @@
   <i>A GUI example demonstrating some of the datapack's features, which was made in less than 5 minutes and in-game!</i>
 </p>
 
-## Abstract
+## Overview
 
-Custom user interfaces are very often used to enhance player experience and increase the overall quality of Minecraft maps and servers. While some servers have the convenience of using plugins to base their menus on item-based GUIs, datapacks are hindered by numerous limitations in producing the same results on their own. Due to these limitations, creating item-based GUIs with commands is often proven a very difficult task, with easier, robust alternatives being typically employed on singleplayer worlds and vanilla servers. The aim of this datapack is to serve as a mapmaking framework standardizing the design of item-based GUIs, allowing the user to easily create them in-game, without needing to work on any of the complex backend functionality *or modify the datapack itself*. This can be achieved by simply dragging and dropping items with custom NBT parameters in containers, which can be translated into functional GUIs. Such containers currently only include block entities, such as chests, barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with normal entities, such as chest minecarts.
+Minecraft servers frequently use custom user interfaces where the player accesses the inventory of a container (e.g., a chest), the items of which serve as interactable elements. While there are plugins making the design of such menus trivial to developers, Minecraft commands and, by extension, datapacks are much harder to work with, and their limitations often make it difficult to replicate these item-based GUIs usually seen on servers. Certain datapacks as well as datapack generators have been made with the intent to provide developers with a GUI framework. However, these are often restricted to essential features that rarely go beyond the creation of buttons and page navigation. Furthermore, existing approaches are based on adaptation of a datapack template in which the logic of specific GUIs is hard-coded, hindering scalability for large projects.
 
-### Features
+The aim of this datapack is to serve as an advanced mapmaking framework for item-based GUIs, allowing developers to easily create them in-game, without needing to consider any of the complex, low-level functionality or involving access to any of the files within the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers, which the datapack compiles into functional GUIs. At the moment, the datapack is limited to block entities, such as barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with entities such as chest minecarts.
 
-The datapack comes with the following features:
+The datapack has the following features:
 
-* Tools for creating advanced item-based GUIs in-game
-* Quick and easy to use
-* Fully customizable, without needing to access the datapack's files
-* Robust to different user behaviors, without interfering with inventory items
-* Works for both singleplayer and multiplayer
+* NBT-based standard for quick and easy creation of advanced item-based GUIs
+* Completely in-game workflow, with the entire datapack being a black box that the developer can ignore
+* Robust design, support for multiplayer and no interference with player inventories
 * Complete documentation, in-game tutorial and demos
 
-## Downloading and Installing
+## Downloading, Installing and Updating
 
 The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the datapacks folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:_help``. By convention, all user functions begin with an underscore, "_", to be distinguished from the backend ones.
 
@@ -42,13 +40,13 @@ The datapack can be downloaded from this repository by clicking on "Code" and th
 | ``/function ajjgui:_version``   | Displays datapack version                    |
 | ``/function ajjgui:_widget/``   | Gives GUI demo widgets                       |
 
-The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command, and the previous one generated is automatically removed. The datapack can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world, *including any GUIs made with it*.
+The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command, and the previous one generated is automatically removed. The datapack must be reinstalled if an updated version of it has been downloaded. It can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world, *including any GUIs made with it*.
 
-## GUI Widgets
+## Creating a GUI
 
-Every item in a GUI corresponds to a user interface element with a predefined functionality. This is referred to as a *widget*. Depending on their type, widgets exhibit different properties when interacted with (e.g., the *button* widget may change the GUI page and run commands).
+The datapack adopts the concept of *[graphical widgets](https://en.wikipedia.org/wiki/Graphical_widget)* present in real-world user interfaces. Within the scope of Minecraft's item-based GUIs, and this datapack specifically, every item in a GUI corresponds to an interactive element (e.g., a button).
 
-There are 8 types of widgets available:
+There are 8 types of GUI widgets available:
 
 * [Placeholder](#placeholder)
 * [Button](#button)
@@ -59,15 +57,15 @@ There are 8 types of widgets available:
 * [Itembin](#itembin)
 * [Scrollbutton](#scrollbutton)
 
-## Creating a GUI
-
 An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_tutorial``. The tutorial provides the player with premade demo widgets to experiment with. Multiple examples are given, both here and in-game, to help provide a better understanding of their custom NBT. The following section explains all the different types of widgets available and how they can be customized. Once obtained, these items can be placed inside shulker boxes, with each shulker box corresponding to a different GUI page. The shulker boxes can be arranged based on their page number and compiled to build a functional GUI in-game. This manual can be accessed with ``/function ajjgui:_manual``.
 
 ## List of GUI Widgets
 
-> **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using command blocks.
+> **NOTE:** Some of the following commands are too long to fit in the chat box and need to be executed using a command block.
 
-> **NOTE:** The ``ajjgui.Command``, ``ajjgui.Fixed``, ``ajjgui.Page`` and ``ajjgui.Relative`` NBT tags are covered separately in later sections.
+> **NOTE:** The right data types must be used. Where a byte list is specified, an integer list is also supported for simplicity.
+
+> **NOTE:** The ``ajjgui.Command``, ``ajjgui.Exit``, ``ajjgui.Fixed``, ``ajjgui.Page`` and ``ajjgui.Relative`` NBT tags are covered separately in later sections.
 
 ### Placeholder
 
@@ -85,6 +83,8 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 
 #### Example
 
+A *placeholder*:
+
 ```
 /give @p minecraft:light_gray_stained_glass_pane{ajjgui:{Widget:"placeholder"},display:{Name:'{"text":"","italic":"false"}'}}
 ```
@@ -99,11 +99,12 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 
 ### Button
 
-The *button* is a widget that changes the GUI page and/or runs commands when clicked. More information about changing pages and running commands can be found in the following sections.
+The *button* is a widget that changes the GUI page, exits the GUI and/or runs a GUI command when clicked. More information can be found in the following sections.
 
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``     | N/A      | Byte           |
 | ``ajjgui.Relative`` | ``0b``   | Boolean (Byte) |
@@ -116,7 +117,7 @@ The *button* is a widget that changes the GUI page and/or runs commands when cli
 
 #### Examples
 
-More information about [changing pages](#changing-gui-pages) and [running commands](#running-gui-commands-and-accessing-data).
+More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs](#exiting-guis) and [running GUI commands](#running-gui-commands-and-accessing-data).
 
 ### Counter
 
@@ -125,6 +126,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``     | N/A      | Byte           |
 | ``ajjgui.Relative`` | ``0b``   | Boolean (Byte) |
@@ -176,6 +178,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Items``    | Required | Compound List  |
 | ``ajjgui.Page``     | N/A      | Byte           |
@@ -227,6 +230,7 @@ The *radiobutton* is a widget that changes between an "OFF" and "ON" state item 
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Group``    | ``0b``   | Byte           |
 | ``ajjgui.OFF``      | Required | Compound       |
@@ -272,6 +276,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 | NBT Tag             | Default  | Type           |
 |:--------------------|:---------|:---------------|
 | ``ajjgui.Command``  | N/A      | String         |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``     | N/A      | Byte           |
 | ``ajjgui.Relative`` | ``0b``   | Boolean (Byte) |
@@ -283,6 +288,8 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 ```
 
 #### Example
+
+An *itembin*:
 
 ```
 /give @p minecraft:bucket{ajjgui:{Widget:"itembin"},display:{Name:'{"text":"Recycle Bin","italic":"false"}'}}
@@ -299,6 +306,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 | NBT Tag                | Default  | Type           |
 |:-----------------------|:---------|:---------------|
 | ``ajjgui.Command``     | N/A      | String         |
+| ``ajjgui.Exit``        | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Fixed``       | ``0b``   | Boolean (Byte) |
 | ``ajjgui.Page``        | N/A      | Byte           |
 | ``ajjgui.Placeholder`` | Required | Compound       |
@@ -314,19 +322,19 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 #### Examples
 
-1. An *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.Placeholder`` and a stack size of ``64b``:
+1. An empty *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.Placeholder`` and a stack size of ``64b``:
 
 ```
 /give @p minecraft:gray_stained_glass_pane{ajjgui:{Widget:"itemslot",Placeholder:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{display:{Name:'{"text":"Placeholder Item","italic":"false"}'}}},Size:64b},display:{Name:'{"text":"Placeholder Item","italic":"false"}'}}
 ```
 
-2. An *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.Placeholder`` and a stack size of ``16b``:
+2. An empty *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.Placeholder`` and a stack size of ``16b``:
 
 ```
 /give @p minecraft:gray_stained_glass_pane{ajjgui:{Widget:"itemslot",Placeholder:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{display:{Name:'{"text":"Placeholder Item","italic":"false"}'}}},Size:16b},display:{Name:'{"text":"Placeholder Item","italic":"false"}'}}
 ```
 
-3. An *itemslot* with a default placeholder item different from the one specified in ``ajjgui.Placeholder`` and a stack size of ``64b``:
+3. An empty *itemslot* with a default placeholder item different from the one specified in ``ajjgui.Placeholder`` and a stack size of ``64b``:
 
 ```
 /give @p minecraft:white_stained_glass_pane{ajjgui:{Widget:"itemslot",Placeholder:{id:"minecraft:gray_stained_glass_pane",Count:1b,tag:{display:{Name:'{"text":"Placeholder Item","italic":"false"}'}}},Size:64b},display:{Name:'{"text":"Default Placeholder Item","italic":"false"}'}}
@@ -349,6 +357,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 | NBT Tag             | Default  | Type               |
 |:--------------------|:---------|:-------------------|
 | ``ajjgui.Command``  | N/A      | String             |
+| ``ajjgui.Exit``     | ``0b``   | Boolean (Byte)     |
 | ``ajjgui.Fixed``    | ``0b``   | Boolean (Byte)     |
 | ``ajjgui.Items``    | N/A      | Compound List      |
 | ``ajjgui.Page``     | N/A      | Byte               |
@@ -381,7 +390,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 
 > **NOTE:** The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
 
-> **NOTE:** If the ``ajjgui.Widget`` NBT tag of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required. This, by extension, applies to widgets specified in ``ajjgui.Widgets``.
+> **NOTE:** If the ``ajjgui.Widget`` NBT tag of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional, and no specific tags are required. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.Widgets`` NBT tag of the *scrollbutton*.
 
 ## Changing GUI Pages
 
@@ -419,9 +428,9 @@ Each of the above widgets, excluding the *placeholder*, can be made to change th
 
 ## Fixed GUI Widgets
 
-Each of the above widgets can be made to stay on display if the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
+Each of the above widgets can be made to stay on display when the GUI page is changed. This is done by setting the ``ajjgui.Fixed`` NBT tag to ``1b``. If a *scrollbutton* is made fixed, its widgets also obtain this property.
 
-### Example
+#### Example
 
 A *button* staying fixed in its slot when the GUI page is changed:
 
@@ -429,11 +438,23 @@ A *button* staying fixed in its slot when the GUI page is changed:
 /give @p minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Relative:1b,Fixed:1b},display:{Name:'{"text":"Go to Next Page","italic":"false"}'}}
 ```
 
+## Exiting GUIs
+
+Each of the above widgets, excluding the *placeholder*, can be made to exit the GUI when clicked. This is done by setting the ``ajjgui.Exit`` NBT tag to ``1b``.
+
+#### Example
+
+A *button* exiting the GUI:
+
+```
+/give @p minecraft:barrier{ajjgui:{Widget:"button",Exit:1b},display:{Name:'{"text":"Exit","color":"white","italic":"false"}'}}
+```
+
 ## Running GUI Commands and Accessing Data
 
 Each of the above widgets, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.Command`` NBT tag. This command is executed by an external command block instead of the player themselves. The ``"ajjgui.user"`` scoreboard tag can be used to target the player triggering the widget. In this way, it is also possible to access the count, page, slot and state values of the selected widget, stored respectively in the ``ajjgui.count``, ``ajjgui.page``, ``ajjgui.slot`` and ``ajjgui.state`` scores of this player. The NBT of the selected widget is accessible from the ``Widget`` NBT tag in the ``ajjgui:gui`` data storage. Any items added or removed from an *itemslot* are accessible from the ``In`` and ``Out`` NBT tags respectively in the ``ajjgui:itemslot`` data storage. Likewise, any items added to an *itembin* are accessible from the ``In`` NBT tag in the ``ajjgui:itembin`` data storage.
 
-### Examples
+#### Examples
 
 1. A *button* running a command referencing the player that pressed it:
 
@@ -443,29 +464,32 @@ Each of the above widgets, excluding the the *placeholder*, can be made to run c
 
 2. A *switch* running a command based on its current state:
 
-Assume the following commands are located in a function ```name:func``` within another datapack:
+```
+/give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
+```
+
+where the following commands are located in a function ```name:func``` within another datapack:
 
 ```
 execute if score @s ajjgui.state matches 0 run say set switch to Disabled
 execute if score @s ajjgui.state matches 1 run say set switch to Enabled
 ```
 
-A *switch* running a function as the player that pressed it:
-
-```
-/give @p minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","italic":"false"}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function name:func"},display:{Name:'{"text":"Disabled","italic":"false"}'}}
-```
-
 ## Manually Modifying GUIs
 
 For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
 
-### Examples
+#### Examples
 
 1. A command setting the nearest GUI's page to the first one:
 
 ```
 /scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
+```
+
+Then:
+
+```
 /function ajjgui:_reload
 ```
 
@@ -473,6 +497,11 @@ For every GUI compiled, there is a marker entity located at the container's coor
 
 ```
 /data modify entity @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] data.GUI[0][{Slot:0b}].id set value "minecraft:stone"
+```
+
+Then:
+
+```
 /function ajjgui:_reload
 ```
 

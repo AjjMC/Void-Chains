@@ -69,4 +69,8 @@ execute positioned 0 62 20 run scoreboard players set @e[type=minecraft:marker,t
 execute positioned 20 62 0 run forceload add ~ ~
 execute positioned 0 62 20 run forceload add ~ ~
 
+team empty red
+team empty blue
+team empty guest
+
 function map:lobby/reset_all_settings

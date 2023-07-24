@@ -1,4 +1,5 @@
-execute if score #countdown_seconds global matches 1.. run title @a subtitle [{"text":"TELEPORTATION IN ","color":"yellow","bold":"true"},{"score":{"name":"#countdown_seconds","objective":"global"}}]
+execute if score #countdown_seconds global matches 4..5 run title @a subtitle [{"score":{"name":"#countdown_seconds","objective":"global"},"color":"yellow"}]
+execute if score #countdown_seconds global matches 1..3 run title @a subtitle [{"score":{"name":"#countdown_seconds","objective":"global"},"color":"red"}]
 execute if score #countdown_seconds global matches 1.. as @a at @s run playsound minecraft:block.note_block.pling block @s
 scoreboard players remove #countdown_seconds global 1
 
