@@ -1,0 +1,1 @@
+function map:lobby/select_archer_kit

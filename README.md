@@ -15,6 +15,7 @@ Instructions:
 * Open the "Play" menu
 * Adjust the game's settings (optional)
 * Join a team (unless random assignment is enabled)
+* Select a kit
 * Start a game (a player is required on each team)
 
 ## Gameplay

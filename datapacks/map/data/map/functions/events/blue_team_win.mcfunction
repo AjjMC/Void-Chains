@@ -1,5 +1,6 @@
 title @s times 10t 40t 10t
 
+kill @e[type=minecraft:arrow]
 execute as @e[type=minecraft:item,tag=powerup] at @s run function map:game/destroy_powerup
 scoreboard players set #active_game global 0
 function map:events/reset_player

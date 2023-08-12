@@ -1,0 +1,1 @@
+function map:lobby/select_knight_kit

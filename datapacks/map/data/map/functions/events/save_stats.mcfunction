@@ -24,6 +24,7 @@ execute as @a[team=blue,tag=!cached,limit=1] run function map:events/save_stats/
 execute as @a[team=blue,tag=!cached,limit=1] run function map:events/save_stats/blue_8
 execute as @a[team=blue,tag=!cached,limit=1] run function map:events/save_stats/blue_9
 
+data remove storage map:data Kit
 tag @a remove cached
 
 execute positioned 20 62 0 as @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] run data modify entity @s data.GUI[0] set from storage map:reset_guis Stats

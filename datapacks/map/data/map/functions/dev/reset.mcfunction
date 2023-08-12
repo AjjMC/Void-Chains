@@ -73,4 +73,7 @@ team empty red
 team empty blue
 team empty guest
 
+tag @a[tag=archer] remove archer
+tag @a[tag=warrior] remove warrior
+
 function map:lobby/reset_all_settings
