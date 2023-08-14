@@ -6,7 +6,7 @@ execute if entity @s[tag=knight] run item replace entity @s weapon.offhand with 
 
 execute if entity @s[tag=archer] unless entity @s[tag=knockback_powerup] run item replace entity @s hotbar.0 with minecraft:wooden_sword{Unbreakable:1b,HideFlags:63,map:{Equipment:1b,Sword:1b}}
 execute if entity @s[tag=archer,tag=knockback_powerup] run item replace entity @s hotbar.0 with minecraft:wooden_sword{Unbreakable:1b,HideFlags:63,map:{Equipment:1b,Sword:1b},Enchantments:[{id:"minecraft:knockback",lvl:2}]}
-execute if entity @s[tag=archer] run item replace entity @s hotbar.1 with minecraft:bow{Unbreakable:1b,HideFlags:63,map:{Equipment:1b,Bow:1b},Enchantments:[{id:"minecraft:infinity",lvl:1}],display:{Name:'{"text":"Bow","color":"white","italic":"false"}'}}
+execute if entity @s[tag=archer] run item replace entity @s hotbar.1 with minecraft:bow{Unbreakable:1b,HideFlags:63,map:{Equipment:1b,Bow:1b},Enchantments:[{id:"minecraft:infinity",lvl:1}]}
 execute if entity @s[tag=archer] run item replace entity @s inventory.0 with minecraft:arrow{Unbreakable:1b,HideFlags:63,map:{Equipment:1b,Arrow:1b}}
 
 execute if entity @s[tag=warrior,tag=!knockback_powerup] run item replace entity @s hotbar.0 with minecraft:stone_axe{Unbreakable:1b,HideFlags:63,map:{Equipment:1b,Axe:1b}}
@@ -17,4 +17,6 @@ execute if score #developer_tools global matches 1 run item replace entity @s ho
 item replace entity @s armor.feet with minecraft:leather_boots{Unbreakable:1b,HideFlags:63,map:{Equipment:1b},display:{color:255}}
 item replace entity @s armor.legs with minecraft:leather_leggings{Unbreakable:1b,HideFlags:63,map:{Equipment:1b},display:{color:255}}
 item replace entity @s armor.chest with minecraft:leather_chestplate{Unbreakable:1b,HideFlags:63,map:{Equipment:1b},display:{color:255}}
-item replace entity @s armor.head with minecraft:leather_helmet{Unbreakable:1b,HideFlags:63,map:{Equipment:1b},display:{color:255}}
+
+execute if entity @s[name=!Ajj] run item replace entity @s armor.head with minecraft:leather_helmet{Unbreakable:1b,HideFlags:63,map:{Equipment:1b},display:{color:255}}
+execute if entity @s[name=Ajj] run item replace entity @s armor.head with minecraft:leather_helmet{Unbreakable:1b,HideFlags:63,map:{Equipment:1b},display:{color:16777215}}
