@@ -24,11 +24,11 @@ The game is played as follows:
 
 *	Two teams begin with a number of anchor platforms assigned to each, suspended at random locations over the void, which serve as respawn points for players.
 
-*	Players can form paths of their team color, starting from one of their anchors, allowing them to expand their land and navigate across the void.
+*	Players can form paths of their team color, starting from one of their anchor platforms, allowing them to expand their land and navigate across the void.
 
 * If part of a territory is not attached to any anchor platforms of the same color, it collapses.
 
-*	Players can use their paths to override the opposite color and detach enemy land from the anchors supporting it, causing isolated blocks to fall and hence "spleefing" any players standing on top.
+*	Players can use their paths to override the opposite color and detach enemy land from the anchor platforms supporting it, causing isolated blocks to fall and hence "spleefing" any players standing on top.
 
 *	It is possible to walk into the opposing team's territory instead of overriding it, but paths cannot be generated from within the enemy color.
 
