@@ -1,5 +1,5 @@
 function map:events/reset_player
-function map:events/stats/reset
+function map:events/reset_stats
 
 execute if score #active_game global matches 0 run function map:events/return_player
 execute if score #active_game global matches 1 run function map:events/host_player
