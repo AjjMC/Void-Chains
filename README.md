@@ -13,7 +13,7 @@ The minigame can be downloaded from this repository by clicking on "Code" and th
 Instructions:
 
 * Open the "Play" menu
-* Adjust the game's settings (optional)
+* Adjust the game settings (optional)
 * Join a team (unless random assignment is enabled)
 * Select a kit (optional)
 * Start a game (a player is required on each team)
