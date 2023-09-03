@@ -77,4 +77,5 @@ execute positioned 0 62 20 run scoreboard players set @e[type=minecraft:marker,t
 
 execute as @a run function map:events/reset_player
 scoreboard players reset @a
+
 tellraw @a {"text":"Reset map","color":"red"}
