@@ -49,6 +49,10 @@ team modify blue friendlyFire false
 
 team modify guest friendlyFire false
 
+team empty red
+team empty blue
+team empty guest
+
 bossbar add map:timer {"text":""}
 bossbar set map:timer color green
 bossbar set map:timer style notched_6
@@ -63,14 +67,14 @@ execute at @e[type=minecraft:marker,tag=arena] run fill ~-51 ~ ~-51 ~51 ~ ~51 mi
 execute at @e[type=minecraft:marker,tag=arena] run fill ~-47 ~ ~-47 ~47 ~ ~47 minecraft:air
 execute at @e[type=minecraft:marker,tag=arena] run worldborder center ~ ~
 
-execute positioned 20 62 0 as @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] run data modify entity @s data.GUI[0] set from storage map:reset_guis Stats
-execute positioned 0 62 20 run scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
-
 execute positioned 20 62 0 run forceload add ~ ~
 execute positioned 0 62 20 run forceload add ~ ~
 
-team empty red
-team empty blue
-team empty guest
-
 function map:lobby/reset_all_settings
+
+execute positioned 20 62 0 as @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] run data modify entity @s data.GUI[0] set from storage map:reset_guis Stats
+execute positioned 0 62 20 run scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
+
+execute as @a run function map:events/reset_player
+scoreboard players reset @a
+tellraw @a {"text":"Reset map","color":"red"}
