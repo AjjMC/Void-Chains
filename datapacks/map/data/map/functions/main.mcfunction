@@ -4,8 +4,8 @@ team join guest @a[team=]
 tag @a[tag=!knight,tag=!archer,tag=!warrior] add knight
 
 execute as @e[type=minecraft:falling_block] at @s positioned ~-47.5 ~4 ~-47.5 if entity @e[type=minecraft:marker,tag=arena,dx=94,dy=64,dz=94] run kill @s
-kill @e[type=minecraft:item,nbt={Item:{tag:{map:{Equipment:1b}}}}]
-kill @e[type=minecraft:arrow,nbt={inGround:1b}]
+execute as @e[type=minecraft:item] if data entity @s {Item:{tag:{map:{Equipment:1b}}}} run kill @s
+execute as @e[type=minecraft:arrow] if data entity @s {inGround:1b} run kill @s
 
 scoreboard players add @a tp_count 0
 execute as @a unless score @s tp_count = #tp_count global run function map:events/update_player
