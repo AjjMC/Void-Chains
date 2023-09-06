@@ -56,25 +56,33 @@ team empty guest
 bossbar add map:timer {"text":""}
 bossbar set map:timer color green
 bossbar set map:timer style notched_6
+bossbar set map:timer value 0
+bossbar set map:timer players
 
+worldborder set 30000000
 worldborder damage amount 100
 worldborder damage buffer 0
 
-kill @e[type=minecraft:marker,tag=arena]
 execute positioned 0 62 1000 run forceload add ~-47 ~-47 ~47 ~47
+kill @e[type=minecraft:marker,tag=arena]
 execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["arena"]}
 execute at @e[type=minecraft:marker,tag=arena] run fill ~-51 ~ ~-51 ~51 ~ ~51 minecraft:barrier
-execute at @e[type=minecraft:marker,tag=arena] run fill ~-47 ~ ~-47 ~47 ~ ~47 minecraft:air
 execute at @e[type=minecraft:marker,tag=arena] run worldborder center ~ ~
+execute at @e[type=minecraft:marker,tag=arena] run function map:events/reset_arena
+
+kill @e[type=minecraft:arrow]
+execute as @e[type=minecraft:item,tag=powerup] at @s run function map:game/destroy_powerup
 
 execute positioned 20 62 0 run forceload add ~ ~
 execute positioned 0 62 20 run forceload add ~ ~
-
-function map:lobby/reset_all_settings
-
+execute positioned 0 62 20 run data merge block ~ ~ ~ {CustomName:'{"text":"Game Menu"}',Lock:""}
 execute positioned 20 62 0 as @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] run data modify entity @s data.GUI[0] set from storage map:reset_guis Stats
 execute positioned 0 62 20 run scoreboard players set @e[type=minecraft:marker,tag=ajjgui.gui,sort=nearest,limit=1] ajjgui.page 0
+function map:lobby/reset_all_settings
+function ajjgui:_reload
+setblock 0 55 0 minecraft:air
 
+execute as @a run function map:events/return_player
 execute as @a run function map:events/reset_player
 scoreboard players reset @a
 
