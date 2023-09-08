@@ -37,6 +37,18 @@ scoreboard players set #minute_ticks global 1200
 scoreboard players set #active_game global 0
 scoreboard players set #tp_count global 0
 
+scoreboard players reset #countdown_seconds global
+scoreboard players reset #game_minutes global
+scoreboard players reset #game_seconds global
+scoreboard players reset #game_ticks global
+scoreboard players reset #game_ticks_total global
+scoreboard players reset #game_winner global
+scoreboard players reset #powerup_minutes global
+scoreboard players reset #powerup_seconds global
+scoreboard players reset #powerup_ticks global
+scoreboard players reset #temp global
+scoreboard players reset #temp1 global
+
 team add guest {"text":"Guest Team"}
 team add red {"text":"Red Team"}
 team add blue {"text":"Blue Team"}

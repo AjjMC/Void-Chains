@@ -1,4 +1,4 @@
-scoreboard players operation #temp global = #starting_anchor_count global
+scoreboard players operation #temp global = #anchor_starting_count global
 execute at @e[type=minecraft:marker,tag=arena] run function map:events/prepare_arena
 
 execute as @a run effect clear @s minecraft:weakness

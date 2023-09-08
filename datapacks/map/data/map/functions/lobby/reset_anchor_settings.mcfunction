@@ -1,6 +1,6 @@
 scoreboard players set #anchor_generation global 1
 
-scoreboard players set #starting_anchor_count global 3
+scoreboard players set #anchor_starting_count global 3
 scoreboard players set #anchor_claiming_seconds global 5
 scoreboard players set #anchor_generation_seconds global 15
 

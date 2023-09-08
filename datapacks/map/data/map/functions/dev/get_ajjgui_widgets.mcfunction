@@ -16,7 +16,7 @@ give @s minecraft:stone_axe{HideFlags:255,ajjgui:{Widget:"button",Command:"execu
 give @s minecraft:arrow{ajjgui:{Widget:"button",Page:0b,Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/change_page"},display:{Name:'{"text":"Back to Main Menu","color":"green","italic":"false"}'}}
 give @s minecraft:arrow{ajjgui:{Widget:"button",Page:1b,Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/change_page"},display:{Name:'{"text":"Back to Settings Menu","color":"green","italic":"false"}'}}
 
-give @s minecraft:stonecutter{ajjgui:{Widget:"button",Page:2b,Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/change_page"},display:{Name:'{"text":"General Settings","color":"green","italic":"false"}'}}
+give @s minecraft:repeater{ajjgui:{Widget:"button",Page:2b,Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/change_page"},display:{Name:'{"text":"General Settings","color":"green","italic":"false"}'}}
 give @s minecraft:chain{ajjgui:{Widget:"button",Page:3b,Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/change_page"},display:{Name:'{"text":"Anchor Settings","color":"green","italic":"false"}'}}
 give @s minecraft:nether_star{ajjgui:{Widget:"button",Page:4b,Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/change_page"},display:{Name:'{"text":"Powerup Settings","color":"green","italic":"false"}'}}
 
@@ -45,11 +45,11 @@ give @s minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dy
 give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/reset_general_settings"},display:{Name:'{"text":"Reset General Settings","color":"red","italic":"false"}'}}
 
 
-give @s minecraft:soul_lantern{Enchantments:[{}],display:{Name:'{"text":"Generation Ability","color":"green","italic":"false"}'}}
+give @s minecraft:spawner{HideFlags:255,display:{Name:'{"text":"Generation Ability","color":"green","italic":"false"}'}}
 give @s minecraft:lime_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","color":"green","italic":"false"}'}}},{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","color":"red","italic":"false"}'}}}],Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/anchor_generation",State:1b},display:{Name:'{"text":"Enabled","color":"green","italic":"false"}'}}
 
 give @s minecraft:chain{display:{Name:'{"text":"Starting Count","color":"green","italic":"false"}'}}
-give @s minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[3,4,5,6,1,2],Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/starting_anchor_count",State:2b},display:{Name:'{"text":""}'}} 3
+give @s minecraft:black_stained_glass_pane{ajjgui:{Widget:"counter",Values:[3,4,5,6,1,2],Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/anchor_starting_count",State:2b},display:{Name:'{"text":""}'}} 3
 
 give @s minecraft:lantern{display:{Name:'{"text":"Claiming Duration (Seconds)","color":"green","italic":"false"}'}}
 give @s minecraft:orange_stained_glass_pane{ajjgui:{Widget:"counter",Values:[5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,1,2,3,4],Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/anchor_claiming_seconds",State:4b},display:{Name:'{"text":""}'}} 5
@@ -66,10 +66,10 @@ give @s minecraft:lime_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:lime_dy
 give @s minecraft:redstone_lamp{display:{Name:'{"text":"Generation Period (Minutes)","color":"green","italic":"false"}',Lore:['{"text":"Applicable if powerup generation is enabled.","color":"gray","italic":"false"}']}}
 give @s minecraft:brown_stained_glass_pane{ajjgui:{Widget:"counter",Values:[1,2,3,4,5],Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/powerup_generation_minutes"},display:{Name:'{"text":""}'}} 1
 
-give @s minecraft:beacon{display:{Name:'{"text":"Effect Duration (Seconds)","color":"green","italic":"false"}'}}
+give @s minecraft:beacon{display:{Name:'{"text":"Effect Duration (Seconds)","color":"green","italic":"false"}',Lore:['{"text":"Applicable if powerup generation is enabled.","color":"gray","italic":"false"}']}}
 give @s minecraft:cyan_stained_glass_pane{ajjgui:{Widget:"counter",Values:[30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29],Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/powerup_effect_seconds",State:29b},display:{Name:'{"text":""}'}} 30
 
-give @s minecraft:tnt{display:{Name:'{"text":"Timeout Duration (Seconds)","color":"green","italic":"false"}'}}
+give @s minecraft:tnt{display:{Name:'{"text":"Timeout Duration (Seconds)","color":"green","italic":"false"}',Lore:['{"text":"Applicable if powerup generation is enabled.","color":"gray","italic":"false"}']}}
 give @s minecraft:red_stained_glass_pane{ajjgui:{Widget:"counter",Values:[15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,10,11,12,13,14],Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/powerup_timeout_seconds",State:14b},display:{Name:'{"text":""}'}} 15
 
 give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"execute as @a[tag=ajjgui.user] run function map:lobby/gui/reset_powerup_settings"},display:{Name:'{"text":"Reset Powerup Settings","color":"red","italic":"false"}'}}
