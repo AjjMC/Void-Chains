@@ -1,4 +1,4 @@
-# A Custom GUI Mapmaking Framework Using In-Game Minecraft Commands (Minecraft: Java Edition Datapack)
+# A GUI Framework for Minecraft Mapmaking Using In-Game Commands
 
 <p align = "center">
   <img src="assets/gui.gif" width="350">
@@ -10,9 +10,9 @@
 
 ## Overview
 
-Minecraft servers frequently use custom user interfaces that utilize the inventory of a container (e.g., a chest), the items of which serve as interactable elements. While there are plugins making the design of such menus trivial to developers, Minecraft commands and, by extension, datapacks are much harder to work with, and their limitations often make it difficult to replicate these item-based GUIs usually seen on servers. Certain datapacks as well as datapack generators have been made with the intent to provide developers with a GUI framework. However, these are often restricted to essential features that rarely go beyond the creation of buttons and page navigation. Furthermore, existing approaches are based on adaptation of a datapack template in which the logic of specific GUIs is hard-coded, hindering scalability for large projects.
+Minecraft servers frequently use custom user interfaces that utilize the inventory of a container (e.g., a chest), the items of which serve as interactable elements. While there are plugins making the design of such menus trivial to server developers, Minecraft commands and, by extension, datapacks are much harder to work with, and their limitations often make it difficult to replicate these item-based GUIs in situations where plugins are not available. Certain datapacks as well as datapack generators have been made with the intent to provide command developers with a GUI framework. However, these are often restricted to essential features that rarely go beyond the creation of buttons and page navigation. Furthermore, existing approaches are based on adaptation of a datapack template, in which the logic of specific GUIs is hard-coded, hindering scalability and maintenance for large projects.
 
-The aim of this datapack is to serve as an advanced mapmaking framework for item-based GUIs, allowing developers to easily create them in-game, without needing to consider any of the complex, low-level functionality or involving access to any of the files within the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers, which the datapack compiles into functional GUIs. At the moment, the datapack is limited to block entities, such as barrels, droppers, hoppers or even brewing stands. However, the same design may be generalized in the future to work with entities such as chest minecarts.
+The aim of this datapack is to serve as an advanced framework allowing users to easily create item-based GUIs in-game, without needing to consider any of the complex, low-level functionality or involving access to any of the files within the datapack. This is achieved by simply dragging and dropping items with custom NBT tags in containers, which the datapack compiles into functional GUIs. At the moment, the datapack is limited to block entities, such as barrels, droppers, hoppers or even brewing stands. However, there are future plans for personalized GUIs (i.e., using chest boats) that involve storing individual players' GUI instances in a database.
 
 The datapack has the following features:
 
@@ -23,7 +23,7 @@ The datapack has the following features:
 
 ## Downloading, Installing and Updating
 
-The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the datapacks folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:_help``. By convention, all user functions begin with an underscore, "_", to be distinguished from the backend ones.
+The datapack can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the datapack. After this folder has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:_help``. By convention, all user functions begin with an underscore, ``_``, to be distinguished from the backend ones.
 
 | User Function                   | Description                                  |
 |:--------------------------------|:---------------------------------------------|
@@ -40,7 +40,7 @@ The datapack can be downloaded from this repository by clicking on "Code" and th
 | ``/function ajjgui:_version``   | Displays datapack version                    |
 | ``/function ajjgui:_widget/``   | Gives GUI demo widgets                       |
 
-The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and, as such, cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command, and the previous one generated is automatically removed. The datapack must be reinstalled if an updated version of it has been downloaded. It can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world, *including any GUIs made with it*.
+The datapack can be installed by running ``/function ajjgui:_install`` at any location in the world, which generates a 3x1 tower consisting of two command blocks and a shulker box. These block entities are needed for the datapack to be fully functional and cannot be destroyed. *They must also be placed in a chunk that is constantly loaded.* The tower can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:_uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
 
 ## Creating a GUI
 
@@ -305,6 +305,8 @@ An *itembin*:
   <img src="assets/itembin.gif" width="350">
 </p>
 
+> **NOTE:** The *itembin* has a built-in cooldown of 0.4s.
+
 ### Itemslot
 
 The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.Placeholder`` NBT tag. The maximum number of items in an *itemslot* is stored in the ``ajjgui.Size`` NBT tag, which cannot be larger than ``64b``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.State`` NBT tag.
@@ -356,6 +358,8 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 <p align = "center">
   <img src="assets/itemslot.gif" width="350">
 </p>
+
+> **NOTE:** The *itemslot* has a built-in cooldown of 0.4s.
 
 ### Scrollbutton
 
@@ -483,9 +487,9 @@ execute if score @s ajjgui.state matches 0 run say set switch to Disabled
 execute if score @s ajjgui.state matches 1 run say set switch to Enabled
 ```
 
-## Manually Modifying GUIs
+## Directly Modifying GUIs
 
-For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be manually modified to achieve desired results. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction. *It is highly recommended to to read the rest of the documentation before proceeding with such modifications as any existing alternatives may be substantially easier to work with.*
+For every GUI compiled, there is a marker entity located at the container's coordinates with the ``"ajjgui.gui"`` scoreboard tag. This entity stores the page value in its ``ajjgui.page`` score as well as the page list in its ``data.GUI`` NBT tag. Each element in this list corresponds to a page, storing widgets in the same format containers use to store items. If the available widget types and tags do not already support a particular functionality, the page number and widget NBT may be directly modified to achieve desired results. This would, for example, be needed if one wanted to modify a GUI without prior user interaction. In order for the changes to be applied, ``/function ajjgui:_reload`` needs to be run. Otherwise, the GUI is updated upon user interaction.
 
 #### Examples
 
@@ -513,9 +517,9 @@ Then:
 /function ajjgui:_reload
 ```
 
-> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when manually modifying NBT.
+> **NOTE:** The compiler adds the ``ajjgui.Slot`` and ``ajjgui.Compiled`` NBT tags to each widget. These two must not be changed when directly modifying NBT.
 
-> **NOTE:** Decompiling a GUI reverts any NBT changes to widgets, manual or not.
+> **NOTE:** Decompiling a GUI resets it to the state it was in when compiled.
 
 ## Copyright
 
