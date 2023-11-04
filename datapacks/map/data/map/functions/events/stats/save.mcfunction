@@ -14,13 +14,13 @@ summon minecraft:text_display ~ ~ 0 {Tags:["stats","stats7"]}
 
 tag @s add selected
 
-data modify entity @e[type=minecraft:text_display,tag=stats1,limit=1] text set value '{"selector":"@a[tag=selected]","italic":"false"}'
-data modify entity @e[type=minecraft:text_display,tag=stats2,limit=1] text set value '[{"text":"Kit: ","color":"gray","italic":"false"},{"nbt":"Kit","storage":"map:data","color":"dark_green"}]'
-data modify entity @e[type=minecraft:text_display,tag=stats3,limit=1] text set value '[{"text":"Kills: ","color":"gray","italic":"false"},{"score":{"name":"@a[tag=selected]","objective":"kills"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=stats4,limit=1] text set value '[{"text":"Deaths: ","color":"gray","italic":"false"},{"score":{"name":"@a[tag=selected]","objective":"deaths"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=stats5,limit=1] text set value '[{"text":"Anchors Claimed: ","color":"gray","italic":"false"},{"score":{"name":"@a[tag=selected]","objective":"anchors_claimed"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=stats6,limit=1] text set value '[{"text":"Anchors Generated: ","color":"gray","italic":"false"},{"score":{"name":"@a[tag=selected]","objective":"anchors_generated"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=stats7,limit=1] text set value '[{"text":"Powerups Activated: ","color":"gray","italic":"false"},{"score":{"name":"@a[tag=selected]","objective":"powerups_activated"},"color":"yellow"}]'
+data modify entity @e[type=minecraft:text_display,tag=stats1,limit=1] text set value '{"selector":"@a[tag=selected]","italic":false}'
+data modify entity @e[type=minecraft:text_display,tag=stats2,limit=1] text set value '[{"text":"Kit: ","color":"gray","italic":false},{"nbt":"Kit","storage":"map:data","color":"dark_green"}]'
+data modify entity @e[type=minecraft:text_display,tag=stats3,limit=1] text set value '[{"text":"Kills: ","color":"gray","italic":false},{"score":{"name":"@a[tag=selected]","objective":"kills"},"color":"yellow"}]'
+data modify entity @e[type=minecraft:text_display,tag=stats4,limit=1] text set value '[{"text":"Deaths: ","color":"gray","italic":false},{"score":{"name":"@a[tag=selected]","objective":"deaths"},"color":"yellow"}]'
+data modify entity @e[type=minecraft:text_display,tag=stats5,limit=1] text set value '[{"text":"Anchors Claimed: ","color":"gray","italic":false},{"score":{"name":"@a[tag=selected]","objective":"anchors_claimed"},"color":"yellow"}]'
+data modify entity @e[type=minecraft:text_display,tag=stats6,limit=1] text set value '[{"text":"Anchors Generated: ","color":"gray","italic":false},{"score":{"name":"@a[tag=selected]","objective":"anchors_generated"},"color":"yellow"}]'
+data modify entity @e[type=minecraft:text_display,tag=stats7,limit=1] text set value '[{"text":"Powerups Activated: ","color":"gray","italic":false},{"score":{"name":"@a[tag=selected]","objective":"powerups_activated"},"color":"yellow"}]'
 
 tag @s remove selected
 

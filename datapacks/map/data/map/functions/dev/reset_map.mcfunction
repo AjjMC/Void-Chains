@@ -48,6 +48,7 @@ scoreboard players reset #powerup_seconds global
 scoreboard players reset #powerup_ticks global
 scoreboard players reset #temp global
 scoreboard players reset #temp1 global
+scoreboard players reset #world_border_shrinking_ticks global
 
 team add guest {"text":"Guest Team"}
 team add red {"text":"Red Team"}

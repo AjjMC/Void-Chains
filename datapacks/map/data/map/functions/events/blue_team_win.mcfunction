@@ -5,8 +5,8 @@ execute as @e[type=minecraft:item,tag=powerup] at @s run function map:game/destr
 scoreboard players set #active_game global 0
 function map:events/reset_player
 
-title @s[team=red] title {"text":"GAME OVER!","color":"dark_red","bold":"true"}
-title @s[team=blue] title {"text":"VICTORY!","color":"gold","bold":"true"}
+title @s[team=red] title {"text":"GAME OVER!","color":"dark_red","bold":true}
+title @s[team=blue] title {"text":"VICTORY!","color":"gold","bold":true}
 title @s[team=guest] title {"text":""}
 
 title @s subtitle [{"text":"Blue Team ","color":"blue"},{"text":"won the game!","color":"white"}]
