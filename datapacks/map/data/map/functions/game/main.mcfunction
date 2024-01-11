@@ -13,7 +13,7 @@ execute if score #game_minutes global matches ..9 if score #game_seconds global 
 execute if score #game_minutes global matches 10.. if score #game_seconds global matches ..9 run bossbar set map:timer name [{"score":{"name":"#game_minutes","objective":"global"},"color":"yellow"},{"text":":0"},{"score":{"name":"#game_seconds","objective":"global"}}]
 execute if score #game_minutes global matches 10.. if score #game_seconds global matches 10.. run bossbar set map:timer name [{"score":{"name":"#game_minutes","objective":"global"},"color":"yellow"},{"text":":"},{"score":{"name":"#game_seconds","objective":"global"}}]
 
-execute if score #world_border_shrinking global matches 1 run function map:game/world_border
+execute if score #arena_border_shrinking global matches 1 run function map:game/arena_border
 function map:game/powerup_generation
 
 execute as @a[team=red,tag=!dead] at @s run function map:game/red_team
@@ -30,7 +30,7 @@ execute as @a[team=!guest] run function map:game/check_powerup
 execute as @e[gamemode=spectator] at @s positioned ~-47.5 ~-64 ~-47.5 unless entity @e[type=minecraft:marker,tag=arena,dx=94,dy=64,dz=94] run spectate
 execute as @e[gamemode=spectator] at @s positioned ~-47.5 ~-64 ~-47.5 unless entity @e[type=minecraft:marker,tag=arena,dx=94,dy=64,dz=94] at @e[type=minecraft:marker,tag=arena] run tp @s ~ ~20 ~
 
-execute as @e[type=minecraft:marker,tag=anchor] at @s run function map:game/world_border_destroy_anchors
+execute as @e[type=minecraft:marker,tag=anchor] at @s run function map:game/arena_border_destroy_anchors
 
 execute unless entity @e[type=minecraft:marker,tag=red_anchor] unless entity @a[team=red,tag=!dead] as @a run function map:events/blue_team_win
 execute unless entity @e[type=minecraft:marker,tag=blue_anchor] unless entity @a[team=blue,tag=!dead] as @a run function map:events/red_team_win

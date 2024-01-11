@@ -48,7 +48,7 @@ scoreboard players reset #powerup_seconds global
 scoreboard players reset #powerup_ticks global
 scoreboard players reset #temp global
 scoreboard players reset #temp1 global
-scoreboard players reset #world_border_shrinking_ticks global
+scoreboard players reset #arena_border_shrinking_ticks global
 
 team add guest {"text":"Guest Team"}
 team add red {"text":"Red Team"}
@@ -99,4 +99,4 @@ execute as @a run function map:events/return_player
 execute as @a run function map:events/reset_player
 scoreboard players reset @a
 
-tellraw @a {"text":"Reset map","color":"red"}
+tellraw @a {"text":"Reset map","color":"dark_red"}

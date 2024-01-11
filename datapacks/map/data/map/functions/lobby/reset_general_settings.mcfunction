@@ -1,9 +1,9 @@
 scoreboard players set #random_team_assignment global 0
-scoreboard players set #world_border_shrinking global 1
+scoreboard players set #arena_border_shrinking global 1
 gamerule showDeathMessages true
 scoreboard players set #falling_blocks global 1
 
-scoreboard players set #world_border_shrinking_minutes global 6
+scoreboard players set #arena_border_shrinking_minutes global 6
 scoreboard players set #respawn_seconds global 5
 
 scoreboard players set #developer_tools global 0

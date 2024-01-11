@@ -14,8 +14,8 @@ scoreboard players set #powerup_ticks global 0
 scoreboard players set #powerup_seconds global 0
 scoreboard players set #powerup_minutes global 0
 
-scoreboard players operation #world_border_shrinking_ticks global = #world_border_shrinking_minutes global
-scoreboard players operation #world_border_shrinking_ticks global *= #minute_ticks global
+scoreboard players operation #arena_border_shrinking_ticks global = #arena_border_shrinking_minutes global
+scoreboard players operation #arena_border_shrinking_ticks global *= #minute_ticks global
 
 scoreboard players set #countdown_seconds global 5
 scoreboard players set #active_game global 1

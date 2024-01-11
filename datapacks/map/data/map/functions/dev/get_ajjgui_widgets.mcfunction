@@ -24,8 +24,8 @@ give @s minecraft:nether_star{ajjgui:{Widget:"button",Page:4b,Command:"function 
 give @s minecraft:hopper{display:{Name:'{"text":"Random Team Assignment","color":"green","italic":false}'}}
 give @s minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}}],Command:"function map:lobby/gui/random_team_assignment"},display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}
 
-give @s minecraft:structure_void{display:{Name:'{"text":"World Border Shrinking","color":"green","italic":false}'}}
-give @s minecraft:lime_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}},{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}}],Command:"function map:lobby/gui/world_border_shrinking",State:1b},display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}
+give @s minecraft:structure_void{display:{Name:'{"text":"Arena Border Shrinking","color":"green","italic":false}'}}
+give @s minecraft:lime_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}},{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}}],Command:"function map:lobby/gui/arena_border_shrinking",State:1b},display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}
 
 give @s minecraft:skeleton_skull{display:{Name:'{"text":"Death Messages","color":"green","italic":false}'}}
 give @s minecraft:lime_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}},{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}}],Command:"function map:lobby/gui/death_messages",State:1b},display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}
@@ -33,16 +33,16 @@ give @s minecraft:lime_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:lime_dy
 give @s minecraft:anvil{display:{Name:'{"text":"Falling Blocks","color":"green","italic":false}'}}
 give @s minecraft:lime_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}},{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}}],Command:"function map:lobby/gui/falling_blocks",State:1b},display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}
 
-give @s minecraft:clock{display:{Name:'{"text":"World Border Shrinking Start Time (Minutes)","color":"green","italic":false}',Lore:['{"text":"Applicable if shrinking is enabled.","color":"gray","italic":false}']}}
-give @s minecraft:yellow_stained_glass_pane{ajjgui:{Widget:"counter",Values:[6b,7b,8b,9b,10b,11b,12b,13b,14b,15b,16b,17b,18b,19b,20b,1b,2b,3b,4b,5b],Command:"function map:lobby/gui/world_border_shrinking_minutes",State:5b},display:{Name:'{"text":""}'}} 6
+give @s minecraft:clock{display:{Name:'{"text":"Arena Border Shrinking Start Time (Minutes)","color":"green","italic":false}',Lore:['{"text":"Applicable if shrinking is enabled.","color":"gray","italic":false}']}}
+give @s minecraft:yellow_stained_glass_pane{ajjgui:{Widget:"counter",Values:[6b,7b,8b,9b,10b,11b,12b,13b,14b,15b,16b,17b,18b,19b,20b,1b,2b,3b,4b,5b],Command:"function map:lobby/gui/arena_border_shrinking_minutes",State:5b},display:{Name:'{"text":""}'}} 6
 
 give @s minecraft:white_bed{display:{Name:'{"text":"Respawn Duration (Seconds)","color":"green","italic":false}'}}
 give @s minecraft:white_stained_glass_pane{ajjgui:{Widget:"counter",Values:[5b,6b,7b,8b,9b,10b,11b,12b,13b,14b,15b,16b,17b,18b,19b,20b,21b,22b,23b,24b,25b,26b,27b,28b,29b,30b,31b,32b,33b,34b,35b,36b,37b,38b,39b,40b,41b,42b,43b,44b,45b,46b,47b,48b,49b,50b,51b,52b,53b,54b,55b,56b,57b,58b,59b,60b],Command:"function map:lobby/gui/respawn_seconds",State:4b},display:{Name:'{"text":""}'}} 5
 
-give @s minecraft:command_block_minecart{display:{Name:'{"text":"Developer Tools","color":"red","italic":false}',Lore:['{"text":"Cheats used for game experimentation.","color":"gray","italic":false}','{"text":"Games can start with a single player.","color":"gray","italic":false}']}}
+give @s minecraft:command_block_minecart{display:{Name:'{"text":"Developer Tools","color":"light_purple","italic":false}',Lore:['{"text":"Cheats used for game experimentation.","color":"gray","italic":false}','{"text":"Games can start with a single player.","color":"gray","italic":false}']}}
 give @s minecraft:gray_dye{ajjgui:{Widget:"switch",Items:[{id:"minecraft:gray_dye",Count:1b,tag:{display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}},{id:"minecraft:lime_dye",Count:1b,tag:{display:{Name:'{"text":"Enabled","color":"green","italic":false}'}}}],Command:"function map:lobby/gui/developer_tools"},display:{Name:'{"text":"Disabled","color":"red","italic":false}'}}
 
-give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_general_settings"},display:{Name:'{"text":"Reset General Settings","color":"red","italic":false}'}}
+give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_general_settings"},display:{Name:'{"text":"Reset General Settings","color":"dark_red","italic":false}'}}
 
 
 give @s minecraft:spawner{HideFlags:255,display:{Name:'{"text":"Generation Ability","color":"green","italic":false}'}}
@@ -57,7 +57,7 @@ give @s minecraft:orange_stained_glass_pane{ajjgui:{Widget:"counter",Values:[5b,
 give @s minecraft:soul_lantern{display:{Name:'{"text":"Generation Duration (Seconds)","color":"green","italic":false}',Lore:['{"text":"Applicable if anchor generation is enabled.","color":"gray","italic":false}']}}
 give @s minecraft:light_blue_stained_glass_pane{ajjgui:{Widget:"counter",Values:[15b,16b,17b,18b,19b,20b,21b,22b,23b,24b,25b,26b,27b,28b,29b,30b,31b,32b,33b,34b,35b,36b,37b,38b,39b,40b,41b,42b,43b,44b,45b,46b,47b,48b,49b,50b,51b,52b,53b,54b,55b,56b,57b,58b,59b,60b,1b,2b,3b,4b,5b,6b,7b,8b,9b,10b,11b,12b,13b,14b],Command:"function map:lobby/gui/anchor_generation_seconds",State:14b},display:{Name:'{"text":""}'}} 15
 
-give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_anchor_settings"},display:{Name:'{"text":"Reset Anchor Settings","color":"red","italic":false}'}}
+give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_anchor_settings"},display:{Name:'{"text":"Reset Anchor Settings","color":"dark_red","italic":false}'}}
 
 
 give @s minecraft:nether_star{display:{Name:'{"text":"Powerup Generation","color":"green","italic":false}'}}
@@ -72,13 +72,13 @@ give @s minecraft:cyan_stained_glass_pane{ajjgui:{Widget:"counter",Values:[30b,3
 give @s minecraft:tnt{display:{Name:'{"text":"Timeout Duration (Seconds)","color":"green","italic":false}',Lore:['{"text":"Applicable if powerup generation is enabled.","color":"gray","italic":false}']}}
 give @s minecraft:red_stained_glass_pane{ajjgui:{Widget:"counter",Values:[15b,16b,17b,18b,19b,20b,21b,22b,23b,24b,25b,26b,27b,28b,29b,30b,31b,32b,33b,34b,35b,36b,37b,38b,39b,40b,41b,42b,43b,44b,45b,46b,47b,48b,49b,50b,51b,52b,53b,54b,55b,56b,57b,58b,59b,60b,10b,11b,12b,13b,14b],Command:"function map:lobby/gui/powerup_timeout_seconds",State:14b},display:{Name:'{"text":""}'}} 15
 
-give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_powerup_settings"},display:{Name:'{"text":"Reset Powerup Settings","color":"red","italic":false}'}}
+give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_powerup_settings"},display:{Name:'{"text":"Reset Powerup Settings","color":"dark_red","italic":false}'}}
 
 
-give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_all_settings"},display:{Name:'{"text":"Reset All Settings","color":"red","italic":false}'}}
+give @s minecraft:barrier{ajjgui:{Widget:"button",Command:"function map:lobby/gui/reset_all_settings"},display:{Name:'{"text":"Reset All Settings","color":"dark_red","italic":false}'}}
 
 
-give @s minecraft:barrier{display:{Name:'{"text":"No Stats Recorded","color":"red","italic":false}'}}
+give @s minecraft:barrier{display:{Name:'{"text":"No Stats Recorded","color":"dark_red","italic":false}'}}
 
 
 give @s minecraft:player_head{ajjgui:{Widget:"button",Command:"function map:lobby/gui/ajj_github_profile"},SkullOwner:"Ajj",display:{Name:'{"text":"Ajj","color":"green","italic":false}',Lore:['{"text":"Datapack developer and mapmaker.","color":"gray","italic":false}','{"text":""}','{"text":"Click to view GitHub profile","color":"yellow","italic":false}']}}
