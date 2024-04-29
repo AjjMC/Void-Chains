@@ -1,5 +1,9 @@
 # Void Chains
 
+> **CURRENTLY STILL IN 1.20.4**
+>
+> **The minigame will be updated soon.**
+
 <p align = "center">
   <img src="thumbnail.png" width="100%">
 </p>
