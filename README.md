@@ -8,7 +8,7 @@
   <img src="thumbnail.png" width="100%">
 </p>
 
-Void Chains is a PvP-based minigame inspired by several elements of King of the Hill gamemodes, Splatoon, and Spleef. Two teams compete for domination in a dynamic landscape hanging in chains above the void. Using skill, teamwork, and unique mechanics, the objective is to make enemy territory collapse, leading up to the elimination of all opponents.
+Void Chains is a competitive PvP minigame that blends elements from King of the Hill, Splatoon, and Spleef. In this high-stakes contest, two teams battle for domination on a constantly shifting landscape suspended by chains over the void. Players must harness their skills and collaborate effectively to manipulate the battlefield and trigger the collapse of the opposing team's territory. The ultimate goal is to strategically force the enemy into the abyss, ensuring their complete elimination and securing victory. Through innovative mechanics and teamwork, participants engage in intense, tactical gameplay where every move could be decisive.
 
 ## Downloading and Instructions
 
