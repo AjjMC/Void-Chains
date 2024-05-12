@@ -1,4 +1,4 @@
-tag @s remove archer
-tag @s remove warrior
+tag @s remove map.archer
+tag @s remove map.warrior
 
-tag @s add knight
+tag @s add map.knight

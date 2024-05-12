@@ -1,1 +1,1 @@
-execute as @e[type=minecraft:marker,tag=blue_anchor,sort=nearest,limit=1] at @s run function map:game/destroy_blue_anchor
+execute as @e[type=minecraft:marker,tag=map.blue_anchor,sort=nearest,limit=1] at @s run function map:game/destroy_blue_anchor

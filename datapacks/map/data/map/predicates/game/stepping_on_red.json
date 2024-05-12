@@ -2,10 +2,9 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "type": "minecraft:player",
     "stepping_on": {
       "block": {
-        "tag": "map:game/red"
+        "blocks": "#map:game/red"
       }
     }
   }

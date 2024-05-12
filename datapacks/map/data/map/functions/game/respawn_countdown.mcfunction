@@ -1,8 +1,8 @@
-title @s subtitle [{"text":"Respawning in "},{"score":{"name":"@s","objective":"countdown_seconds"},"color":"yellow"}]
+title @s subtitle [{"text":"Respawning in "},{"score":{"name":"@s","objective":"map.countdown_seconds"},"color":"yellow"}]
 
-scoreboard players add @s countdown_ticks 1
+scoreboard players add @s map.countdown_ticks 1
 
-execute if score @s countdown_ticks matches 20 run scoreboard players remove @s countdown_seconds 1
-execute if score @s countdown_ticks matches 20 run scoreboard players set @s countdown_ticks 0
+execute if score @s map.countdown_ticks matches 20 run scoreboard players remove @s map.countdown_seconds 1
+execute if score @s map.countdown_ticks matches 20 run scoreboard players set @s map.countdown_ticks 0
 
-execute if score @s countdown_seconds matches 0 run function map:game/respawn_player
+execute if score @s map.countdown_seconds matches 0 run function map:game/respawn_player

@@ -1,8 +1,8 @@
 # Void Chains
 
-> **CURRENTLY STILL IN 1.20.4**
+> **AVAILABLE ON 1.20.5+**
 >
-> **The minigame will be updated soon.**
+> **Please report any bugs in the issues section.**
 
 <p align = "center">
   <img src="thumbnail.png" width="100%">

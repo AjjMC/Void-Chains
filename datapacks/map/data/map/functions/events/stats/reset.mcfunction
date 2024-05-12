@@ -1,9 +1,9 @@
-tag @s remove knight
-tag @s remove archer
-tag @s remove warrior
+tag @s remove map.knight
+tag @s remove map.archer
+tag @s remove map.warrior
 
-scoreboard players set @s kills 0
-scoreboard players set @s deaths 0
-scoreboard players set @s anchors_claimed 0
-scoreboard players set @s anchors_generated 0
-scoreboard players set @s powerups_activated 0
+scoreboard players set @s map.kills 0
+scoreboard players set @s map.deaths 0
+scoreboard players set @s map.anchors_claimed 0
+scoreboard players set @s map.anchors_generated 0
+scoreboard players set @s map.powerups_activated 0

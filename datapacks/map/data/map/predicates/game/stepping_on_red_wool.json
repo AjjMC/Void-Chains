@@ -2,12 +2,9 @@
   "condition": "minecraft:entity_properties",
   "entity": "this",
   "predicate": {
-    "type": "minecraft:player",
     "stepping_on": {
       "block": {
-        "blocks": [
-          "minecraft:red_wool"
-        ]
+        "blocks": "minecraft:red_wool"
       }
     }
   }
