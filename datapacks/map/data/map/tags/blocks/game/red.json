@@ -1,6 +1,6 @@
 {
   "values": [
-    "minecraft:red_wool",
-    "minecraft:red_concrete"
+    "minecraft:red_concrete",
+    "#map:game/red_wool"
   ]
 }

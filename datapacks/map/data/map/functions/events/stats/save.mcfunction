@@ -3,6 +3,7 @@ loot insert ~ ~ ~ loot map:lobby/player_head
 execute if entity @s[tag=map.knight] run data modify storage map:data kit set value "Knight"
 execute if entity @s[tag=map.archer] run data modify storage map:data kit set value "Archer"
 execute if entity @s[tag=map.warrior] run data modify storage map:data kit set value "Warrior"
+execute if entity @s[tag=map.miner] run data modify storage map:data kit set value "Miner"
 
 summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats1"]}
 summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats2"]}

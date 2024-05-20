@@ -15,7 +15,9 @@ gamerule spectatorsGenerateChunks false
 
 scoreboard objectives add map.death deathCount
 scoreboard objectives add map.hunger food
+scoreboard objectives add map.arrows dummy
 scoreboard objectives add map.global dummy
+scoreboard objectives add map.gui_ticks dummy
 scoreboard objectives add map.tp_count dummy
 scoreboard objectives add map.charge_ticks dummy
 scoreboard objectives add map.charge_seconds dummy

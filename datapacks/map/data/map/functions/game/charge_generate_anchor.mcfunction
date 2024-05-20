@@ -7,4 +7,4 @@ execute if score @s map.charge_seconds matches 20 run function map:game/generate
 tag @s remove map.claim_anchor
 tag @s add map.generate_anchor
 
-title @s actionbar {"text":"Generating anchor..."}
+execute if entity @s[tag=!map.laser_powerup] run title @s actionbar {"text":"Generating anchor..."}

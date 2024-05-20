@@ -14,23 +14,14 @@ execute if score #game_minutes map.global matches 10.. if score #game_seconds ma
 execute if score #game_minutes map.global matches 10.. if score #game_seconds map.global matches 10.. run bossbar set map:timer name [{"score":{"name":"#game_minutes","objective":"map.global"},"color":"yellow"},{"text":":"},{"score":{"name":"#game_seconds","objective":"map.global"}}]
 
 execute if score #arena_border_shrinking map.global matches 1 run function map:game/arena_border
+
 function map:game/powerup_generation
 
-execute as @a[team=map.red,tag=!map.dead] at @s run function map:game/red_team
-execute as @a[team=map.blue,tag=!map.dead] at @s run function map:game/blue_team
-execute as @a[team=map.guest] run function map:game/guest_team
-execute as @a[tag=map.dead] run function map:game/dead_players
-execute as @a[tag=map.active_powerup] run function map:game/powerup_countdown
+execute as @e[type=minecraft:arrow] run function map:game/arrows
+execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/anchors
 
-execute as @a unless predicate map:game/charging_anchor run function map:game/reset_charge
-execute as @a if score @s map.death matches 1.. run function map:game/player_death
-execute as @a[team=!map.guest,tag=!map.dead] at @s positioned ~-47.5 ~16 ~-47.5 if entity @e[type=minecraft:marker,tag=map.arena,dx=94,dy=64,dz=94] run kill @s
-execute as @a[team=!map.guest] run function map:game/check_powerup
-
-execute as @e[gamemode=spectator] at @s positioned ~-47.5 ~-64 ~-47.5 unless entity @e[type=minecraft:marker,tag=map.arena,dx=94,dy=64,dz=94] run spectate
-execute as @e[gamemode=spectator] at @s positioned ~-47.5 ~-64 ~-47.5 unless entity @e[type=minecraft:marker,tag=map.arena,dx=94,dy=64,dz=94] at @e[type=minecraft:marker,tag=map.arena] run tp @s ~ ~20 ~
-
-execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/arena_border_destroy_anchors
+execute as @a[team=!map.guest,tag=!map.dead] run function map:game/players
+execute as @a[gamemode=spectator] run function map:game/spectators
 
 execute unless entity @e[type=minecraft:marker,tag=map.red_anchor] unless entity @a[team=map.red,tag=!map.dead] as @a run function map:events/blue_team_win
 execute unless entity @e[type=minecraft:marker,tag=map.blue_anchor] unless entity @a[team=map.blue,tag=!map.dead] as @a run function map:events/red_team_win

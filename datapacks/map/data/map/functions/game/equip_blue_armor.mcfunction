@@ -1,0 +1,7 @@
+item replace entity @s armor.feet with minecraft:leather_boots[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:hide_tooltip={},minecraft:dyed_color={rgb:255},minecraft:enchantments={levels:{"minecraft:binding_curse":2}}]
+item replace entity @s armor.legs with minecraft:leather_leggings[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:hide_tooltip={},minecraft:dyed_color={rgb:255},minecraft:enchantments={levels:{"minecraft:binding_curse":2}}]
+item replace entity @s armor.chest with minecraft:leather_chestplate[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:hide_tooltip={},minecraft:dyed_color={rgb:255},minecraft:enchantments={levels:{"minecraft:binding_curse":2}}]
+
+execute if score @s map.selected_hat matches 0 run item replace entity @s armor.head with minecraft:leather_helmet[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:hide_tooltip={},minecraft:dyed_color={rgb:255},minecraft:enchantments={levels:{"minecraft:binding_curse":2}}]
+
+function map:game/equip_both_teams_armor

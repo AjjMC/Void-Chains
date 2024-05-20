@@ -4,7 +4,7 @@
   "predicate": {
     "stepping_on": {
       "block": {
-        "blocks": "minecraft:blue_wool"
+        "blocks": "#map:game/blue_wool"
       }
     }
   }
