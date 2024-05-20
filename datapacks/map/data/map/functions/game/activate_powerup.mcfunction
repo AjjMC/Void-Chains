@@ -12,6 +12,6 @@ execute if score #temp map.global matches 4 run function map:game/activate_invis
 execute if score #temp map.global matches 5 run function map:game/activate_laser_powerup
 
 effect give @s[tag=!map.invisibility_powerup] minecraft:glowing infinite 0 true
-execute at @s run playsound minecraft:block.enchantment_table.use block @a
+execute at @s run playsound minecraft:block.enchantment_table.use master @a
 
 scoreboard players add @s map.powerups_activated 1

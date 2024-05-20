@@ -12,5 +12,5 @@ execute store result bossbar map:timer max run scoreboard players get #arena_bor
 execute store result bossbar map:timer value run scoreboard players get #game_ticks_total map.global
 
 execute if score #game_minutes map.global = #arena_border_shrinking_minutes map.global if score #game_seconds map.global matches 0 if score #game_ticks map.global matches 0 run tellraw @a {"text":"The arena border has begun to shrink!","color":"dark_aqua"}
-execute if score #game_minutes map.global = #arena_border_shrinking_minutes map.global if score #game_seconds map.global matches 0 if score #game_ticks map.global matches 0 as @a at @s run playsound minecraft:entity.wither.death hostile @s
+execute if score #game_minutes map.global = #arena_border_shrinking_minutes map.global if score #game_seconds map.global matches 0 if score #game_ticks map.global matches 0 as @a at @s run playsound minecraft:entity.wither.death master @s
 execute if score #game_minutes map.global = #arena_border_shrinking_minutes map.global if score #game_seconds map.global matches 0 if score #game_ticks map.global matches 0 run worldborder set 25 300
