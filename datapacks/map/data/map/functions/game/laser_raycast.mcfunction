@@ -6,4 +6,4 @@ execute if block ~ ~ ~ #minecraft:wool run playsound minecraft:block.lava.exting
 execute if block ~ ~ ~ #minecraft:wool run schedule function map:mechanics/main 1t
 execute if block ~ ~ ~ #minecraft:wool run setblock ~ ~ ~ minecraft:air
 
-execute if entity @s[distance=..50] positioned ^ ^ ^0.1 run function map:game/laser_raycast
+execute if entity @s[distance=..50] positioned ^ ^ ^1 run function map:game/laser_raycast
