@@ -11,6 +11,7 @@ gamerule fallDamage false
 gamerule keepInventory true
 gamerule reducedDebugInfo false
 gamerule sendCommandFeedback false
+gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 
 scoreboard objectives add map.death deathCount

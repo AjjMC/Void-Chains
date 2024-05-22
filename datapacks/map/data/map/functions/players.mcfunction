@@ -1,3 +1,4 @@
+execute if entity @s[gamemode=survival] run gamemode adventure @s
 execute if score @s map.hunger matches ..19 run effect give @s minecraft:saturation 1 0 true
 execute if score @s map.gui_ticks matches 1.. run scoreboard players remove @s map.gui_ticks 1
 
