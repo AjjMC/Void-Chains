@@ -4,7 +4,7 @@ execute if score @s map.gui_ticks matches 1.. run scoreboard players set @s map.
 execute if score @s map.gui_ticks matches 1.. run return fail
 execute if score @s map.gui_ticks matches 0 on vehicle on passengers run scoreboard players set @s map.gui_ticks 5
 execute if score @s map.gui_ticks matches 1.. run ride @s dismount
-execute if score @s map.gui_ticks matches 1.. at @s run tp @s ~ ~ ~
+execute if score @s map.gui_ticks matches 1.. run tp @s @s
 execute if score @s map.gui_ticks matches 1.. run return fail
 scoreboard players set @s map.gui_ticks 5
 
