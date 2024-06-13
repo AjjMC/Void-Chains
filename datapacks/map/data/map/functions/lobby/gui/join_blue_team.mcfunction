@@ -1,8 +1,0 @@
-execute at @s run playsound minecraft:ui.button.click master @s
-
-execute if entity @s[team=map.blue] run tellraw @s [{"text":"Already joined "},{"text":"Blue Team","color":"blue"}]
-
-execute if score #random_team_assignment map.global matches 0 if entity @s[team=!map.blue] run tellraw @s [{"text":"Joined "},{"text":"Blue Team","color":"blue"}]
-execute if score #random_team_assignment map.global matches 0 run team join map.blue @s
-
-execute if score #random_team_assignment map.global matches 1 if entity @s[team=!map.blue] run tellraw @s [{"text":"Cannot join team; teams will be randomly assigned"}]

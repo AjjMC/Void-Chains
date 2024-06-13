@@ -1,1 +1,0 @@
-execute as @e[type=minecraft:marker,tag=map.red_anchor,sort=nearest,limit=1] at @s run function map:game/destroy_red_anchor
