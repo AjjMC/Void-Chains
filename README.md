@@ -30,11 +30,11 @@ The minigame can be downloaded from this repository by clicking on "Code" and th
 
 * If part of a territory is not attached to any anchor platforms of the same color, it collapses
 
-*	Player trails can override the opposite color and detach enemy land from the anchor platforms supporting it, causing isolated blocks to fall and \\"spleef\\" others
+*	Player trails can override the opposite color and detach enemy land from the anchor platforms supporting it, causing isolated blocks to fall and "spleef" others
 
 *	It is possible to walk into the opposing territory and not override it, but land cannot be expanded from within that color
 
-*	Players can claim anchor platforms of the enemy team, and new anchor platforms may be generated within a team\'s own territory
+*	Players can claim anchor platforms of the enemy team, and new anchor platforms may be generated within a team's own territory
 
 *	The border will begin to shrink, destroying all anchor platforms it touches and limiting player movement
 
