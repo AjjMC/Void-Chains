@@ -1,6 +1,8 @@
-setworldspawn 0 63 0
+bossbar add map:timer {"text":""}
+bossbar set map:timer color green
+bossbar set map:timer style notched_6
+
 defaultgamemode adventure
-time set day
 
 gamerule commandBlockOutput false
 gamerule doDaylightCycle false
@@ -55,9 +57,6 @@ scoreboard players set #minus_one map.global -1
 scoreboard players set #two map.global 2
 scoreboard players set #minute_ticks map.global 1200
 
-scoreboard players set #game_state map.global 0
-scoreboard players set #progress_count map.global 0
-
 scoreboard players reset #arena_border_shrinking_ticks map.global
 scoreboard players reset #countdown_seconds map.global
 scoreboard players reset #game_minutes map.global
@@ -88,36 +87,33 @@ team empty map.red
 team empty map.blue
 team empty map.guest
 
-bossbar add map:timer {"text":""}
-bossbar set map:timer color green
-bossbar set map:timer style notched_6
-bossbar set map:timer value 0
-bossbar set map:timer players
+time set day
 
 worldborder damage amount 100
 worldborder damage buffer 0
 
 execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
+execute positioned 20 62 0 run forceload add ~ ~
+execute positioned 0 62 20 run forceload add ~ ~
+
+function map:events/prepare_arena_reset
 kill @e[type=minecraft:marker,tag=map.arena]
 execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["map.arena"]}
 execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-42 ~ ~-42 ~42 ~ ~42 minecraft:barrier
-execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
 execute at @e[type=minecraft:marker,tag=map.arena] run function map:events/reset_arena
+execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
+execute as @a run function map:events/return_player
 
-kill @e[type=minecraft:arrow]
-execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/destroy_powerup
-
-execute positioned 20 62 0 run forceload add ~ ~
-execute positioned 0 62 20 run forceload add ~ ~
+setworldspawn 0 63 0
 execute positioned 0 62 20 run data merge block ~ ~ ~ {CustomName:'{"text":"Game Menu"}',Lock:""}
 execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:reset_guis stats
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
 function map:lobby/reset_all_settings
 function ajjgui:_reload
-data remove storage ajjgui:data database
 
-execute as @a run function map:events/return_player
-execute as @a run function map:events/reset_player
+data remove storage ajjgui:data database
+scoreboard players set #game_state map.global 0
+scoreboard players set #progress_count map.global 0
 scoreboard players reset @a
 function map:dev/set_cosmetics
 
