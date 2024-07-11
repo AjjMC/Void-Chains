@@ -93,7 +93,7 @@ give @p minecraft:barrier[minecraft:custom_name='{"text":"No Stats Recorded","co
 # links
 
 give @p minecraft:player_head[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/ajj_github_profile"}},minecraft:profile={name:"Ajj"},minecraft:custom_name='{"text":"Ajj","color":"green","italic":false}',minecraft:lore=['{"text":"Mapmaker and datapack developer.","color":"gray","italic":false}','{"text":""}','{"text":"Click to view GitHub profile","color":"yellow","italic":false}']]
-give @p minecraft:filled_map[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/map_github_repository"}},minecraft:hide_additional_tooltip={},minecraft:custom_name='{"text":"Void Chains","color":"green","italic":false}',minecraft:lore=['{"text":""}','{"text":"Click to view GitHub repository","color":"yellow","italic":false}']]
+give @p minecraft:filled_map[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/map_github_repository"}},minecraft:hide_additional_tooltip={},minecraft:custom_name='{"text":"Void Chains","color":"green","italic":false}',minecraft:lore=['{"text":"Download and feedback page.","color":"gray","italic":false}','{"text":""}','{"text":"Click to view GitHub repository","color":"yellow","italic":false}']]
 give @p minecraft:command_block[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/ajjgui_github_repository"}},minecraft:custom_name='{"text":"ajjgui Datapack","color":"green","italic":false}',minecraft:lore=['{"text":"A data-driven GUI framework for mapmaking.","color":"gray","italic":false}','{"text":""}','{"text":"Click to view GitHub repository","color":"yellow","italic":false}']]
 
 # settings page 0
