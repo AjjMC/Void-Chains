@@ -25,4 +25,6 @@ tag @s remove map.anchor_powerup
 tag @s remove map.invisibility_powerup
 tag @s remove map.laser_powerup
 
+title @s actionbar {"text":""}
+
 schedule function map:mechanics/main 1t
