@@ -1,3 +1,5 @@
+bossbar set map:timer players @a
+
 scoreboard players add #game_ticks_total map.global 1
 scoreboard players add #game_ticks map.global 1
 
