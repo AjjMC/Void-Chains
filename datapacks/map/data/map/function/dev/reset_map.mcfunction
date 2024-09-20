@@ -89,7 +89,6 @@ team empty map.guest
 
 time set day
 
-worldborder damage amount 100
 worldborder damage buffer 0
 
 execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
