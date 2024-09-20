@@ -1,24 +1,9 @@
-bossbar set map:timer players @a
-
-scoreboard players add #game_ticks_total map.global 1
-scoreboard players add #game_ticks map.global 1
-
-execute if score #game_ticks map.global matches 20 run scoreboard players add #game_seconds map.global 1
-execute if score #game_ticks map.global matches 20 run scoreboard players set #game_ticks map.global 0
-execute if score #game_seconds map.global matches 60 run scoreboard players add #game_minutes map.global 1
-execute if score #game_seconds map.global matches 60 run scoreboard players set #game_seconds map.global 0
-
-execute if score #game_minutes map.global matches ..9 if score #game_seconds map.global matches ..9 run bossbar set map:timer name [{"text":"0","color":"yellow"},{"score":{"name":"#game_minutes","objective":"map.global"}},{"text":":0"},{"score":{"name":"#game_seconds","objective":"map.global"}}]
-execute if score #game_minutes map.global matches ..9 if score #game_seconds map.global matches 10.. run bossbar set map:timer name [{"text":"0","color":"yellow"},{"score":{"name":"#game_minutes","objective":"map.global"}},{"text":":"},{"score":{"name":"#game_seconds","objective":"map.global"}}]
-execute if score #game_minutes map.global matches 10.. if score #game_seconds map.global matches ..9 run bossbar set map:timer name [{"score":{"name":"#game_minutes","objective":"map.global"},"color":"yellow"},{"text":":0"},{"score":{"name":"#game_seconds","objective":"map.global"}}]
-execute if score #game_minutes map.global matches 10.. if score #game_seconds map.global matches 10.. run bossbar set map:timer name [{"score":{"name":"#game_minutes","objective":"map.global"},"color":"yellow"},{"text":":"},{"score":{"name":"#game_seconds","objective":"map.global"}}]
-
-execute if score #arena_border_shrinking map.global matches 1 run function map:game/arena_border
-
+function map:game/timer
 function map:game/powerup_generation
 
 execute as @e[type=minecraft:arrow] run function map:game/arrows
 execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/anchors
+execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/powerups
 
 execute as @a run function map:game/players
 
