@@ -24,18 +24,18 @@ The minigame can be downloaded from this repository by clicking on "Code" and th
 
 ## Gameplay
 
-*	Two teams begin with a number of anchor platforms assigned to each, suspended at random locations over the void, which serve as respawn points
+* Two teams begin with a number of anchor platforms assigned to each, suspended at random locations over the void, which serve as respawn points
 
-*	Players can form land trails to expand their color and traverse the void, starting from one of their anchor platforms
+* Players can form land trails to expand their color and traverse the void, starting from one of their anchor platforms
 
 * If part of a territory is not attached to any anchor platforms of the same color, it collapses
 
-*	Player trails can override the opposite color and detach enemy land from the anchor platforms supporting it, causing isolated blocks to fall and "spleef" others
+* Player trails can override the opposite color and detach enemy land from the anchor platforms supporting it, causing isolated blocks to fall and "spleef" others
 
-*	It is possible to walk into the opposing territory and not override it, but land cannot be expanded from within that color
+* It is possible to walk into the opposing territory and not override it, but land cannot be expanded from within that color
 
-*	Players can claim anchor platforms of the enemy team, and new anchor platforms may be generated within a team's own territory
+* Players can claim anchor platforms of the enemy team, and new anchor platforms may be generated within a team's own territory
 
-*	The border will begin to shrink, destroying all anchor platforms it touches and limiting player movement
+* The border will begin to shrink, destroying all anchor platforms it touches and limiting player movement
 
-*	The objective is to eliminate the opposing team after claiming all the anchor platforms and preventing enemy player respawning
+* The objective is to eliminate the opposing team after claiming all the anchor platforms and preventing enemy player respawning
