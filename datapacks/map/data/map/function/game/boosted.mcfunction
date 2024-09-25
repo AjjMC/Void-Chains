@@ -1,4 +1,5 @@
 function map:game/powerup_countdown
+execute if predicate map:lobby/using_gui run return fail
 
 execute if entity @s[tag=map.speed_powerup] run title @s actionbar {"text":"You Can Move Faster!","color":"green"}
 execute if entity @s[tag=map.knockback_powerup] run title @s actionbar {"text":"You Have Knockback on Your Weapon!","color":"green"}
