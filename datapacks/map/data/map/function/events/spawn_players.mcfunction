@@ -1,4 +1,6 @@
+worldborder damage amount 1000
 worldborder set 77
+
 effect clear @a minecraft:weakness
 
 scoreboard players operation #temp map.global = #anchor_starting_count map.global

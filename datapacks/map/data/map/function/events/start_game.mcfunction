@@ -1,8 +1,7 @@
 setblock 0 62 20 minecraft:air
-setblock 0 62 20 minecraft:barrel[facing=up]
-data modify block 0 62 20 Lock set value " "
+setblock 0 62 20 minecraft:barrel[facing=up]{Lock:" "}
 
-title @a times 20t 60t 20t
+title @a times 0s 5s 0s
 title @a title {"text":"GAME STARTING!","bold":true}
 
 execute as @a run function map:events/close_gui

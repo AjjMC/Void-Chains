@@ -5,4 +5,4 @@ execute if score #countdown_seconds map.global matches 1.. as @a at @s run plays
 scoreboard players remove #countdown_seconds map.global 1
 
 execute if score #countdown_seconds map.global matches -1 run function map:events/spawn_players
-execute if score #countdown_seconds map.global matches 0..4 run schedule function map:events/start_countdown 20t
+execute if score #countdown_seconds map.global matches 0..4 run schedule function map:events/start_countdown 1s

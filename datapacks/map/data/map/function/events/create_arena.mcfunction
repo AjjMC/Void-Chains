@@ -1,4 +1,4 @@
-setworldspawn ~ ~20 ~
+setworldspawn ~ ~1 ~
 
 fill ~-38 ~-1 ~-38 ~38 ~-1 ~38 minecraft:barrier replace minecraft:air
 function map:events/distribute_anchors

@@ -21,12 +21,12 @@ scoreboard objectives add map.death deathCount
 scoreboard objectives add map.hunger food
 
 scoreboard objectives add map.arrows dummy
-scoreboard objectives add map.global dummy
-scoreboard objectives add map.gui_ticks dummy
 scoreboard objectives add map.charge_seconds dummy
 scoreboard objectives add map.charge_ticks dummy
 scoreboard objectives add map.countdown_seconds dummy
 scoreboard objectives add map.countdown_ticks dummy
+scoreboard objectives add map.global dummy
+scoreboard objectives add map.gui_ticks dummy
 scoreboard objectives add map.powerup_seconds dummy
 scoreboard objectives add map.powerup_ticks dummy
 scoreboard objectives add map.progress_count dummy
@@ -70,6 +70,8 @@ scoreboard players reset #powerup_ticks map.global
 scoreboard players reset #temp map.global
 scoreboard players reset #temp1 map.global
 
+setworldspawn 0 63 0
+
 team add map.guest {"text":"Guest Team"}
 team add map.red {"text":"Red Team"}
 team add map.blue {"text":"Blue Team"}
@@ -90,6 +92,7 @@ team empty map.guest
 time set day
 
 worldborder damage buffer 0
+worldborder set 30000000
 
 execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
 execute positioned 20 62 0 run forceload add ~ ~
@@ -97,23 +100,28 @@ execute positioned 0 62 20 run forceload add ~ ~
 
 function map:events/prepare_arena_reset
 kill @e[type=minecraft:marker,tag=map.arena]
+
 execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["map.arena"]}
 execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-42 ~ ~-42 ~42 ~ ~42 minecraft:barrier
 execute at @e[type=minecraft:marker,tag=map.arena] run function map:events/reset_arena
 execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
+
 execute as @a run function map:events/return_player
 
-setworldspawn 0 63 0
-execute positioned 0 62 20 run data merge block ~ ~ ~ {CustomName:'{"text":"Game Menu"}',Lock:""}
+data modify block 0 62 20 Lock set value ""
+
 execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:reset_guis stats
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
+
 function map:lobby/reset_all_settings
 function ajjgui:_reload
 
 data remove storage ajjgui:data database
+
 scoreboard players set #game_state map.global 0
 scoreboard players set #progress_count map.global 0
 scoreboard players reset @a
+
 function map:dev/set_cosmetics
 
 tellraw @a {"text":"Reset map","color":"light_purple"}
