@@ -1,5 +1,5 @@
 setblock 0 62 20 minecraft:air
-setblock 0 62 20 minecraft:barrel[facing=up]{Lock:" "}
+setblock 0 62 20 minecraft:barrel[facing=up]{lock:{items:["minecraft:debug_stick"]}}
 
 title @a times 0s 5s 0s
 title @a title {"text":"GAME STARTING!","bold":true}

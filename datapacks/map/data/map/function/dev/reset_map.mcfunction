@@ -1,5 +1,5 @@
 bossbar add map:timer {"text":""}
-bossbar set map:timer color green
+bossbar set map:timer color yellow
 bossbar set map:timer style notched_6
 
 defaultgamemode adventure
@@ -57,7 +57,7 @@ scoreboard players set #minus_one map.global -1
 scoreboard players set #two map.global 2
 scoreboard players set #minute_ticks map.global 1200
 
-scoreboard players reset #arena_border_shrinking_ticks map.global
+scoreboard players reset #border_shrinking_ticks map.global
 scoreboard players reset #countdown_seconds map.global
 scoreboard players reset #game_minutes map.global
 scoreboard players reset #game_seconds map.global
@@ -103,12 +103,16 @@ kill @e[type=minecraft:marker,tag=map.arena]
 
 execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["map.arena"]}
 execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-42 ~ ~-42 ~42 ~ ~42 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-39 ~1 ~-39 ~-39 ~5 ~39 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-39 ~1 ~-39 ~39 ~5 ~-39 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~39 ~1 ~39 ~-39 ~5 ~39 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~39 ~1 ~39 ~39 ~5 ~-39 minecraft:barrier
 execute at @e[type=minecraft:marker,tag=map.arena] run function map:events/reset_arena
 execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
 
 execute as @a run function map:events/return_player
 
-data modify block 0 62 20 Lock set value ""
+data remove block 0 62 20 lock
 
 execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:reset_guis stats
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0

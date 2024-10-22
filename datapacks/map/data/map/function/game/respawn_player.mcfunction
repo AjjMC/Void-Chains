@@ -5,12 +5,14 @@ execute at @e[type=minecraft:marker,tag=map.blue_anchor,sort=random,limit=1] run
 
 gamemode adventure @s
 
-execute if entity @s[team=map.red] run function map:game/equip_red_armor
-execute if entity @s[team=map.blue] run function map:game/equip_blue_armor
-
 scoreboard players set @s[tag=map.knight] map.arrows 0
 scoreboard players set @s[tag=map.archer] map.arrows 12
 scoreboard players set @s[tag=map.warrior] map.arrows 0
 scoreboard players set @s[tag=map.miner] map.arrows 0
+
+execute if entity @s[team=map.red] run function map:game/equip_red_armor
+execute if entity @s[team=map.blue] run function map:game/equip_blue_armor
+
+execute if entity @s[tag=map.archer] run function map:game/equip_arrows
 
 tag @s remove map.dead

@@ -1,4 +1,4 @@
-function map:lobby/split_teams
+function map:lobby/create_teams
 
 execute store result score #temp map.global if entity @a[team=!map.guest]
 scoreboard players operation #temp map.global %= #two map.global

@@ -1,5 +1,5 @@
-execute if score #arena_border_shrinking map.global matches 0 run function map:game/display_time
-execute if score #arena_border_shrinking map.global matches 1 run function map:game/arena_border
+execute if score #border_shrinking map.global matches 0 run function map:game/display_time
+execute if score #border_shrinking map.global matches 1 run function map:game/border
 
 bossbar set map:timer players @a
 

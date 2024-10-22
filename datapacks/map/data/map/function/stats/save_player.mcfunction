@@ -17,11 +17,11 @@ tag @s add map.selected
 
 data modify entity @e[type=minecraft:text_display,tag=map.stats1,limit=1] text set value '{"selector":"@a[tag=map.selected]","italic":false}'
 data modify entity @e[type=minecraft:text_display,tag=map.stats2,limit=1] text set value '[{"text":"Kit: ","color":"gray","italic":false},{"nbt":"kit","storage":"map:data","color":"dark_green"}]'
-data modify entity @e[type=minecraft:text_display,tag=map.stats3,limit=1] text set value '[{"text":"Kills: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.kills"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=map.stats4,limit=1] text set value '[{"text":"Deaths: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.deaths"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=map.stats5,limit=1] text set value '[{"text":"Anchors Claimed: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.anchors_claimed"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=map.stats6,limit=1] text set value '[{"text":"Anchors Generated: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.anchors_generated"},"color":"yellow"}]'
-data modify entity @e[type=minecraft:text_display,tag=map.stats7,limit=1] text set value '[{"text":"Powerups Activated: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.powerups_activated"},"color":"yellow"}]'
+data modify entity @e[type=minecraft:text_display,tag=map.stats3,limit=1] text set value '[{"text":"Kills: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.kills"},"color":"white"}]'
+data modify entity @e[type=minecraft:text_display,tag=map.stats4,limit=1] text set value '[{"text":"Deaths: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.deaths"},"color":"white"}]'
+data modify entity @e[type=minecraft:text_display,tag=map.stats5,limit=1] text set value '[{"text":"Anchors Claimed: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.anchors_claimed"},"color":"white"}]'
+data modify entity @e[type=minecraft:text_display,tag=map.stats6,limit=1] text set value '[{"text":"Anchors Generated: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.anchors_generated"},"color":"white"}]'
+data modify entity @e[type=minecraft:text_display,tag=map.stats7,limit=1] text set value '[{"text":"Powerups Activated: ","color":"gray","italic":false},{"score":{"name":"@a[tag=map.selected]","objective":"map.powerups_activated"},"color":"white"}]'
 
 tag @s remove map.selected
 
