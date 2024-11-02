@@ -2,6 +2,8 @@
 
 > **AVAILABLE ON 1.21.3**
 >
+> **[CLICK HERE TO DOWNLOAD](https://github.com/AjjMC/Void-Chains/archive/refs/heads/main.zip)**
+>
 > **Please report any bugs in the issues section.**
 
 <p align = "center">
@@ -9,10 +11,6 @@
 </p>
 
 Void Chains is a competitive PvP minigame that blends elements from various game modes, including KOTH and Spleef. In this high-stakes contest, two teams battle for domination on an ever-changing landscape suspended by chains over the void. By manipulating the battlefield through unique mechanics, the goal is to strategically claim all the respawn points of the enemy, ensuring their complete elimination and securing victory.
-
-# Downloading
-
-The minigame can be downloaded from this repository by clicking on "Code" and then "Download ZIP". The folder inside the ZIP file is the world.
 
 # Getting Started
 
