@@ -59,7 +59,7 @@ give @p minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",command
 give @p minecraft:chain[minecraft:custom_name='{"text":"Generation Ability","color":"green","italic":false}']
 give @p minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":'{"text":"Click to change","color":"yellow","italic":false}',"minecraft:lore":['{"text":"Enabled","color":"green","italic":false}']}},{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":'{"text":"Click to change","color":"yellow","italic":false}',"minecraft:lore":['{"text":"Disabled","color":"red","italic":false}']}}],command:"function map:gui/anchor_generation",state:1}},minecraft:custom_name='{"text":"Click to change","color":"yellow","italic":false}',minecraft:lore=['{"text":"Enabled","color":"green","italic":false}']]
 
-give @p minecraft:lodestone[minecraft:custom_name='{"text":"Starting Count","color":"green","italic":false}']
+give @p minecraft:frogspawn[minecraft:custom_name='{"text":"Starting Count","color":"green","italic":false}']
 give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[3,4,5,6,1,2],command:"function map:gui/anchor_starting_count",state:2}},minecraft:custom_name='{"text":"Click to change","color":"yellow","italic":false}'] 3
 
 give @p minecraft:purple_banner[minecraft:custom_name='{"text":"Claiming Duration (Seconds)","color":"green","italic":false}']
@@ -185,3 +185,5 @@ give @p minecraft:nether_star[minecraft:custom_data={ajjgui:{widget:"button",com
 
 give @p minecraft:frogspawn[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:dev/restart_game",exit:1b}},minecraft:custom_name='{"text":"Restart Game","color":"green","italic":false}']
 give @p minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:dev/end_game",exit:1b}},minecraft:custom_name='{"text":"End Game","color":"green","italic":false}']
+
+tellraw @s {"text":"Got ajjgui widgets","color":"light_purple"}

@@ -12,4 +12,4 @@ execute if entity @s[tag=map.miner] run item replace entity @s hotbar.1 with min
 execute if entity @s[tag=map.knockback_powerup] run item modify entity @s hotbar.0 map:game/add_knockback
 execute if entity @s[tag=map.laser_powerup] run item modify entity @s hotbar.0 map:game/add_laser
 
-execute if score #developer_tools map.global matches 1 run item replace entity @s hotbar.8 with minecraft:command_block_minecart[minecraft:custom_data={map:{item:1b,developer_tools:1b}},minecraft:consumable={consume_seconds:2147483647},minecraft:custom_name='[{"text":"Developer Tools","italic":false},{"text":" (Right Click)","color":"gray"}]']
+execute if score #developer_tools map.global matches 1 run item replace entity @s hotbar.8 with minecraft:command_block_minecart[minecraft:custom_data={map:{item:1b,developer_tools:1b}},minecraft:consumable={consume_seconds:2147483647},minecraft:custom_name='[{"text":"Developer Tools","color":"light_purple","italic":false},{"text":" (Right Click)","color":"gray"}]']

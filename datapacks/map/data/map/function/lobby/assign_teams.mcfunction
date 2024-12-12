@@ -1,4 +1,5 @@
 function map:lobby/create_teams
+team empty map.random
 
 execute store result score #temp map.global if entity @a[team=!map.guest]
 scoreboard players operation #temp map.global %= #two map.global

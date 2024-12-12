@@ -2,11 +2,7 @@ execute if entity @s[gamemode=survival] run gamemode adventure @s
 execute if score @s map.hunger matches ..19 run effect give @s minecraft:saturation 1 0 true
 execute if score @s map.gui_ticks matches 1.. run scoreboard players remove @s map.gui_ticks 1
 
-execute if score @s map.gui_ticks matches 0 run advancement revoke @s only map:lobby/join_guest_team
-execute if score @s map.gui_ticks matches 0 run advancement revoke @s only map:lobby/join_red_team
-execute if score @s map.gui_ticks matches 0 run advancement revoke @s only map:lobby/join_blue_team
-execute if score @s map.gui_ticks matches 0 run advancement revoke @s only map:lobby/player_settings
-execute if score @s map.gui_ticks matches 0 run advancement revoke @s only map:game/developer_tools
+execute if score @s map.gui_ticks matches 0 run function map:revoke_advancements
 
 scoreboard players add @s map.selected_hat 0
 scoreboard players add @s map.selected_shield 0
