@@ -5,9 +5,8 @@ execute if entity @s[team=map.random] if items entity @s hotbar.5 minecraft:purp
 
 execute unless items entity @s hotbar.0 *[minecraft:custom_data~{map:{game_info:1b}}] run function map:lobby/equip_player
 execute unless items entity @s hotbar.3 *[minecraft:custom_data~{map:{join_guest_team:1b}}] run function map:lobby/equip_player
+execute unless items entity @s hotbar.8 *[minecraft:custom_data~{map:{player_settings:1b}}] run function map:lobby/equip_player
 
 execute if score #random_team_assignment map.global matches 0 unless items entity @s hotbar.4 *[minecraft:custom_data~{map:{join_red_team:1b}}] run function map:lobby/equip_player
 execute if score #random_team_assignment map.global matches 0 unless items entity @s hotbar.5 *[minecraft:custom_data~{map:{join_blue_team:1b}}] run function map:lobby/equip_player
 execute if score #random_team_assignment map.global matches 1 unless items entity @s hotbar.5 *[minecraft:custom_data~{map:{join_random_team:1b}}] run function map:lobby/equip_player
-
-execute unless items entity @s hotbar.8 *[minecraft:custom_data~{map:{player_settings:1b}}] run function map:lobby/equip_player
