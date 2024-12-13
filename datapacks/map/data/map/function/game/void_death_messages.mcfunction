@@ -6,8 +6,8 @@ execute if score #temp map.global matches 0 if entity @a[tag=map.attacker] run t
 execute if score #temp map.global matches 1 unless entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" was consumed by the void","color":"white"}]
 execute if score #temp map.global matches 1 if entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" was consumed by the void while trying to escape ","color":"white"},{"selector":"@a[tag=map.attacker]"}]
 
-execute if score #temp map.global matches 2 unless entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" tried to fly but couldn't","color":"white"}]
-execute if score #temp map.global matches 2 if entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" tried to fly but couldn't while trying to escape ","color":"white"},{"selector":"@a[tag=map.attacker]"}]
+execute if score #temp map.global matches 2 unless entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" attempted to fly but couldn't","color":"white"}]
+execute if score #temp map.global matches 2 if entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" attempted to fly but couldn't while trying to escape ","color":"white"},{"selector":"@a[tag=map.attacker]"}]
 
 execute if score #temp map.global matches 3 unless entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" tripped and fell","color":"white"}]
 execute if score #temp map.global matches 3 if entity @a[tag=map.attacker] run tellraw @a [{"selector":"@s"},{"text":" tripped and fell while trying to escape ","color":"white"},{"selector":"@a[tag=map.attacker]"}]
