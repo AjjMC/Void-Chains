@@ -3,7 +3,6 @@
     "function": "minecraft:set_components",
     "components": {
       "minecraft:custom_data": {"map":{"item":true,"weapon":true}},
-      "minecraft:rarity": "common",
       "!minecraft:consumable": {},
       "!minecraft:enchantment_glint_override": {}
     }
