@@ -89,7 +89,6 @@ team modify map.blue friendlyFire false
 team modify map.random color dark_purple
 team modify map.random friendlyFire false
 
-team empty map.guest
 team empty map.red
 team empty map.blue
 team empty map.random
