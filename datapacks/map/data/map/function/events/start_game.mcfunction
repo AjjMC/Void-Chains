@@ -1,3 +1,5 @@
+execute if score #developer_tools map.global matches 1 run tellraw @a {"text":"Starting game with Developer Tools enabled","color":"light_purple"}
+
 function map:events/lock_play_gui
 
 title @a times 0s 5s 0s
