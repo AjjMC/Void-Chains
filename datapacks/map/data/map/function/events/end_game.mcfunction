@@ -5,8 +5,7 @@ execute at @e[type=minecraft:marker,tag=map.arena] run function map:events/reset
 execute as @a run function map:events/return_player
 function map:stats/main
 
-data remove block 0 62 20 lock
-function ajjgui:_reload
+function map:events/unlock_play_gui
 
 team empty map.red
 team empty map.blue

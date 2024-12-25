@@ -116,13 +116,11 @@ execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
 
 execute as @a run function map:events/return_player
 
-data remove block 0 62 20 lock
-
 execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:reset_guis stats
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
 
 function map:lobby/reset_all_settings
-function ajjgui:_reload
+function map:events/unlock_play_gui
 
 data remove storage ajjgui:data database
 
