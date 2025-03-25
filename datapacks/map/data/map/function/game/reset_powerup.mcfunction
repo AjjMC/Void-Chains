@@ -1,9 +1,9 @@
-execute if score #game_state map.global matches 3 if entity @s[tag=map.speed_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"gray"},{"text":"Speed Powerup","color":"gold"}]
-execute if score #game_state map.global matches 3 if entity @s[tag=map.knockback_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"gray"},{"text":"Knockback Powerup","color":"gold"}]
-execute if score #game_state map.global matches 3 if entity @s[tag=map.bridge_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"gray"},{"text":"Bridge Powerup","color":"gold"}]
-execute if score #game_state map.global matches 3 if entity @s[tag=map.anchor_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"gray"},{"text":"Anchor Powerup","color":"gold"}]
-execute if score #game_state map.global matches 3 if entity @s[tag=map.invisibility_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"gray"},{"text":"Invisibility Powerup","color":"gold"}]
-execute if score #game_state map.global matches 3 if entity @s[tag=map.laser_powerup] run tellraw @a [{"selector":"@s"},{"text":" is no longer affected by the ","color":"gray"},{"text":"Laser Powerup","color":"gold"}]
+execute if score #game_state map.global matches 3 if entity @s[tag=map.speed_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Speed Powerup",color:"gold"}]
+execute if score #game_state map.global matches 3 if entity @s[tag=map.knockback_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Knockback Powerup",color:"gold"}]
+execute if score #game_state map.global matches 3 if entity @s[tag=map.bridge_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Bridge Powerup",color:"gold"}]
+execute if score #game_state map.global matches 3 if entity @s[tag=map.anchor_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Anchor Powerup",color:"gold"}]
+execute if score #game_state map.global matches 3 if entity @s[tag=map.invisibility_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Invisibility Powerup",color:"gold"}]
+execute if score #game_state map.global matches 3 if entity @s[tag=map.laser_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Laser Powerup",color:"gold"}]
 
 effect clear @s minecraft:glowing
 effect clear @s minecraft:speed
@@ -25,6 +25,6 @@ tag @s remove map.anchor_powerup
 tag @s remove map.invisibility_powerup
 tag @s remove map.laser_powerup
 
-title @s actionbar {"text":""}
+title @s actionbar {text:""}
 
 schedule function map:mechanics/main 1t

@@ -1,4 +1,4 @@
-data modify entity @s data.gui[0][{Slot:4b}].components.minecraft:custom_name set value '[{"text":"Red Team ","color":"red","italic":false},{"text":"Won!","color":"green"}]'
+data modify entity @s data.gui[0][{Slot:4b}].components.minecraft:custom_name set value [{text:"Red Team ",color:"red",italic:0b},{text:"Won!",color:"green"}]
 
 data modify entity @s data.gui[0][{Slot:0b}].id set value "minecraft:red_stained_glass_pane"
 data modify entity @s data.gui[0][{Slot:1b}].id set value "minecraft:red_stained_glass_pane"

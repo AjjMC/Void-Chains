@@ -1,1 +1,1 @@
-title @s actionbar {"text":"You are now spectating"}
+title @s actionbar {text:"You are now spectating"}

@@ -3,6 +3,9 @@ execute if score @s map.hunger matches ..19 run effect give @s minecraft:saturat
 execute if score @s map.gui_ticks matches 1.. run scoreboard players remove @s map.gui_ticks 1
 execute if score @s map.gui_ticks matches 0 run function map:events/revoke_advancements
 
+execute if predicate map:lobby/stepping_on_slime_block run effect give @s minecraft:jump_boost infinite 19 true
+execute unless predicate map:lobby/stepping_on_slime_block run effect clear @s minecraft:jump_boost
+
 execute as @a[tag=map.using_gui] unless predicate map:lobby/using_gui run function map:events/clear_ajjgui_prompt
 
 scoreboard players add @s map.selected_hat 0

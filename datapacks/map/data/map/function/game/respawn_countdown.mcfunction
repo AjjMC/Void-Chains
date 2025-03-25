@@ -1,4 +1,4 @@
-execute if score @s map.countdown_seconds matches 1.. run title @s subtitle [{"text":"Respawning in "},{"score":{"name":"@s","objective":"map.countdown_seconds"},"color":"yellow"}]
+execute if score @s map.countdown_seconds matches 1.. run title @s subtitle [{text:"Respawning in "},{score:{name:"@s",objective:"map.countdown_seconds"},color:"yellow"}]
 
 execute if score @s map.countdown_seconds matches 0 run function map:game/respawn_player
 

@@ -1,2 +1,2 @@
-title @s actionbar {"text":""}
+title @s actionbar {text:""}
 tag @s remove map.using_gui

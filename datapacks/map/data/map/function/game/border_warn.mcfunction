@@ -3,5 +3,5 @@ execute at @s run playsound minecraft:entity.wither.death master @s
 execute if entity @s[tag=map.dead] run return fail
 
 title @s times 0s 5s 0s
-title @s title {"text":"BORDER SHRINKING!","color":"red","bold":true}
-title @s subtitle {"text":"Move to the Center to Survive"}
+title @s title {text:"BORDER SHRINKING!",color:"red",bold:1b}
+title @s subtitle {text:"Move to the Center to Survive"}

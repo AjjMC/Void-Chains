@@ -1,9 +1,9 @@
 title @a times 0s 5s 0s
-title @a title {"text":"GAME STARTING!","bold":true}
+title @a title {text:"GAME STARTING!",bold:1b}
 
 team empty map.random
 
-execute if score #developer_tools map.global matches 1 run tellraw @a {"text":"Starting game with Developer Tools enabled","color":"light_purple"}
+execute if score #developer_tools map.global matches 1 run tellraw @a {text:"Starting game with Developer Tools enabled",color:"light_purple"}
 execute as @a run function map:events/close_gui
 
 function map:lobby/lock_play_gui

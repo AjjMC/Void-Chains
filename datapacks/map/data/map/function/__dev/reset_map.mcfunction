@@ -1,4 +1,4 @@
-bossbar add map:timer {"text":""}
+bossbar add map:timer {text:""}
 bossbar set map:timer color yellow
 bossbar set map:timer style notched_6
 
@@ -72,10 +72,10 @@ scoreboard players reset #temp1 map.global
 
 setworldspawn 0 63 0
 
-team add map.guest {"text":"Guest Team"}
-team add map.red {"text":"Red Team"}
-team add map.blue {"text":"Blue Team"}
-team add map.random {"text":"Random Team"}
+team add map.guest {text:"Guest Team"}
+team add map.red {text:"Red Team"}
+team add map.blue {text:"Blue Team"}
+team add map.random {text:"Random Team"}
 
 team modify map.guest color yellow
 team modify map.guest friendlyFire false
@@ -128,4 +128,4 @@ scoreboard players set #game_state map.global 0
 scoreboard players set #progress_count map.global 0
 scoreboard players reset @a
 
-tellraw @s {"text":"Reset map","color":"light_purple"}
+tellraw @s {text:"Reset map",color:"light_purple"}
