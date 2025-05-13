@@ -4,7 +4,11 @@
 >
 > **[CLICK HERE TO DOWNLOAD](https://github.com/AjjMC/Void-Chains/archive/refs/heads/main.zip)**
 >
-> **Please report any bugs in the issues section.**
+> **For any queries, please use the issues section.**
+
+> **RECOGNIZED BY MOJANG**
+>
+> **Featured on the official Minecraft Realms as part of the ["Survival: The Remix" release](https://www.minecraft.net/en-us/article/new-on-java-realms-survival-the-remix) (April 2025)!**
 
 <p align = "center">
   <img src="repo/general/thumbnail.png" width="100%">
