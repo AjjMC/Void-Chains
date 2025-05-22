@@ -5,10 +5,9 @@ execute at @e[type=minecraft:marker,tag=map.blue_anchor,sort=random,limit=1] run
 
 gamemode adventure @s
 
-scoreboard players set @s[tag=map.knight] map.arrows 0
-scoreboard players set @s[tag=map.archer] map.arrows 12
-scoreboard players set @s[tag=map.warrior] map.arrows 0
-scoreboard players set @s[tag=map.miner] map.arrows 0
+execute if entity @s[tag=map.wildcard] run function map:game/select_wildcard_kit
+
+function map:events/set_kit_defaults
 
 execute if entity @s[team=map.red] run function map:game/equip_red_armor
 execute if entity @s[team=map.blue] run function map:game/equip_blue_armor

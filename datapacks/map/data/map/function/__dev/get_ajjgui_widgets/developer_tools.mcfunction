@@ -1,0 +1,20 @@
+give @s minecraft:red_bed[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/respawn_red_team",exit:1b}},minecraft:custom_name=[{text:"Respawn As ",color:"green",italic:0b},{text:"Red Team",color:"red"}]]
+give @s minecraft:red_concrete[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/place_red_anchor",exit:1b}},minecraft:custom_name=[{text:"Place ",color:"green",italic:0b},{text:"Red Team ",color:"red"},{text:"Anchor"}]]
+give @s minecraft:red_dye[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/destroy_red_anchor",exit:1b}},minecraft:custom_name=[{text:"Destroy ",color:"green",italic:0b},{text:"Red Team ",color:"red"},{text:"Anchor"}]]
+
+give @s minecraft:blue_bed[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/respawn_blue_team",exit:1b}},minecraft:custom_name=[{text:"Respawn As ",color:"green",italic:0b},{text:"Blue Team",color:"blue"}]]
+give @s minecraft:blue_concrete[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/place_blue_anchor",exit:1b}},minecraft:custom_name=[{text:"Place ",color:"green",italic:0b},{text:"Blue Team ",color:"blue"},{text:"Anchor"}]]
+give @s minecraft:blue_dye[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/destroy_blue_anchor",exit:1b}},minecraft:custom_name=[{text:"Destroy ",color:"green",italic:0b},{text:"Blue Team ",color:"blue"},{text:"Anchor"}]]
+
+give @s minecraft:shield[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/select_knight_kit",exit:1b}},minecraft:custom_name=[{text:"Select ",color:"green",italic:0b},{text:"Knight Kit",color:"dark_green"}],minecraft:lore=[{text:"- Wooden Sword",color:"gray",italic:0b},{text:"- Shield",color:"gray",italic:0b}]]
+give @s minecraft:bow[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/select_archer_kit",exit:1b}},minecraft:custom_name=[{text:"Select ",color:"green",italic:0b},{text:"Archer Kit",color:"dark_green"}],minecraft:lore=[{text:"- Wooden Sword",color:"gray",italic:0b},{text:"- Bow (x12 Arrow)",color:"gray",italic:0b}]]
+give @s minecraft:stone_axe[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/select_warrior_kit",exit:1b}},minecraft:attribute_modifiers=[],minecraft:custom_name=[{text:"Select ",color:"green",italic:0b},{text:"Warrior Kit",color:"dark_green"}],minecraft:lore=[{text:"- Stone Axe",color:"gray",italic:0b}]]
+give @s minecraft:wooden_pickaxe[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/select_miner_kit",exit:1b}},minecraft:attribute_modifiers=[],minecraft:custom_name=[{text:"Select ",color:"green",italic:0b},{text:"Miner Kit",color:"dark_green"}],minecraft:lore=[{text:"- Wooden Sword",color:"gray",italic:0b},{text:"- Wooden Pickaxe (Breaks Chains)",color:"gray",italic:0b}]]
+give @s minecraft:hopper[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/select_wildcard_kit",exit:1b}},minecraft:custom_name=[{text:"Select ",color:"green",italic:0b},{text:"Wildcard Kit",color:"dark_green"}],minecraft:lore=[{text:"- Random kit upon respawning",color:"gray",italic:0b}]]
+
+give @s minecraft:nether_star[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/generate_powerup",exit:1b}},minecraft:enchantment_glint_override=false,minecraft:custom_name=[{text:"Generate ",color:"green",italic:0b},{text:"Powerup",color:"gold"}]]
+
+give @s minecraft:frogspawn[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/restart_game",exit:1b}},minecraft:custom_name={text:"Restart Game",color:"green",italic:0b}]
+give @s minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:cheats/end_game",exit:1b}},minecraft:custom_name={text:"End Game",color:"green",italic:0b}]
+
+tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}

@@ -1,7 +1,7 @@
 function map:game/timer
 function map:game/powerup_generation
 
-execute as @e[type=minecraft:arrow] run function map:game/arrows
+execute as @e[type=minecraft:arrow] at @s run function map:game/arrows
 execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/anchors
 execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/powerups
 

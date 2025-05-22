@@ -26,6 +26,7 @@ scoreboard objectives add map.charge_ticks dummy
 scoreboard objectives add map.countdown_seconds dummy
 scoreboard objectives add map.countdown_ticks dummy
 scoreboard objectives add map.global dummy
+scoreboard objectives add map.gui_cooldown_ticks dummy
 scoreboard objectives add map.gui_ticks dummy
 scoreboard objectives add map.powerup_seconds dummy
 scoreboard objectives add map.powerup_ticks dummy
@@ -52,6 +53,14 @@ scoreboard objectives add map.green_shield dummy
 scoreboard objectives add map.purple_shield dummy
 scoreboard objectives add map.black_shield dummy
 scoreboard objectives add map.white_shield dummy
+
+scoreboard objectives add map.selected_arrow_trail dummy
+scoreboard objectives add map.yellow_arrow_trail dummy
+scoreboard objectives add map.orange_arrow_trail dummy
+scoreboard objectives add map.green_arrow_trail dummy
+scoreboard objectives add map.purple_arrow_trail dummy
+scoreboard objectives add map.black_arrow_trail dummy
+scoreboard objectives add map.white_arrow_trail dummy
 
 scoreboard players set #minus_one map.global -1
 scoreboard players set #two map.global 2
@@ -122,6 +131,7 @@ function map:lobby/unlock_play_gui
 
 data remove storage ajjgui:data database
 
+scoreboard players set #play_gui_locked map.global 0
 scoreboard players set #game_state map.global 0
 scoreboard players set #progress_count map.global 0
 scoreboard players reset @a

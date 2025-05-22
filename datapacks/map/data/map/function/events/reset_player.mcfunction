@@ -13,3 +13,5 @@ tag @s remove map.claim_anchor
 tag @s remove map.generate_anchor
 
 title @s clear
+
+execute if entity @s[tag=map.wildcard] run function map:events/select_wildcard_kit
