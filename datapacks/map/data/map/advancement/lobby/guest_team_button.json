@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:using_item",
+            "conditions": {
+                "item": {
+                    "predicates": {
+                        "minecraft:custom_data": "{map:{guest_team_button:1b}}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "map:lobby/item/use/guest_team_button"
+    }
+}

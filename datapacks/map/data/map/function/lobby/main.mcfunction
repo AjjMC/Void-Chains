@@ -1,1 +1,1 @@
-execute as @a run function map:lobby/players
+execute as @a run function map:lobby/player

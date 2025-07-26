@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "map:game/laser"
+        "function": "map:game/item/use/laser"
     }
 }

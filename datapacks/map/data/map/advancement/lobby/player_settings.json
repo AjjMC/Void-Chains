@@ -12,6 +12,6 @@
         }
     },
     "rewards": {
-        "function": "map:lobby/player_settings"
+        "function": "map:lobby/item/use/player_settings"
     }
 }

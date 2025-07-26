@@ -1,1 +1,0 @@
-execute as @n[type=minecraft:marker,tag=map.blue_anchor] at @s run function map:game/destroy_blue_anchor

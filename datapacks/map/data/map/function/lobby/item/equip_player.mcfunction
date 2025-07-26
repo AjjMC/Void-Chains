@@ -1,0 +1,9 @@
+clear @s
+
+item replace entity @s hotbar.0 with minecraft:written_book[minecraft:custom_data={map:{item:1b,game_info:1b}},minecraft:tooltip_display={hidden_components:["minecraft:written_book_content"]},minecraft:enchantment_glint_override=false,minecraft:written_book_content={pages:[{text:"Two teams begin with a number of anchor platforms assigned to each, suspended at random locations over the void, which serve as respawn points.\n\nPlayers can form land trails to expand their color and traverse the void, starting from one of their anchor platforms.",color:"dark_gray"},{text:"If part of a territory is not attached to any anchor platforms of the same color, it collapses.\n\nPlayer trails can override the opposite color and detach enemy land from the anchor platforms supporting it, causing isolated blocks to fall and \"spleef\" others.",color:"dark_gray"},{text:"It is possible to walk into the opposing territory and not override it, but land cannot be expanded from within that color.\n\nPlayers can claim anchor platforms of the enemy team, and new anchor platforms may be generated within a team\'s own territory.",color:"dark_gray"},{text:"The border will begin to shrink, destroying all anchor platforms it touches and limiting player movement.\n\nThe objective is to eliminate the opposing team after claiming all the anchor platforms and preventing enemy player respawning.\n\nEnjoy!",color:"dark_gray"}],title:"Game Info",author:Ajj},minecraft:lore=[{text:"Void Chains [m1.21.8v1]",color:"gray",italic:0b}]]
+
+function map:lobby/item/update_team_buttons
+
+item replace entity @s hotbar.8 with minecraft:compass[minecraft:custom_data={map:{item:1b,player_settings:1b}},minecraft:consumable={consume_seconds:2147483647},minecraft:custom_name=[{text:"Your Settings",color:"green",italic:0b},{text:" (Right Click)",color:"gray"}]]
+
+function ajjgui:_reload

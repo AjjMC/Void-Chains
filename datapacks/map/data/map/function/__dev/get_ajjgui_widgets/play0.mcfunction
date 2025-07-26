@@ -1,4 +1,0 @@
-give @s minecraft:comparator[minecraft:custom_data={ajjgui:{widget:"button",page:1b,command:"function map:gui/game_settings"}},minecraft:custom_name={text:"Game Settings",color:"green",italic:0b}]
-give @s minecraft:firework_rocket[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/start_game"}},minecraft:tooltip_display={hidden_components:["minecraft:fireworks"]},minecraft:custom_name={text:"Start Game",color:"green",italic:0b},minecraft:lore=[{text:"Make sure that all players are ready!",color:"gray",italic:0b}]]
-
-tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}

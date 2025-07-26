@@ -1,0 +1,2 @@
+item replace entity @s hotbar.0 with minecraft:wooden_sword[minecraft:custom_data={map:{item:1b,weapon:1b}},minecraft:unbreakable={},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers","minecraft:unbreakable"]}]
+item replace entity @s hotbar.1 with minecraft:blaze_rod[minecraft:custom_data={map:{item:1b,laser:1b}},minecraft:consumable={consume_seconds:2147483647},minecraft:custom_name=[{text:"Pyro Rod",color:"light_purple",italic:0b},{text:" (Right Click)",color:"gray"}]]

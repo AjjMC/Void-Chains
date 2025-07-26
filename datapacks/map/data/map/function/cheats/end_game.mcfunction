@@ -1,1 +1,0 @@
-function map:events/draw

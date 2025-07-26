@@ -7,27 +7,38 @@ defaultgamemode adventure
 gamerule commandBlockOutput false
 gamerule doDaylightCycle false
 gamerule doImmediateRespawn true
+gamerule doMobLoot false
 gamerule doTileDrops false
 gamerule doWeatherCycle false
 gamerule fallDamage false
 gamerule keepInventory true
+gamerule locatorBar false
+gamerule mobGriefing false
 gamerule reducedDebugInfo false
 gamerule sendCommandFeedback false
 gamerule showDeathMessages true
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 
+scoreboard objectives add map.creeper_egg minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add map.death deathCount
 scoreboard objectives add map.hunger food
+scoreboard objectives add map.kill minecraft.custom:minecraft.player_kills
+scoreboard objectives add map.lingering_potion minecraft.used:minecraft.lingering_potion
+scoreboard objectives add map.splash_potion minecraft.used:minecraft.splash_potion
 
 scoreboard objectives add map.arrows dummy
 scoreboard objectives add map.charge_seconds dummy
 scoreboard objectives add map.charge_ticks dummy
 scoreboard objectives add map.countdown_seconds dummy
 scoreboard objectives add map.countdown_ticks dummy
+scoreboard objectives add map.creeper_eggs dummy
 scoreboard objectives add map.global dummy
-scoreboard objectives add map.gui_cooldown_ticks dummy
-scoreboard objectives add map.gui_ticks dummy
+scoreboard objectives add map.gui_hard_cooldown_ticks dummy
+scoreboard objectives add map.gui_soft_cooldown_ticks dummy
+scoreboard objectives add map.potion1 dummy
+scoreboard objectives add map.potion2 dummy
+scoreboard objectives add map.potion3 dummy
 scoreboard objectives add map.powerup_seconds dummy
 scoreboard objectives add map.powerup_ticks dummy
 scoreboard objectives add map.progress_count dummy
@@ -107,9 +118,11 @@ time set day
 worldborder damage buffer 0
 worldborder set 30000000
 
+execute positioned 0 62 20 run forceload add ~ ~ ~ ~
+execute positioned 20 62 0 run forceload add ~ ~ ~ ~
 execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
 
-function map:events/prepare_arena_reset
+function map:game/arena/prepare_reset
 kill @e[type=minecraft:marker,tag=map.arena]
 
 execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["map.arena"]}
@@ -118,16 +131,16 @@ execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-39 ~1 ~-39 ~-39 ~5
 execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-39 ~1 ~-39 ~39 ~5 ~-39 minecraft:barrier
 execute at @e[type=minecraft:marker,tag=map.arena] run fill ~39 ~1 ~39 ~-39 ~5 ~39 minecraft:barrier
 execute at @e[type=minecraft:marker,tag=map.arena] run fill ~39 ~1 ~39 ~39 ~5 ~-39 minecraft:barrier
-execute at @e[type=minecraft:marker,tag=map.arena] run function map:events/reset_arena
+execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/reset
 execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
 
-execute as @a run function map:events/return_player
+execute as @a run function map:lobby/return_player
 
 execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:reset_guis stats
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
 
-function map:lobby/reset_all_settings
-function map:lobby/unlock_play_gui
+function map:general/settings/reset
+function map:general/gui/unlock_play
 
 data remove storage ajjgui:data database
 

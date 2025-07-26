@@ -1,0 +1,2 @@
+item replace entity @s hotbar.2 with minecraft:creeper_spawn_egg[minecraft:custom_data={map:{item:1b,creeper_egg:1b}},minecraft:can_place_on=[{blocks:"#map:game/arena"}],minecraft:tooltip_display={hidden_components:["minecraft:can_place_on"]},minecraft:entity_data={id:"minecraft:creeper",Invulnerable:1b,NoAI:1b,ExplosionRadius:4b,ignited:1b,Tags:["map.creeper"]}] 2
+item modify entity @s hotbar.2 map:game/set_creeper_egg_count

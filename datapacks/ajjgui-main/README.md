@@ -1,6 +1,6 @@
 # A Data-Driven GUI Framework for Minecraft Mapmaking
 
-> **AVAILABLE ON 1.21.5**
+> **AVAILABLE ON 1.21.8**
 >
 > **[CLICK HERE TO DOWNLOAD](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip)**
 >
@@ -34,29 +34,29 @@ The datapack provides the following features:
 
 After this datapack has been added to the "datapacks" folder of a Minecraft world, ``/reload`` needs to be run in-game. A list of the datapack's commands is available via ``/function ajjgui:__help``. By convention, all functions run directly by the mapmaker start with two underscores. Functions starting with a single underscore are aliases that do not give any feedback messages in the chat. These are meant to be used by the mapmaker as part of their own map's datapack. Any functions not listed here are internal and are not meant to be used.
 
-| Function                           | Description                                             |
-|:-----------------------------------|:--------------------------------------------------------|
-| ``/function ajjgui:__compile``     | Compiles GUI                                            |
-| ``/function ajjgui:__crediting``   | Displays datapack crediting information                 |
-| ``/function ajjgui:__decompile``   | Decompiles nearest GUI                                  |
-| ``/function ajjgui:__help``        | Displays datapack command list                          |
-| ``/function ajjgui:__install``     | Installs datapack                                       |
-| ``/function ajjgui:__kit``         | Gives GUI design and compilation kit                    |
-| ``/function ajjgui:__manual``      | Displays datapack manual link                           |
-| ``/function ajjgui:__open``        | Opens ported GUI with player UUID and GUI ID            |
-| ``/function ajjgui:__openself``    | Opens ported GUI of executing player with GUI ID        |
-| ``/function ajjgui:__port``        | Ports nearest GUI to player with player UUID and GUI ID |
-| ``/function ajjgui:__portself``    | Ports nearest GUI to executing player with GUI ID       |
-| ``/function ajjgui:__reload``      | Reloads GUIs                                            |
-| ``/function ajjgui:__tutorial``    | Displays GUI design and compilation tutorial            |
-| ``/function ajjgui:__uninstall``   | Uninstalls datapack                                     |
-| ``/function ajjgui:__version``     | Displays datapack version                               |
-| ``/function ajjgui:__widgetdemo/`` | Gives GUI demo widgets                                  |
-| ``/function ajjgui:_open``         | Runs ``/function ajjgui:__open`` without feedback       |
-| ``/function ajjgui:_openself``     | Runs ``/function ajjgui:__openself`` without feedback   |
-| ``/function ajjgui:_port``         | Runs ``/function ajjgui:__port`` without feedback       |
-| ``/function ajjgui:_portself``     | Runs ``/function ajjgui:__portself`` without feedback   |
-| ``/function ajjgui:_reload``       | Runs ``/function ajjgui:__reload`` without feedback     |
+| Function                                                       | Description                                           |
+|:---------------------------------------------------------------|:------------------------------------------------------|
+| ``/function ajjgui:__compile``                                 | Compiles GUI                                          |
+| ``/function ajjgui:__crediting``                               | Displays datapack crediting information               |
+| ``/function ajjgui:__decompile``                               | Decompiles nearest GUI                                |
+| ``/function ajjgui:__help``                                    | Displays datapack command list                        |
+| ``/function ajjgui:__install``                                 | Installs datapack                                     |
+| ``/function ajjgui:__kit``                                     | Gives GUI design and compilation kit                  |
+| ``/function ajjgui:__manual``                                  | Displays datapack manual link                         |
+| ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}`` | Opens ported GUI                                      |
+| ``/function ajjgui:__openself {id:<gui_id>}``                  | Opens ported GUI of executing player                  |
+| ``/function ajjgui:__port {player:<player_uuid>,id:<gui_id>}`` | Ports nearest GUI                                     |
+| ``/function ajjgui:__portself {id:<gui_id>}``                  | Ports nearest GUI to executing player                 |
+| ``/function ajjgui:__reload``                                  | Reloads GUIs                                          |
+| ``/function ajjgui:__tutorial``                                | Displays GUI design and compilation tutorial          |
+| ``/function ajjgui:__uninstall``                               | Uninstalls datapack                                   |
+| ``/function ajjgui:__version``                                 | Displays datapack version                             |
+| ``/function ajjgui:__widgetdemo/``                             | Gives GUI demo widgets                                |
+| ``/function ajjgui:_open {player:<player_uuid>,id:<gui_id>}``  | Runs ``/function ajjgui:__open`` without feedback     |
+| ``/function ajjgui:_openself {id:<gui_id>}``                   | Runs ``/function ajjgui:__openself`` without feedback |
+| ``/function ajjgui:_port {player:<player_uuid>,id:<gui_id>}``  | Runs ``/function ajjgui:__port`` without feedback     |
+| ``/function ajjgui:_portself {id:<gui_id>}``                   | Runs ``/function ajjgui:__portself`` without feedback |
+| ``/function ajjgui:_reload``                                   | Runs ``/function ajjgui:__reload`` without feedback   |
 
 The datapack can be installed by running ``/function ajjgui:__install`` at any location in the world, which generates a shulker box. This needs to be located in a loaded chunk for the datapack to be fully functional and cannot be destroyed. The shulker box can be relocated by repeating the installation command elsewhere. Any updated versions of the datapack are automatically installed at the same location upon reloading the world. The datapack can be uninstalled using ``/function ajjgui:__uninstall``, which removes all data associated with it from the world and decompiles any existing GUIs.
 
@@ -92,7 +92,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 
 The *placeholder* is a widget that cannot be interacted with and is used to display an item.
 
-| NBT Tag           | Default                             | Type           |
+| Item NBT Tag      | Default                             | Type           |
 |:------------------|:------------------------------------|:---------------|
 | ``ajjgui.fixed``  | ``0b``                              | Byte (Boolean) |
 | ``ajjgui.widget`` | Required (``"placeholder"`` or N/A) | String         |
@@ -100,7 +100,7 @@ The *placeholder* is a widget that cannot be interacted with and is used to disp
 #### Usage
 
 ```
-/give @p <item id>[minecraft:custom_data={ajjgui:{widget:"placeholder",<optional ajjgui tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"placeholder",<optional_ajjgui_tags>}}]
 ```
 
 #### Example
@@ -121,7 +121,7 @@ A *placeholder*:
 
 The *button* is a widget that changes the GUI page, exits the GUI and/or runs a GUI command when clicked. More information can be found in the following sections.
 
-| NBT Tag             | Default                 | Type           |
+| Item NBT Tag        | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
@@ -133,7 +133,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 #### Usage
 
 ```
-/give @p <item id>[minecraft:custom_data={ajjgui:{widget:"button",<optional ajjgui tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"button",<optional_ajjgui_tags>}}]
 ```
 
 #### Examples
@@ -144,7 +144,7 @@ More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs]
 
 The *counter* is a widget that changes to a different count of the same item when clicked, following a value sequence. The value sequence is specified in the ``ajjgui.values`` NBT tag. The default value is the one initially used upon creation of the widget. Once a *counter* in its default state is clicked, it changes to the second value in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first value is always used instead of the default one. The current state of a *counter* is stored in the ``ajjgui.state`` NBT tag.
 
-| NBT Tag             | Default                  | Type           |
+| Item NBT Tag        | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
@@ -158,7 +158,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 #### Usage
 
 ```
-/give @p <item id>[minecraft:custom_data={ajjgui:{widget:"counter",values:[<value 1>,<value 2>,…,<value N>],<optional ajjgui tags>}}] <default value>
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"counter",values:[<value_1>,<value_2>,…,<value_N>],<optional_ajjgui_tags>}}] <default_value>
 ```
 
 where N is the number of states.
@@ -201,7 +201,7 @@ where N is the number of states.
 
 The *switch* is a widget that changes to a different item when clicked, following an item sequence. The item sequence is specified in the ``ajjgui.items`` NBT tag. The default item is the one initially used upon creation of the widget. Once a *switch* in its default state is clicked, it changes to the second item in the list and so on. Hence, the first one is not used until the end of the first cycle. After one cycle, the first item is always used instead of the default one. The current state of a *switch* is stored in the ``ajjgui.state`` NBT tag.
 
-| NBT Tag             | Default                 | Type           |
+| Item NBT Tag        | Default                 | Type           |
 |:--------------------|:------------------------|:---------------|
 | ``ajjgui.command``  | N/A                     | String         |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
@@ -215,7 +215,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 #### Usage
 
 ```
-/give @p <default item id>[minecraft:custom_data={ajjgui:{widget:"switch",items:[<item 1>,<item 2>,…,<item N>],<optional ajjgui tags>}}]
+/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"switch",items:[<item_1>,<item_2>,…,<item_N>],<optional_ajjgui_tags>}}]
 ```
 
 where N is the number of states.
@@ -256,9 +256,9 @@ where N is the number of states.
 
 ### Radiobutton
 
-The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group identifier change to their disabled state. The group identifier of a *radiobutton* is stored in the ``ajjgui.group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.state`` NBT tag.
+The *radiobutton* is a widget that changes between a disabled and an enabled state item when clicked. It comes in groups in which only one widget can be enabled at a time, with the rest being disabled. Each item is specified in the ``ajjgui.disabled`` and ``ajjgui.enabled`` NBT tags. The default item is the one initially used upon creation of the widget. Once a *radiobutton* is clicked, it changes to the item corresponding to its enabled state, and all the other *radiobutton* widgets with the same group ID change to their disabled state. The group ID of a *radiobutton* is stored in the ``ajjgui.group`` NBT tag. The current state of a *radiobutton* is stored in the ``ajjgui.state`` NBT tag.
 
-| NBT Tag             | Default                      | Type           |
+| Item NBT Tag        | Default                      | Type           |
 |:--------------------|:-----------------------------|:---------------|
 | ``ajjgui.command``  | N/A                          | String         |
 | ``ajjgui.disabled`` | Required                     | Compound       |
@@ -274,7 +274,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 #### Usage
 
 ```
-/give @p <default item id>[minecraft:custom_data={ajjgui:{widget:"radiobutton",off:<off item>,on:<on item>,<optional ajjgui tags>}}]
+/give @p <default_item_id>[minecraft:custom_data={ajjgui:{widget:"radiobutton",off:<off_item>,on:<on_item>,<optional_ajjgui_tags>}}]
 ```
 
 #### Examples
@@ -309,7 +309,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 
 The *itembin* is a widget that clears all items inserted by the player in a particular slot in the GUI.
 
-| NBT Tag             | Default                  | Type           |
+| Item NBT Tag        | Default                  | Type           |
 |:--------------------|:-------------------------|:---------------|
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
@@ -321,7 +321,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 #### Usage
 
 ```
-/give @p <item id>[minecraft:custom_data={ajjgui:{widget:"itembin",<optional ajjgui tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"itembin",<optional_ajjgui_tags>}}]
 ```
 
 #### Example
@@ -347,7 +347,7 @@ An *itembin*:
 
 The *itemslot* is a widget that stores items inserted by the player in a particular slot in the GUI. Once one or more stacked items are inserted, the current ones occupying the slot (if any) are replaced and returned to the player's inventory. When the *itemslot* is not being used, a placeholder item occupies the slot. This is stored in the ``ajjgui.placeholder`` NBT tag. The maximum number of items in an *itemslot* is stored in the ``ajjgui.size`` NBT tag, which cannot be larger than ``99``. Any excess items are returned to the player. Whether an *itemslot* has an item in it is determined by the ``ajjgui.state`` NBT tag.
 
-| NBT Tag                | Default                   | Type           |
+| Item NBT Tag           | Default                   | Type           |
 |:-----------------------|:--------------------------|:---------------|
 | ``ajjgui.command``     | N/A                       | String         |
 | ``ajjgui.exit``        | ``0b``                    | Byte (Boolean) |
@@ -362,7 +362,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 #### Usage
 
 ```
-/give @p <default item or placeholder id>[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:<placeholder item>,<optional ajjgui tags>}}]
+/give @p (<default_placeholder_item_id>|<default_item_id>)[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:<placeholder_item>,<optional_ajjgui_tags>}}]
 ```
 
 #### Examples
@@ -406,7 +406,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 The *scrollbutton* is a widget that cycles one or more lists of *static* widgets (see notes) across respective GUI slot lists when clicked. This allows for additional space in the GUI. Each widget list is specified in the ``ajjgui.widgets`` NBT tag. Within each widget list, widgets are added in the order they appear in. The slot list associated with each widget list is specified in the ``ajjgui.slots`` NBT tag. Within each slot list, slots are added in the order they are occupied by the respective widget list. The *scrollbutton* also contains the entire functionality of the *switch*, including the ``ajjgui.items`` and ``ajjgui.state`` NBT tags.
 
-| NBT Tag             | Default                       | Type               |
+| Item NBT Tag        | Default                       | Type               |
 |:--------------------|:------------------------------|:-------------------|
 | ``ajjgui.command``  | N/A                           | String             |
 | ``ajjgui.exit``     | ``0b``                        | Byte (Boolean)     |
@@ -422,7 +422,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 #### Usage
 
 ```
-/give @p <item id>[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[<widget 1,1>,<widget 1,2>,…,<widget 1,L_1>],[<widget 2,1>,<widget 2,2>,…,<widget 2,L_2>],…,[<widget N,1>,<widget N,2>,…,<widget N,L_N>]],slots:[[<slot 1,1>,<slot 1,2>,…,<slot 1,M_1>],[<slot 2,1>,<slot 2,2>,…,<slot 2,M_2>],…,[<slot N,1>,<slot N,2>,…,<slot N,M_N>]],<optional ajjgui tags>}}]
+/give @p <item_id>[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[<widget_1,1>,<widget_1,2>,…,<widget_1,L_1>],[<widget_2,1>,<widget_2,2>,…,<widget_2,L_2>],…,[<widget_N,1>,<widget_N,2>,…,<widget_N,L_N>]],slots:[[<slot_1,1>,<slot_1,2>,…,<slot_1,M_1>],[<slot_2,1>,<slot_2,2>,…,<slot_2,M_2>],…,[<slot_N,1>,<slot_N,2>,…,<slot_N,M_N>]],<optional_ajjgui_tags>}}]
 ```
 
 where L_x and M_y are the numbers of widgets and slots in each widget list and slot list respectively, and N is the number of widget list and slot list pairs.
@@ -505,7 +505,7 @@ A *button* exiting the GUI:
 
 ## Porting GUIs to Players
 
-Once a GUI is compiled, it is possible to port a copy of it to a specific player in a database using their UUID and an identifier unique to each GUI associated with them. This allows for personalized menus based on chest boats. Porting the nearest GUI is achieved with ``/function ajjgui:__port`` using the macro arguments "player" for the UUID Int array and "id" for the GUI identifier. Using the same arguments, ``/function ajjgui:__open`` gives a player access to a GUI from the database. The executing player can use their own UUID with ``/function ajjgui:__portself`` and ``/function ajjgui:__openself``, which only require a GUI identifier as an argument.
+Compiled GUIs can create copies for specific players. ``/function ajjgui:__port {player:<player_uuid>,id:<gui_id>}`` ports the nearest GUI to a player, to be accessed using ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}``. Both commands receive two macro arguments: a player UUID "player", as an Int array, and a GUI ID "id", different for each GUI of the same player. The UUID of the executing player is instead used with ``/function ajjgui:__portself {id:<gui_id>}`` and ``/function ajjgui:__openself {id:<gui_id>}``, which only require a GUI ID.
 
 #### Example
 
@@ -534,7 +534,7 @@ Once a GUI is compiled, it is possible to port a copy of it to a specific player
     ```
 
 > [!NOTE]
-> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` data storage NBT tag.
+> There is a persistent actionbar prompt instructing the user to open their inventory to view the chest boat menu and dismount to cancel. This can be modified or removed using the ``ajjgui:data prompt`` NBT tag.
 
 > [!IMPORTANT]
 > These chest boats have an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.

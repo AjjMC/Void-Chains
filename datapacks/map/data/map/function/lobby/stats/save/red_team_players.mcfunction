@@ -1,0 +1,9 @@
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
+execute as @a[team=map.red,tag=!map.cached,limit=1] run function map:lobby/stats/save/player
