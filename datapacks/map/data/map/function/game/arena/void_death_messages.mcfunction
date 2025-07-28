@@ -66,8 +66,8 @@ execute if score #temp map.global matches 18 if entity @a[tag=map.attacker] if e
 execute if score #temp map.global matches 18 unless entity @a[tag=map.attacker] if entity @s[tag=map.active_powerup,tag=map.laser_powerup] run tellraw @a [{selector:"@s"},{text:" wasted the best powerup and fell",color:"white"}]
 execute if score #temp map.global matches 18 if entity @a[tag=map.attacker] if entity @s[tag=map.active_powerup,tag=map.laser_powerup] run tellraw @a [{selector:"@s"},{text:" wasted the best powerup and fell while trying to escape ",color:"white"},{selector:"@a[tag=map.attacker]"}]
 
-execute if score #temp map.global matches 19 unless entity @a[tag=map.attacker] if entity @s[name=!Ajj] run tellraw @a [{selector:"@s"},{text:" fell and blames the game",color:"white"}]
-execute if score #temp map.global matches 19 if entity @a[tag=map.attacker] if entity @s[name=!Ajj] run tellraw @a [{selector:"@s"},{text:" fell and blames the game while trying to escape ",color:"white"},{selector:"@a[tag=map.attacker]"}]
+execute if score #temp map.global matches 19 unless entity @a[tag=map.attacker] if entity @s[name=!Ajj] run tellraw @a [{selector:"@s"},{text:" fell and blamed the game",color:"white"}]
+execute if score #temp map.global matches 19 if entity @a[tag=map.attacker] if entity @s[name=!Ajj] run tellraw @a [{selector:"@s"},{text:" fell and blamed the game while trying to escape ",color:"white"},{selector:"@a[tag=map.attacker]"}]
 
 execute if score #temp map.global matches 19 unless entity @a[tag=map.attacker] if entity @s[name=Ajj] run tellraw @a [{selector:"@s"},{text:" didn't use his backdoor and fell",color:"white"}]
 execute if score #temp map.global matches 19 if entity @a[tag=map.attacker] if entity @s[name=Ajj] run tellraw @a [{selector:"@s"},{text:" didn't use his backdoor and fell while trying to escape ",color:"white"},{selector:"@a[tag=map.attacker]"}]
