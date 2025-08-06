@@ -2,7 +2,7 @@
 
 > **AVAILABLE ON 1.21.8**
 >
-> **[CLICK HERE TO DOWNLOAD](https://github.com/AjjMC/Void-Chains/archive/refs/heads/main.zip)**
+> **CLICK [HERE](https://github.com/AjjMC/Void-Chains/archive/refs/heads/main.zip) TO DOWNLOAD**
 >
 > **For any queries, please use the issues section.**
 
