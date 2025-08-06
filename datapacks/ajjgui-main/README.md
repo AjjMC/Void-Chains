@@ -2,9 +2,9 @@
 
 > **AVAILABLE ON 1.21.8**
 >
-> **[CLICK HERE TO DOWNLOAD](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip)**
+> **Click [here](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip) to download.**
 >
-> **Also available on [Modrinth](https://modrinth.com/datapack/ajjgui) and [Planet Minecraft](https://www.planetminecraft.com/data-pack/ajjgui/). Please support the project by starring, following, etc. on the respective platforms!**
+> **Also available on [Modrinth](https://modrinth.com/datapack/ajjgui).**
 >
 > **For any queries, please use the issues section.**
 
