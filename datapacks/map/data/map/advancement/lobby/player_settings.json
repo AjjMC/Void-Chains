@@ -1,17 +1,17 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:using_item",
-            "conditions": {
-                "item": {
-                    "predicates": {
-                        "minecraft:custom_data": "{map:{player_settings:1b}}"
-                    }
-                }
-            }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{map:{player_settings:1b}}"
+          }
         }
-    },
-    "rewards": {
-        "function": "map:lobby/item/use/player_settings"
+      }
     }
+  },
+  "rewards": {
+    "function": "map:lobby/item/use/player_settings"
+  }
 }

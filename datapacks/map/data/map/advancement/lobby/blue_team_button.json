@@ -1,17 +1,17 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:using_item",
-            "conditions": {
-                "item": {
-                    "predicates": {
-                        "minecraft:custom_data": "{map:{blue_team_button:1b}}"
-                    }
-                }
-            }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{map:{blue_team_button:1b}}"
+          }
         }
-    },
-    "rewards": {
-        "function": "map:lobby/item/use/blue_team_button"
+      }
     }
+  },
+  "rewards": {
+    "function": "map:lobby/item/use/blue_team_button"
+  }
 }

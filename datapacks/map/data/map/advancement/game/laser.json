@@ -1,17 +1,17 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:using_item",
-            "conditions": {
-                "item": {
-                    "predicates": {
-                        "minecraft:custom_data": "{map:{laser:1b}}"
-                    }
-                }
-            }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{map:{laser:1b}}"
+          }
         }
-    },
-    "rewards": {
-        "function": "map:game/item/use/laser"
+      }
     }
+  },
+  "rewards": {
+    "function": "map:game/item/use/laser"
+  }
 }

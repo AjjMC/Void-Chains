@@ -1,17 +1,17 @@
 {
-    "criteria": {
-        "requirement": {
-            "trigger": "minecraft:using_item",
-            "conditions": {
-                "item": {
-                    "predicates": {
-                        "minecraft:custom_data": "{map:{developer_tools:1b}}"
-                    }
-                }
-            }
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{map:{developer_tools:1b}}"
+          }
         }
-    },
-    "rewards": {
-        "function": "map:game/item/use/developer_tools"
+      }
     }
+  },
+  "rewards": {
+    "function": "map:game/item/use/developer_tools"
+  }
 }
