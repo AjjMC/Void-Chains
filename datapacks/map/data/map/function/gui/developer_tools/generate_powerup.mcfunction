@@ -1,1 +1,1 @@
-execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/powerup/generate
+execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/powerup/generate

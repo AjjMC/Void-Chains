@@ -1,4 +1,4 @@
-function map:game/arena/powerup/countdown
+function map:game/powerup/countdown
 execute if predicate map:general/using_gui run return fail
 
 execute if entity @s[tag=map.anchor_powerup,team=map.red] run title @s actionbar [{text:"Red Team ",color:"red"},{text:"Territory You Stand on Is Unaffected by Gravity!",color:"green"}]

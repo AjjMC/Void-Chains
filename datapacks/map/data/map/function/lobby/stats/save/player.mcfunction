@@ -5,16 +5,17 @@ execute if entity @s[tag=map.archer] run data modify storage map:data kit set va
 execute if entity @s[tag=map.warrior] run data modify storage map:data kit set value "Warrior"
 execute if entity @s[tag=map.miner] run data modify storage map:data kit set value "Miner"
 execute if entity @s[tag=map.alchemist] run data modify storage map:data kit set value "Alchemist"
+execute if entity @s[tag=map.hunter] run data modify storage map:data kit set value "Hunter"
 execute if entity @s[tag=map.wildcard] run data modify storage map:data kit set value "Wildcard"
 execute if entity @s[tag=map.pyro] run data modify storage map:data kit set value "Pyro"
 
-summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats1"]}
-summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats2"]}
-summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats3"]}
-summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats4"]}
-summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats5"]}
-summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats6"]}
-summon minecraft:text_display ~ ~ 0 {Tags:["map.stats","map.stats7"]}
+summon minecraft:text_display ~ ~ ~ {Tags:["map.stats","map.stats1"]}
+summon minecraft:text_display ~ ~ ~ {Tags:["map.stats","map.stats2"]}
+summon minecraft:text_display ~ ~ ~ {Tags:["map.stats","map.stats3"]}
+summon minecraft:text_display ~ ~ ~ {Tags:["map.stats","map.stats4"]}
+summon minecraft:text_display ~ ~ ~ {Tags:["map.stats","map.stats5"]}
+summon minecraft:text_display ~ ~ ~ {Tags:["map.stats","map.stats6"]}
+summon minecraft:text_display ~ ~ ~ {Tags:["map.stats","map.stats7"]}
 
 tag @s add map.selected
 

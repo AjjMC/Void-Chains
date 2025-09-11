@@ -1,2 +1,0 @@
-execute store result score #temp map.global run clear @s minecraft:nether_star[minecraft:custom_data~{map:{powerup:1b}}]
-execute if score #temp map.global matches 1 run function map:game/arena/powerup/activate

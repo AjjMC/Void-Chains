@@ -1,0 +1,1 @@
+execute on owner unless entity @s[tag=!map.dead,tag=map.hunter] as @n run function map:game/arena/kill_mob

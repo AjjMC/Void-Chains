@@ -1,4 +1,5 @@
-scoreboard players remove @s map.arrows 1
+execute if entity @s[tag=map.archer] run scoreboard players remove @s map.arrows 1
+tag @s remove map.charged_crossbow
 
 execute if score @s map.selected_arrow_trail matches 0 if entity @s[team=map.red] run tag @n add map.red_arrow_trail
 execute if score @s map.selected_arrow_trail matches 0 if entity @s[team=map.blue] run tag @n add map.blue_arrow_trail

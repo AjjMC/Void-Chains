@@ -1,9 +1,10 @@
-function map:game/arena/timer/main
-function map:game/arena/powerup/main
+function map:game/timer/main
+function map:game/powerup/main
 
 execute as @e[type=minecraft:arrow] at @s run function map:game/entities/arrow
 execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/entities/anchor
 execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/entities/powerup
+execute as @e[type=minecraft:wolf] at @s run function map:game/entities/wolf
 
 execute as @a run function map:game/entities/player
 

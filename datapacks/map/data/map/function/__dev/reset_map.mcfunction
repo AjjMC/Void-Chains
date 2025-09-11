@@ -21,7 +21,9 @@ gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 
 scoreboard objectives add map.creeper_egg minecraft.used:minecraft.creeper_spawn_egg
+scoreboard objectives add map.wolf_egg minecraft.used:minecraft.wolf_spawn_egg
 scoreboard objectives add map.death deathCount
+scoreboard objectives add map.hp health HP
 scoreboard objectives add map.hunger food
 scoreboard objectives add map.kill minecraft.custom:minecraft.player_kills
 scoreboard objectives add map.lingering_potion minecraft.used:minecraft.lingering_potion
@@ -49,13 +51,21 @@ scoreboard objectives add map.anchors_claimed dummy
 scoreboard objectives add map.anchors_generated dummy
 scoreboard objectives add map.powerups_activated dummy
 
-scoreboard objectives add map.selected_hat dummy
-scoreboard objectives add map.yellow_hat dummy
-scoreboard objectives add map.orange_hat dummy
-scoreboard objectives add map.green_hat dummy
-scoreboard objectives add map.purple_hat dummy
-scoreboard objectives add map.black_hat dummy
-scoreboard objectives add map.white_hat dummy
+scoreboard objectives add map.selected_cap dummy
+scoreboard objectives add map.yellow_cap dummy
+scoreboard objectives add map.orange_cap dummy
+scoreboard objectives add map.green_cap dummy
+scoreboard objectives add map.purple_cap dummy
+scoreboard objectives add map.black_cap dummy
+scoreboard objectives add map.white_cap dummy
+
+scoreboard objectives add map.selected_boots dummy
+scoreboard objectives add map.yellow_boots dummy
+scoreboard objectives add map.orange_boots dummy
+scoreboard objectives add map.green_boots dummy
+scoreboard objectives add map.purple_boots dummy
+scoreboard objectives add map.black_boots dummy
+scoreboard objectives add map.white_boots dummy
 
 scoreboard objectives add map.selected_shield dummy
 scoreboard objectives add map.yellow_shield dummy
@@ -72,6 +82,16 @@ scoreboard objectives add map.green_arrow_trail dummy
 scoreboard objectives add map.purple_arrow_trail dummy
 scoreboard objectives add map.black_arrow_trail dummy
 scoreboard objectives add map.white_arrow_trail dummy
+
+scoreboard objectives add map.selected_wolf_collar dummy
+scoreboard objectives add map.yellow_wolf_collar dummy
+scoreboard objectives add map.orange_wolf_collar dummy
+scoreboard objectives add map.green_wolf_collar dummy
+scoreboard objectives add map.purple_wolf_collar dummy
+scoreboard objectives add map.black_wolf_collar dummy
+scoreboard objectives add map.white_wolf_collar dummy
+
+scoreboard objectives setdisplay below_name map.hp
 
 scoreboard players set #minus_one map.global -1
 scoreboard players set #two map.global 2
@@ -139,7 +159,7 @@ execute as @a run function map:lobby/return_player
 execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:reset_guis stats
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
 
-function map:general/settings/reset
+function map:general/settings/reset_all
 function map:general/gui/unlock_play
 
 data remove storage ajjgui:data database
@@ -147,6 +167,9 @@ data remove storage ajjgui:data database
 scoreboard players set #play_gui_locked map.global 0
 scoreboard players set #game_state map.global 0
 scoreboard players set #progress_count map.global 0
+
 scoreboard players reset @a
+
+tag @s remove map.init
 
 tellraw @s {text:"Reset map",color:"light_purple"}

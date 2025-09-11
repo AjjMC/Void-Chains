@@ -1,0 +1,8 @@
+execute if entity @s[tag=map.anchor_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Anchor Powerup",color:"aqua"}]
+execute if entity @s[tag=map.bridge_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Bridge Powerup",color:"aqua"}]
+execute if entity @s[tag=map.fire_aspect_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Fire Aspect Powerup",color:"aqua"}]
+execute if entity @s[tag=map.invisibility_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Invisibility Powerup",color:"aqua"}]
+execute if entity @s[tag=map.knockback_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Knockback Powerup",color:"aqua"}]
+execute if entity @s[tag=map.laser_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Laser Powerup",color:"aqua"}]
+execute if entity @s[tag=map.speed_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Speed Powerup",color:"aqua"}]
+execute if entity @s[tag=map.thorns_powerup] run tellraw @a [{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Thorns Powerup",color:"aqua"}]

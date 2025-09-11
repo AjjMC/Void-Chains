@@ -1,1 +1,1 @@
-execute as @n[type=minecraft:marker,tag=map.red_anchor] at @s run function map:game/arena/anchor/destroy_red
+execute as @n[type=minecraft:marker,tag=map.red_anchor] at @s run function map:game/anchor/destroy_red
