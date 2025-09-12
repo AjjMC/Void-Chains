@@ -1,5 +1,4 @@
 title @s times 0t 5t 0t
-title @s actionbar {text:""}
 
 scoreboard players set @s map.countdown_ticks 0
 scoreboard players operation @s map.countdown_seconds = #respawn_seconds map.global
