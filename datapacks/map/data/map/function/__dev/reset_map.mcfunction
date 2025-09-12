@@ -91,8 +91,6 @@ scoreboard objectives add map.purple_wolf_collar dummy
 scoreboard objectives add map.black_wolf_collar dummy
 scoreboard objectives add map.white_wolf_collar dummy
 
-scoreboard objectives setdisplay below_name map.hp
-
 scoreboard players set #minus_one map.global -1
 scoreboard players set #two map.global 2
 scoreboard players set #minute_ticks map.global 1200

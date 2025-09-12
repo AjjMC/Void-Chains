@@ -8,7 +8,7 @@ title @a[team=map.guest] title {text:""}
 
 title @a subtitle [{text:"Red Team ",color:"red"},{text:"Won the Game",color:"white"}]
 
-tellraw @a [{text:"Red Team ",color:"red"},{text:"won the game!",color:"white"}]
+tellraw @a [{text:"Red Team ",color:"red"},{text:"won the game!",color:"yellow"}]
 
 scoreboard players set #game_winner map.global 1
 

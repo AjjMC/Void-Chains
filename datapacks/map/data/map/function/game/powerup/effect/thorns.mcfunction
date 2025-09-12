@@ -6,4 +6,4 @@ item modify entity @s armor.legs map:game/add_thorns
 item modify entity @s armor.chest map:game/add_thorns
 item modify entity @s armor.head map:game/add_thorns
 
-tellraw @a [{selector:"@s"},{text:" has activated the ",color:"green"},{text:"Thorns Powerup",color:"aqua"}]
+tellraw @a [{text:""},{selector:"@s"},{text:" has activated the ",color:"green"},{text:"Thorns Powerup",color:"aqua"}]

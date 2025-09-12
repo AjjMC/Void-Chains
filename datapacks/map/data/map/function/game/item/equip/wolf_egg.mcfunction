@@ -4,7 +4,7 @@ summon minecraft:text_display ~ ~ ~ {text:{selector:"@a[tag=map.selected]"},Tags
 
 tag @s remove map.selected
 
-data modify storage map:data name set from entity @e[type=minecraft:text_display,tag=map.name,limit=1] text.insertion
+data modify storage map:data name set from entity @e[type=minecraft:text_display,tag=map.name,limit=1] text.extra[1]
 data modify storage map:data ending set string storage map:data name -1
 
 execute unless data storage map:data {ending:"s"} run data modify entity @e[type=minecraft:text_display,tag=map.name,limit=1] text set value [{nbt:"name",storage:"map:data"},{text:"'s"},{text:" Wolf"}]
