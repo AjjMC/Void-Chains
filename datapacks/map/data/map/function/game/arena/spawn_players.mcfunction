@@ -25,7 +25,7 @@ execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/p
 
 effect clear @a minecraft:weakness
 
-execute as @a[team=map.guest] run function map:game/player/host
+execute as @a[team=map.guest] run function map:game/player/spectate
 execute as @a[team=!map.guest] run function map:game/player/respawn
 
 scoreboard players set #game_state map.global 3
