@@ -14,6 +14,8 @@
   <img src="repo/general/thumbnail.png" width="100%">
 </p>
 
+## Overview
+
 Void Chains is a unique PvP minigame inspired by KOTH, Spleef, and other game modes. Two teams compete in an empty arena with Anchors and Bridges suspended over the void.
 
 **A TEAM'S ANCHORS...**
@@ -46,7 +48,7 @@ Void Chains is a unique PvP minigame inspired by KOTH, Spleef, and other game mo
 * kills players and destroys Anchors.
 * stops eventually, leaving enough space.
 
-# Getting Started
+## Getting Started
 
 * Join a team through your hotbar.
 * Select a kit through your settings in the hotbar (or use default).
