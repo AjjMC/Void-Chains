@@ -48,8 +48,8 @@ Void Chains is a unique PvP minigame inspired by KOTH, Spleef, and other game mo
 
 # Getting Started
 
-1. Join a team through your hotbar.
-2. Select a kit through your settings in the hotbar (or use default).
-3. Open the game menu through the Play barrel.
+* Join a team through your hotbar.
+* Select a kit through your settings in the hotbar (or use default).
+* Open the game menu through the Play barrel.
   - Adjust the game settings (or use default).
   - Start the game.
