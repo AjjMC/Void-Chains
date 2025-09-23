@@ -8,4 +8,4 @@ function map:game/anchor/reset_charge
 particle minecraft:explosion_emitter ~ ~1 ~ 0 0 0 0 1 force
 playsound minecraft:entity.blaze.hurt master @a
 
-function map:game/player/reward_anchor_generation
+execute if score #anchor_generation_reward map.global matches 1 run function map:game/player/reward_anchor_generation

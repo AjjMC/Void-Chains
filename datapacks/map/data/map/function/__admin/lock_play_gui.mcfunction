@@ -4,4 +4,4 @@ scoreboard players set #play_gui_locked map.global 1
 
 function map:general/gui/lock_play
 
-tellraw @s {text:"Locked play GUI",color:"light_purple"}
+tellraw @s {text:"Locked Play GUI",color:"light_purple"}

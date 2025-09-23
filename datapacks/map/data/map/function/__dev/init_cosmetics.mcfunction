@@ -18,4 +18,4 @@ scoreboard players set Ajj map.orange_wolf_collar 1
 scoreboard players set Ajj map.green_wolf_collar 1
 scoreboard players set Ajj map.white_wolf_collar 1
 
-tellraw @s {text:"Initialized cosmetics",color:"light_purple"}
+tellraw @s {text:"Initialized Cosmetics",color:"light_purple"}

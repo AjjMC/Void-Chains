@@ -1,4 +1,4 @@
-function map:game/arena/prepare_reset
+function map:game/arena/init_reset
 
 title @a times 0s 3s 0s
 

@@ -5,4 +5,4 @@ function map:general/settings/reset_all
 execute as @a[team=map.random] run function map:lobby/item/use/guest_team_button
 team empty map.random
 
-tellraw @a {text:"Reset all settings"}
+tellraw @a {text:"Reset All Settings"}

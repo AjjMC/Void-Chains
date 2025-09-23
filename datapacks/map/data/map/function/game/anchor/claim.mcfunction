@@ -8,4 +8,4 @@ function map:game/anchor/reset_charge
 particle minecraft:explosion_emitter ~ ~1 ~ 0 0 0 0 1 force
 playsound minecraft:block.respawn_anchor.charge master @a
 
-function map:game/player/reward_anchor_claiming
+execute if score #anchor_claiming_reward map.global matches 1 run function map:game/player/reward_anchor_claiming

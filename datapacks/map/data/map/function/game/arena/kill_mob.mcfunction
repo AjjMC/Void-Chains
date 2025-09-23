@@ -1,4 +1,4 @@
-data remove entity @s Owner
+data remove entity @s CustomName
 
 data modify entity @s NoAI set value 1b
 data modify entity @s Silent set value 1b

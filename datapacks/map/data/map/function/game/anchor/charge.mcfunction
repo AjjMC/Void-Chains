@@ -1,3 +1,4 @@
+scoreboard players set @s map.charge_ticks 0
 scoreboard players add @s map.charge_seconds 1
 
 execute if score @s map.charge_seconds matches 1 run playsound minecraft:block.note_block.harp master @s ~ ~ ~ 1 0.1

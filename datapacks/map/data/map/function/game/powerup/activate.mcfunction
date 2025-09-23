@@ -4,7 +4,7 @@ function map:game/powerup/reset_effect_message
 function map:game/powerup/reset_effect
 
 scoreboard players set @s map.powerup_ticks 0
-scoreboard players operation @s map.powerup_seconds = #powerup_effect_seconds map.global
+scoreboard players operation @s map.powerup_seconds = #powerup_effect_duration map.global
 
 execute store result score #temp map.global run random value 0..7
 

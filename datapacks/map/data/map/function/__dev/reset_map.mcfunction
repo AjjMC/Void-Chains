@@ -16,7 +16,7 @@ gamerule locatorBar false
 gamerule mobGriefing false
 gamerule reducedDebugInfo false
 gamerule sendCommandFeedback false
-gamerule showDeathMessages true
+gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 
@@ -91,8 +91,9 @@ scoreboard objectives add map.purple_wolf_collar dummy
 scoreboard objectives add map.black_wolf_collar dummy
 scoreboard objectives add map.white_wolf_collar dummy
 
-scoreboard players set #minus_one map.global -1
-scoreboard players set #two map.global 2
+scoreboard players set #-1 map.global -1
+scoreboard players set #2 map.global 2
+scoreboard players set #minute_seconds map.global 60
 scoreboard players set #minute_ticks map.global 1200
 
 scoreboard players reset #border_shrinking_ticks map.global
@@ -140,7 +141,7 @@ execute positioned 0 62 20 run forceload add ~ ~ ~ ~
 execute positioned 20 62 0 run forceload add ~ ~ ~ ~
 execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
 
-function map:game/arena/prepare_reset
+function map:game/arena/init_reset
 kill @e[type=minecraft:marker,tag=map.arena]
 
 execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["map.arena"]}
@@ -154,7 +155,7 @@ execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
 
 execute as @a run function map:lobby/return_player
 
-execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:reset_guis stats
+execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] run data modify entity @s data.gui[0] set from storage map:data default_gui.stats
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
 
 function map:general/settings/reset_all
@@ -170,4 +171,4 @@ scoreboard players reset @a
 
 tag @s remove map.init
 
-tellraw @s {text:"Reset map",color:"light_purple"}
+tellraw @s {text:"Reset Map",color:"light_purple"}
