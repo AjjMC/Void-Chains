@@ -171,4 +171,4 @@ scoreboard players reset @a
 
 tag @s remove map.init
 
-tellraw @s {text:"Reset Map",color:"light_purple"}
+tellraw @s {text:"Reset Void Chains",color:"light_purple"}
