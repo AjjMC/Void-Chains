@@ -1,3 +1,5 @@
+gamerule pvp false
+
 worldborder damage amount 0
 
 scoreboard objectives setdisplay below_name

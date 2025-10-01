@@ -137,8 +137,7 @@ time set day
 worldborder damage buffer 0
 worldborder set 30000000
 
-execute positioned 0 62 20 run forceload add ~ ~ ~ ~
-execute positioned 20 62 0 run forceload add ~ ~ ~ ~
+execute positioned 0 62 0 run forceload add ~-38 ~-38 ~38 ~38
 execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
 
 function map:game/arena/init_reset

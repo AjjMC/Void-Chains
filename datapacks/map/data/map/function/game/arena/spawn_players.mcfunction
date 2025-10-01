@@ -1,3 +1,5 @@
+gamerule pvp true
+
 worldborder damage amount 10000
 worldborder set 77
 
@@ -19,8 +21,6 @@ execute store result bossbar map:timer max run scoreboard players get #border_sh
 scoreboard players operation #temp map.global = #anchor_starting_count map.global
 
 execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/init_create
-
-effect clear @a minecraft:weakness
 
 execute as @a[team=map.guest] run function map:game/player/spectate
 execute as @a[team=!map.guest] run function map:game/player/respawn

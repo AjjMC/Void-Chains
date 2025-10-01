@@ -1,4 +1,4 @@
-give @s minecraft:chain[minecraft:custom_name={text:"Generation Ability",color:"green",italic:0b}]
+give @s minecraft:iron_chain[minecraft:custom_name={text:"Generation Ability",color:"green",italic:0b}]
 give @s minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"Disable",color:"yellow",italic:0b},"minecraft:lore":[{text:"Enabled",color:"green",italic:0b}]}},{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"Enable",color:"yellow",italic:0b},"minecraft:lore":[{text:"Disabled",color:"red",italic:0b}]}}],command:"function map:gui/play/anchor_settings/generation_ability",state:1}},minecraft:custom_name={text:"Disable",color:"yellow",italic:0b},minecraft:lore=[{text:"Enabled",color:"green",italic:0b}]]
 
 give @s minecraft:frogspawn[minecraft:custom_name={text:"Starting Count",color:"green",italic:0b}]
