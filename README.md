@@ -1,6 +1,6 @@
 # Void Chains
 
-> **AVAILABLE ON 1.21.9**
+> **AVAILABLE ON 1.21.10**
 >
 > **Click [here](https://github.com/AjjMC/Void-Chains/archive/refs/heads/main.zip) to download.**
 >
