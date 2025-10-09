@@ -20,3 +20,6 @@ execute at @s positioned ~-38.5 ~-64 ~-38.5 unless entity @e[type=minecraft:mark
 execute if items entity @s hotbar.* minecraft:nether_star[minecraft:custom_data~{map:{powerup:1b}}] run function map:game/powerup/activate
 
 function map:game/item/check
+
+execute store result score @s map.rotation_yaw run data get entity @s Rotation[0] 1000
+execute store result score @s map.rotation_pitch run data get entity @s Rotation[1] 1000

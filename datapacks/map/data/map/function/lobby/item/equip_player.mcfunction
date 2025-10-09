@@ -7,7 +7,7 @@ item replace entity @s hotbar.0 with minecraft:written_book[minecraft:custom_dat
     [{text:""},{text:"A TEAM WITHOUT ANCHORS...\n\n",bold:true},{text:"- cannot respawn until an Anchor becomes available.\n\n- loses if none of its players are able to play.",color:"dark_gray"}], \
     [{text:""},{text:"THE POWERUP...\n\n",bold:true},{text:"- appears near the arena center.\n\n- is activated by players holding it.\n\n- gets destroyed if not collected on time.",color:"dark_gray"}], \
     [{text:""},{text:"THE BORDER...\n\n",bold:true},{text:"- begins to shrink after some time.\n\n- kills players and destroys Anchors.\n\n- stops eventually, leaving enough space.",color:"dark_gray"}] \
-    ],title:"Game Info",author:Ajj},minecraft:lore=[{text:"Void Chains [m1.21.9v1]",color:"gray",italic:0b}]]
+    ],title:"Game Info",author:Ajj},minecraft:lore=[{text:"Void Chains [m1.21.10v1]",color:"gray",italic:0b}]]
 
 function map:lobby/item/update_team_buttons
 

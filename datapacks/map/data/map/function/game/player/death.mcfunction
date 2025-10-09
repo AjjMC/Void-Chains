@@ -1,3 +1,5 @@
+execute if score #death_animations map.global matches 1 run function map:game/player/init_death_animation
+
 title @s times 0t 5t 0t
 
 scoreboard players set @s map.countdown_ticks 0

@@ -32,6 +32,7 @@ scoreboard objectives add map.splash_potion minecraft.used:minecraft.splash_poti
 scoreboard objectives add map.arrows dummy
 scoreboard objectives add map.charge_seconds dummy
 scoreboard objectives add map.charge_ticks dummy
+scoreboard objectives add map.corpse_ticks dummy
 scoreboard objectives add map.countdown_seconds dummy
 scoreboard objectives add map.countdown_ticks dummy
 scoreboard objectives add map.creeper_eggs dummy
@@ -44,6 +45,8 @@ scoreboard objectives add map.potion3 dummy
 scoreboard objectives add map.powerup_seconds dummy
 scoreboard objectives add map.powerup_ticks dummy
 scoreboard objectives add map.progress_count dummy
+scoreboard objectives add map.rotation_pitch dummy
+scoreboard objectives add map.rotation_yaw dummy
 
 scoreboard objectives add map.kills minecraft.custom:minecraft.player_kills
 scoreboard objectives add map.deaths deathCount

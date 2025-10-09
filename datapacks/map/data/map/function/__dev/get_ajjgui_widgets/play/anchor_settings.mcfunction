@@ -10,6 +10,6 @@ give @s minecraft:purple_stained_glass_pane[minecraft:custom_data={ajjgui:{widge
 give @s minecraft:vault[minecraft:custom_name={text:"Generation Duration (Seconds)",color:"green",italic:0b},minecraft:lore=[{text:"Applicable if Generation Ability is enabled.",color:"gray",italic:0b}]]
 give @s minecraft:black_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"counter",values:[15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,1,2,3,4,5,6,7,8,9,10,11,12,13,14],command:"function map:gui/play/anchor_settings/generation_duration",state:14}},minecraft:custom_name={text:"Change",color:"yellow",italic:0b}] 15
 
-give @s minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/play/anchor_settings/reset_anchor_settings"}},minecraft:custom_name={text:"Reset Anchor Settings",color:"red",italic:0b}]
+give @s minecraft:barrier[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/play/anchor_settings/reset_anchor_settings"}},minecraft:custom_name={text:"Reset Anchor Settings",color:"yellow",italic:0b}]
 
 tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}
