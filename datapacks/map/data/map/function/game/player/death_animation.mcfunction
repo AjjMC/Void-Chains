@@ -1,1 +1,1 @@
-$summon minecraft:mannequin $(x) $(y) $(z) {profile:{id:$(uuid)},pose:"fall_flying",immovable:1b,equipment:$(equipment),Rotation:$(rotation),Invulnerable:1b,Tags:["map.corpse"]}
+$summon minecraft:mannequin $(x) $(y) $(z) {profile:{id:$(uuid)},pose:"fall_flying",equipment:$(equipment),Rotation:$(rotation),Invulnerable:1b,Tags:["map.corpse"]}
