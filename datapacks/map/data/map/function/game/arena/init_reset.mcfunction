@@ -9,10 +9,10 @@ kill @e[type=minecraft:arrow]
 kill @e[type=minecraft:lingering_potion]
 kill @e[type=minecraft:splash_potion]
 
-execute as @e[type=minecraft:creeper] at @s run function map:game/arena/destroy_mob
+execute as @e[type=minecraft:creeper] at @s run function map:game/arena/remove_entity
 execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/powerup/destroy
-execute as @e[type=minecraft:mannequin,tag=map.corpse] at @s run function map:game/arena/destroy_corpse
-execute as @e[type=minecraft:wolf] at @s run function map:game/arena/destroy_mob
+execute as @e[type=minecraft:mannequin,tag=map.corpse] at @s run function map:game/arena/remove_entity
+execute as @e[type=minecraft:wolf] at @s run function map:game/arena/remove_entity
 
 execute as @a run function map:game/player/reset
 
