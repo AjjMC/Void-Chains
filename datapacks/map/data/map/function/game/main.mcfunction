@@ -4,7 +4,7 @@ function map:game/powerup/main
 execute as @e[type=minecraft:arrow] at @s run function map:game/entities/arrow
 execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/entities/powerup
 execute as @e[type=minecraft:mannequin,tag=map.corpse] at @s run function map:game/entities/corpse
-execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/entities/anchor
+execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/border/destroy_anchors
 execute as @e[type=minecraft:wolf] at @s run function map:game/entities/wolf
 
 execute as @a run function map:game/entities/player

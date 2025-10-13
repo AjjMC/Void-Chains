@@ -12,7 +12,6 @@ function map:game/item/set_default/all_kits
 
 execute if entity @s[tag=map.hunter] run function map:game/item/set_default/wolf_egg
 
-execute if entity @s[team=map.red] run function map:game/item/equip/red_armor
-execute if entity @s[team=map.blue] run function map:game/item/equip/blue_armor
+function map:game/item/equip/armor
 
 tag @s remove map.dead

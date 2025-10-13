@@ -1,3 +1,6 @@
+execute if entity @s[team=map.red] run function map:game/item/equip/red_armor
+execute if entity @s[team=map.blue] run function map:game/item/equip/blue_armor
+
 execute if score @s map.selected_cap matches 1 run item replace entity @s armor.head with minecraft:leather_helmet[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hide_tooltip:1b},minecraft:dyed_color=16776960,minecraft:enchantments={binding_curse:1}]
 execute if score @s map.selected_cap matches 2 run item replace entity @s armor.head with minecraft:leather_helmet[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hide_tooltip:1b},minecraft:dyed_color=16753920,minecraft:enchantments={binding_curse:1}]
 execute if score @s map.selected_cap matches 3 run item replace entity @s armor.head with minecraft:leather_helmet[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hide_tooltip:1b},minecraft:dyed_color=65280,minecraft:enchantments={binding_curse:1}]

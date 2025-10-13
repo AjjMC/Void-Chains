@@ -11,11 +11,8 @@ item modify entity @s armor.legs map:game/remove_thorns
 item modify entity @s armor.chest map:game/remove_thorns
 item modify entity @s armor.head map:game/remove_thorns
 
-execute if entity @s[team=map.red,tag=map.invisibility_powerup] run function map:game/item/equip/red_armor
-execute if entity @s[team=map.blue,tag=map.invisibility_powerup] run function map:game/item/equip/blue_armor
-
-execute if entity @s[team=map.red,tag=map.knight,tag=map.invisibility_powerup] run function map:game/item/equip/red_shield
-execute if entity @s[team=map.blue,tag=map.knight,tag=map.invisibility_powerup] run function map:game/item/equip/blue_shield
+execute if entity @s[tag=map.invisibility_powerup] run function map:game/item/equip/armor
+execute if entity @s[tag=map.knight,tag=map.invisibility_powerup] run function map:game/item/equip/shield
 
 tag @s remove map.active_powerup
 

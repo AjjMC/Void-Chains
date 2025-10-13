@@ -1,8 +1,8 @@
 execute unless items entity @s hotbar.0 *[minecraft:custom_data~{map:{weapon:1b}}] run function map:game/item/equip/all_kits
 
-execute if entity @s[tag=map.knight,tag=!map.invisibility_powerup] unless items entity @s weapon.offhand *[minecraft:custom_data~{map:{shield:1b}}] run function map:game/item/equip/all_kits
+execute if entity @s[tag=map.knight,tag=!map.invisibility_powerup] unless score @s map.shield_damage matches 192.. unless items entity @s weapon.offhand *[minecraft:custom_data~{map:{shield:1b}}] run function map:game/item/equip/all_kits
 execute if entity @s[tag=map.archer] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{bow:1b}}] run function map:game/item/equip/all_kits
-execute if entity @s[tag=map.miner] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{pickaxe:1b}}] run function map:game/item/equip/all_kits
+execute if entity @s[tag=map.miner,tag=!map.broken_chain] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{pickaxe:1b}}] run function map:game/item/equip/all_kits
 execute if entity @s[tag=map.hunter] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{crossbow:1b}}] run function map:game/item/equip/all_kits
 execute if entity @s[tag=map.pyro] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{laser:1b}}] run function map:game/item/equip/all_kits
 

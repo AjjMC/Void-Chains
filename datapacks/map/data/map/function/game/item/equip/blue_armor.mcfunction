@@ -3,5 +3,3 @@ item replace entity @s armor.chest with minecraft:leather_chestplate[minecraft:c
 
 execute if score @s map.selected_cap matches 0 run item replace entity @s armor.head with minecraft:leather_helmet[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hide_tooltip:1b},minecraft:dyed_color=255,minecraft:enchantments={binding_curse:1}]
 execute if score @s map.selected_boots matches 0 run item replace entity @s armor.feet with minecraft:leather_boots[minecraft:custom_data={map:{armor:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hide_tooltip:1b},minecraft:dyed_color=255,minecraft:enchantments={binding_curse:1}]
-
-function map:game/item/equip/armor

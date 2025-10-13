@@ -20,6 +20,8 @@ gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
 
+scoreboard objectives add map.blocked_shield minecraft.custom:minecraft.damage_blocked_by_shield
+scoreboard objectives add map.broken_chain minecraft.mined:minecraft.iron_chain
 scoreboard objectives add map.creeper_egg minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add map.wolf_egg minecraft.used:minecraft.wolf_spawn_egg
 scoreboard objectives add map.death deathCount
@@ -47,6 +49,7 @@ scoreboard objectives add map.powerup_ticks dummy
 scoreboard objectives add map.progress_count dummy
 scoreboard objectives add map.rotation_pitch dummy
 scoreboard objectives add map.rotation_yaw dummy
+scoreboard objectives add map.shield_damage dummy
 
 scoreboard objectives add map.kills minecraft.custom:minecraft.player_kills
 scoreboard objectives add map.deaths deathCount

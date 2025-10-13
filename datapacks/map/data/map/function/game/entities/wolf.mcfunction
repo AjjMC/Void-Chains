@@ -1,4 +1,4 @@
-execute unless items entity @s armor.body minecraft:wolf_armor run function map:game/arena/remove_entity
+execute unless entity @s[tag=map.wolf] run function map:game/arena/remove_entity
 
 tag @s add map.selected
 

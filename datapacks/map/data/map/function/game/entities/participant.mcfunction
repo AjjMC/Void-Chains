@@ -5,8 +5,10 @@ execute if entity @s[tag=map.active_powerup] run function map:game/entities/boos
 
 execute unless predicate map:game/charging_anchor run function map:game/anchor/reset_charge
 
-execute unless entity @s[tag=map.charged_crossbow] if items entity @s hotbar.1 *[minecraft:custom_data={map:{item:1b,crossbow:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},minecraft:enchantments={"minecraft:piercing":1},minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1,components:{"minecraft:custom_data":{map:{item:1b,arrow:1b}}}}]] run function map:game/item/use/crossbow
+execute unless entity @s[tag=map.charged_crossbow] if items entity @s hotbar.1 *[minecraft:custom_data={map:{item:1b,crossbow:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},minecraft:enchantments={"minecraft:piercing":1},minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1,components:{"minecraft:custom_data":{map:{item:1b,arrow:1b}}}}]] run function map:game/item/use/charged_crossbow
 
+execute if score @s map.blocked_shield matches 1.. run function map:game/item/use/blocked_shield
+execute if score @s map.broken_chain matches 1.. run function map:game/item/use/broken_chain
 execute if score @s map.creeper_egg matches 1.. run function map:game/item/use/creeper_egg
 execute if score @s map.lingering_potion matches 1.. run function map:game/item/use/lingering_potion
 execute if score @s map.splash_potion matches 1.. run function map:game/item/use/splash_potion

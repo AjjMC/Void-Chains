@@ -1,0 +1,1 @@
+scoreboard players set @s map.shield_damage 0

@@ -1,3 +1,6 @@
+execute if entity @s[team=map.red] run function map:game/item/equip/red_shield
+execute if entity @s[team=map.blue] run function map:game/item/equip/blue_shield
+
 execute if score @s map.selected_shield matches 1 run item replace entity @s weapon.offhand with minecraft:shield[minecraft:custom_data={map:{item:1b,shield:1b}},minecraft:unbreakable={},minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},minecraft:base_color="yellow"]
 execute if score @s map.selected_shield matches 2 run item replace entity @s weapon.offhand with minecraft:shield[minecraft:custom_data={map:{item:1b,shield:1b}},minecraft:unbreakable={},minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},minecraft:base_color="orange"]
 execute if score @s map.selected_shield matches 3 run item replace entity @s weapon.offhand with minecraft:shield[minecraft:custom_data={map:{item:1b,shield:1b}},minecraft:unbreakable={},minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},minecraft:base_color="green"]
