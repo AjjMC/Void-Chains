@@ -1,5 +1,5 @@
 setworldspawn 0 63 0
-worldborder set 30000000
+worldborder set 59999968
 
 function map:lobby/stats/main
 

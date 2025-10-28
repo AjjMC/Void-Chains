@@ -16,6 +16,7 @@ execute if score @s map.wolf_egg matches 1.. run function map:game/item/use/wolf
 
 execute if score @s map.kill matches 1.. run function map:game/player/kill
 execute if score @s map.death matches 1.. run function map:game/player/death
+execute if score @s map.taken_damage matches 1.. run function map:game/player/taken_damage
 
 execute at @s positioned ~-38.5 ~-64 ~-38.5 unless entity @e[type=minecraft:marker,tag=map.arena,dx=76,dy=72,dz=76] run function map:game/player/void_death
 

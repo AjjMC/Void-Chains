@@ -4,7 +4,6 @@ bossbar set map:timer style notched_6
 
 defaultgamemode adventure
 
-gamerule commandBlockOutput false
 gamerule doDaylightCycle false
 gamerule doImmediateRespawn true
 gamerule doMobLoot false
@@ -14,8 +13,7 @@ gamerule fallDamage false
 gamerule keepInventory true
 gamerule locatorBar false
 gamerule mobGriefing false
-gamerule reducedDebugInfo false
-gamerule sendCommandFeedback false
+gamerule reducedDebugInfo true
 gamerule showDeathMessages false
 gamerule spawnRadius 0
 gamerule spectatorsGenerateChunks false
@@ -30,6 +28,7 @@ scoreboard objectives add map.hunger food
 scoreboard objectives add map.kill minecraft.custom:minecraft.player_kills
 scoreboard objectives add map.lingering_potion minecraft.used:minecraft.lingering_potion
 scoreboard objectives add map.splash_potion minecraft.used:minecraft.splash_potion
+scoreboard objectives add map.taken_damage minecraft.custom:minecraft.damage_taken
 
 scoreboard objectives add map.arrows dummy
 scoreboard objectives add map.charge_seconds dummy
@@ -141,7 +140,7 @@ team empty map.random
 time set day
 
 worldborder damage buffer 0
-worldborder set 30000000
+worldborder set 59999968
 
 execute positioned 0 62 0 run forceload add ~-38 ~-38 ~38 ~38
 execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
