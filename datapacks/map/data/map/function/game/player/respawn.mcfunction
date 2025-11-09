@@ -1,5 +1,7 @@
-execute at @e[type=minecraft:marker,tag=map.red_anchor,sort=random,limit=1] run tp @s[team=map.red] ~ ~1 ~0.5 facing entity @e[type=minecraft:marker,tag=map.arena,limit=1]
-execute at @e[type=minecraft:marker,tag=map.blue_anchor,sort=random,limit=1] run tp @s[team=map.blue] ~ ~1 ~0.5 facing entity @e[type=minecraft:marker,tag=map.arena,limit=1]
+execute at @e[type=minecraft:marker,tag=map.red_anchor,sort=random,limit=1] run tp @s[team=map.red] ~ ~1 ~
+execute at @e[type=minecraft:marker,tag=map.blue_anchor,sort=random,limit=1] run tp @s[team=map.blue] ~ ~1 ~
+execute at @e[type=minecraft:marker,tag=map.arena] positioned ~ ~1 ~ run rotate @s facing ~ ~ ~
+execute at @s run tp @s ^ ^ ^0.5
 
 tp @s @s
 gamemode adventure @s

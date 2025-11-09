@@ -1,5 +1,7 @@
 execute as @a run function map:game/border/warn
 
+execute store result bossbar map:timer max run scoreboard players get #game_duration_ticks map.global
+
 scoreboard players operation #border_shrinking_ticks map.global = #border_shrinking_duration map.global
 scoreboard players operation #border_shrinking_ticks map.global *= #minute_seconds map.global
 

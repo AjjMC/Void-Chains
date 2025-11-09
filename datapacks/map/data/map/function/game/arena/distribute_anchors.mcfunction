@@ -1,2 +1,2 @@
-execute store success score #temp1 map.global run spreadplayers ~ ~ 25 36 false @e[type=minecraft:marker,tag=map.anchor]
-execute if score #temp1 map.global matches 0 run function map:game/arena/distribute_anchors
+execute store success score #bool map.global run spreadplayers ~ ~ 25 35 false @e[type=minecraft:marker,tag=map.anchor]
+execute if score #bool map.global matches 0 run function map:game/arena/distribute_anchors

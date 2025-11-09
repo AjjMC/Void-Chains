@@ -12,6 +12,7 @@ gamerule doWeatherCycle false
 gamerule fallDamage false
 gamerule keepInventory true
 gamerule locatorBar false
+gamerule maxCommandChainLength 75000
 gamerule mobGriefing false
 gamerule reducedDebugInfo true
 gamerule showDeathMessages false
@@ -102,17 +103,19 @@ scoreboard players set #minute_seconds map.global 60
 scoreboard players set #minute_ticks map.global 1200
 
 scoreboard players reset #border_shrinking_ticks map.global
+scoreboard players reset #count map.global
 scoreboard players reset #countdown_seconds map.global
+scoreboard players reset #game_duration_ticks map.global
 scoreboard players reset #game_minutes map.global
 scoreboard players reset #game_seconds map.global
 scoreboard players reset #game_ticks map.global
 scoreboard players reset #game_ticks_total map.global
 scoreboard players reset #game_winner map.global
-scoreboard players reset #powerup_minutes map.global
+scoreboard players reset #length map.global
+scoreboard players reset #position map.global
 scoreboard players reset #powerup_seconds map.global
 scoreboard players reset #powerup_ticks map.global
-scoreboard players reset #temp map.global
-scoreboard players reset #temp1 map.global
+scoreboard players reset #value map.global
 
 setworldspawn 0 63 0
 
@@ -142,20 +145,25 @@ time set day
 worldborder damage buffer 0
 worldborder set 59999968
 
-execute positioned 0 62 0 run forceload add ~-38 ~-38 ~38 ~38
-execute positioned 0 62 1000 run forceload add ~-38 ~-38 ~38 ~38
+execute positioned 0 62 0 run forceload add ~-41 ~-41 ~41 ~41
+execute positioned 0 62 1000 run forceload add ~-41 ~-41 ~41 ~41
 
 function map:game/arena/init_reset
 kill @e[type=minecraft:marker,tag=map.arena]
 
 execute positioned 0 62 1000 run summon minecraft:marker ~ ~ ~ {Tags:["map.arena"]}
-execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-42 ~ ~-42 ~42 ~ ~42 minecraft:barrier
-execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-39 ~1 ~-39 ~-39 ~5 ~39 minecraft:barrier
-execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-39 ~1 ~-39 ~39 ~5 ~-39 minecraft:barrier
-execute at @e[type=minecraft:marker,tag=map.arena] run fill ~39 ~1 ~39 ~-39 ~5 ~39 minecraft:barrier
-execute at @e[type=minecraft:marker,tag=map.arena] run fill ~39 ~1 ~39 ~39 ~5 ~-39 minecraft:barrier
+
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-41 ~ ~-41 ~41 ~ ~41 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-38 ~1 ~-38 ~-38 ~65 ~38 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-38 ~1 ~-38 ~38 ~65 ~-38 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~38 ~1 ~38 ~-38 ~65 ~38 minecraft:barrier
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~38 ~1 ~38 ~38 ~65 ~-38 minecraft:barrier
+
 execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/reset
 execute at @e[type=minecraft:marker,tag=map.arena] run worldborder center ~ ~
+
+execute store result score #arena_x map.global run data get entity @e[type=minecraft:marker,tag=map.arena,limit=1] Pos[0]
+execute store result score #arena_z map.global run data get entity @e[type=minecraft:marker,tag=map.arena,limit=1] Pos[2]
 
 execute as @a run function map:lobby/return_player
 

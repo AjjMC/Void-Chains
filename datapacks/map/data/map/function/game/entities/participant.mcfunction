@@ -18,7 +18,7 @@ execute if score @s map.kill matches 1.. run function map:game/player/kill
 execute if score @s map.death matches 1.. run function map:game/player/death
 execute if score @s map.taken_damage matches 1.. run function map:game/player/taken_damage
 
-execute at @s positioned ~-38.5 ~-64 ~-38.5 unless entity @e[type=minecraft:marker,tag=map.arena,dx=76,dy=72,dz=76] run function map:game/player/void_death
+execute at @s positioned ~-37.5 ~-64 ~-37.5 unless entity @e[type=minecraft:marker,tag=map.arena,dx=74,dy=72,dz=74] run function map:game/player/void_death
 
 execute if items entity @s hotbar.* minecraft:nether_star[minecraft:custom_data~{map:{powerup:1b}}] run function map:game/powerup/activate
 

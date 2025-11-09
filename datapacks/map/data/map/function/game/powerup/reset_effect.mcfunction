@@ -27,4 +27,4 @@ tag @s remove map.thorns_powerup
 
 title @s actionbar {text:""}
 
-schedule function map:game/mechanics/main 1t
+schedule function map:game/anchor/stability/main 1t

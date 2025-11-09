@@ -12,10 +12,10 @@ execute if entity @s[tag=map.potion3] unless items entity @s hotbar.3 *[minecraf
 
 execute if entity @s[tag=map.wolf_egg] unless items entity @s hotbar.3 *[minecraft:custom_data~{map:{wolf_egg:1b}}] run function map:game/item/equip/all_kits
 
-execute store result score #temp map.global if items entity @s hotbar.2 minecraft:arrow
-execute unless score @s map.arrows = #temp map.global run function map:game/item/equip/all_kits
+execute store result score #count map.global if items entity @s hotbar.2 minecraft:arrow
+execute unless score @s map.arrows = #count map.global run function map:game/item/equip/all_kits
 
-execute store result score #temp map.global if items entity @s hotbar.2 minecraft:creeper_spawn_egg
-execute unless score @s map.creeper_eggs = #temp map.global run function map:game/item/equip/all_kits
+execute store result score #count map.global if items entity @s hotbar.2 minecraft:creeper_spawn_egg
+execute unless score @s map.creeper_eggs = #count map.global run function map:game/item/equip/all_kits
 
 execute if score #developer_tools map.global matches 1 unless items entity @s hotbar.8 *[minecraft:custom_data~{map:{developer_tools:1b}}] run function map:game/item/equip/all_kits

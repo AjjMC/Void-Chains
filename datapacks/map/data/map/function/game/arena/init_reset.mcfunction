@@ -1,4 +1,8 @@
+bossbar set map:timer value 0
+bossbar set map:timer players
+
 gamerule pvp false
+gamerule naturalRegeneration true
 
 worldborder damage amount 0
 

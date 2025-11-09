@@ -1,6 +1,5 @@
-fill ~-1 ~ ~-1 ~1 ~ ~1 minecraft:blue_concrete replace #map:game/arena
-fill ~ ~1 ~ ~ 127 ~ minecraft:iron_chain
+function map:game/anchor/create_blue
 
 summon minecraft:marker ~ ~ ~ {Tags:["map.anchor","map.blue_anchor"]}
 
-schedule function map:game/mechanics/main 1t
+schedule function map:game/anchor/stability/main 1t
