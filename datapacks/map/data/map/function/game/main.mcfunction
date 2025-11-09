@@ -1,3 +1,5 @@
+bossbar set map:timer players @a
+
 function map:game/timer/main
 
 execute if score #game_minutes map.global = #game_duration map.global run return run function map:game/outcome/draw
