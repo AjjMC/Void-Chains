@@ -1,3 +1,3 @@
 scoreboard players set @s map.shield_damage 0
 
-function map:game/item/equip/shield
+execute unless entity @s[tag=map.invisibility_powerup] run function map:game/item/equip/shield
