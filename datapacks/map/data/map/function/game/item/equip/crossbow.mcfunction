@@ -1,0 +1,1 @@
+item replace entity @s hotbar.1 with minecraft:crossbow[minecraft:custom_data={map:{item:1b,crossbow:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},minecraft:enchantments={"minecraft:piercing":1}]
