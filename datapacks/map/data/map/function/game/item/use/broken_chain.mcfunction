@@ -1,6 +1,6 @@
 scoreboard players set @s map.broken_chain 0
 
-tag @s add map.broken_chain
+tag @s remove map.pickaxe
 
 execute as @e[tag=map.anchor] at @s run function map:game/anchor/check
 
