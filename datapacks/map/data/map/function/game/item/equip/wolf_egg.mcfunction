@@ -16,6 +16,6 @@ execute if score @s map.selected_wolf_collar matches 4 run data modify block ~ ~
 execute if score @s map.selected_wolf_collar matches 5 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 15b
 execute if score @s map.selected_wolf_collar matches 6 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 0b
 
-execute if entity @s[tag=map.wolf_egg] run item replace entity @s hotbar.3 from block ~ ~ ~ container.0
+item replace entity @s hotbar.3 from block ~ ~ ~ container.0
 
 data remove storage map:data name
