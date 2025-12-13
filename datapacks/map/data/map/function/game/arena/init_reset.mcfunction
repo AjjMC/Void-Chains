@@ -1,8 +1,8 @@
 bossbar set map:timer value 0
 bossbar set map:timer players
 
-gamerule pvp false
-gamerule naturalRegeneration true
+gamerule minecraft:pvp false
+gamerule minecraft:natural_health_regeneration true
 
 worldborder damage amount 0
 

@@ -3,3 +3,4 @@ execute if entity @s[tag=map.archer] run function map:game/item/set_default/kit/
 execute if entity @s[tag=map.miner] run function map:game/item/set_default/kit/miner
 execute if entity @s[tag=map.alchemist] run function map:game/item/set_default/kit/alchemist
 execute if entity @s[tag=map.hunter] run function map:game/item/set_default/kit/hunter
+execute if entity @s[tag=map.acrobat] run function map:game/item/set_default/kit/acrobat

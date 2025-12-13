@@ -1,1 +1,1 @@
-$worldborder set 25 $(time)
+$worldborder set 25 $(time)s

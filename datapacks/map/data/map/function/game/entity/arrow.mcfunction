@@ -12,7 +12,7 @@ execute if entity @s[tag=map.white_arrow_trail] run particle minecraft:dust{colo
 execute if entity @s[tag=map.selected] run return fail
 execute on origin unless entity @s[type=minecraft:player] run return fail
 
-execute on origin run function map:game/entities/arrow_origin
+execute on origin run function map:game/entity/arrow_origin
 
 execute if score #value map.global matches 0 run tag @s add map.red_arrow_trail
 execute if score #value map.global matches 1 run tag @s add map.blue_arrow_trail

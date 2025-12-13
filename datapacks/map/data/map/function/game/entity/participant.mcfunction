@@ -1,7 +1,7 @@
-execute if entity @s[team=map.red] at @s run function map:game/entities/red_team
-execute if entity @s[team=map.blue] at @s run function map:game/entities/blue_team
+execute if entity @s[team=map.red] at @s run function map:game/entity/red_team
+execute if entity @s[team=map.blue] at @s run function map:game/entity/blue_team
 
-execute if entity @s[tag=map.active_powerup] run function map:game/entities/boosted
+execute if entity @s[tag=map.active_powerup] run function map:game/entity/boosted
 
 execute unless predicate map:game/charging_anchor run function map:game/anchor/reset_charge
 
@@ -12,6 +12,7 @@ execute if score @s map.broken_chain matches 1.. run function map:game/item/use/
 execute if score @s map.creeper_egg matches 1.. run function map:game/item/use/creeper_egg
 execute if score @s map.lingering_potion matches 1.. run function map:game/item/use/lingering_potion
 execute if score @s map.splash_potion matches 1.. run function map:game/item/use/splash_potion
+execute if score @s map.wind_charge matches 1.. run function map:game/item/use/wind_charge
 execute if score @s map.wolf_egg matches 1.. run function map:game/item/use/wolf_egg
 
 execute if score @s map.kill matches 1.. run function map:game/player/kill

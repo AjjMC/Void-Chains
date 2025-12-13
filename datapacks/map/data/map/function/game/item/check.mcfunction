@@ -4,6 +4,7 @@ execute if entity @s[tag=map.knight,tag=!map.invisibility_powerup] unless score 
 execute if entity @s[tag=map.archer] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{bow:1b}}] run function map:game/item/equip/all_kits
 execute if entity @s[tag=map.miner,tag=map.pickaxe] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{pickaxe:1b}}] run function map:game/item/equip/all_kits
 execute if entity @s[tag=map.hunter] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{crossbow:1b}}] run function map:game/item/equip/all_kits
+execute if entity @s[tag=map.acrobat] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{spear:1b}}] run function map:game/item/equip/all_kits
 execute if entity @s[tag=map.pyro] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{laser:1b}}] run function map:game/item/equip/all_kits
 
 execute if entity @s[tag=map.potion1] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{potion1:1b}}] run function map:game/item/equip/all_kits
@@ -17,5 +18,8 @@ execute unless score @s map.arrows = #count map.global run function map:game/ite
 
 execute store result score #count map.global if items entity @s hotbar.2 minecraft:creeper_spawn_egg
 execute unless score @s map.creeper_eggs = #count map.global run function map:game/item/equip/all_kits
+
+execute store result score #count map.global if items entity @s hotbar.2 minecraft:wind_charge
+execute unless score @s map.wind_charges = #count map.global run function map:game/item/equip/all_kits
 
 execute if score #developer_tools map.global matches 1 unless items entity @s hotbar.8 *[minecraft:custom_data~{map:{developer_tools:1b}}] run function map:game/item/equip/all_kits

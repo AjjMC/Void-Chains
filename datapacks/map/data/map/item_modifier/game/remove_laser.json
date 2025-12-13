@@ -3,6 +3,10 @@
     "function": "minecraft:set_components",
     "components": {
       "minecraft:custom_data": {"map":{"item":true,"weapon":true}},
+      "minecraft:use_effects": {
+        "can_sprint": false,
+        "speed_multiplier": 0.2
+      },
       "minecraft:rarity": "common",
       "!minecraft:consumable": {},
       "!minecraft:enchantment_glint_override": {}

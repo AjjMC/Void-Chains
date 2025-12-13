@@ -1,5 +1,5 @@
-gamerule pvp true
-execute if score #natural_regeneration map.global matches 0 run gamerule naturalRegeneration false
+gamerule minecraft:pvp true
+execute if score #natural_regeneration map.global matches 0 run gamerule minecraft:natural_health_regeneration false
 
 worldborder damage amount 10000
 worldborder set 75

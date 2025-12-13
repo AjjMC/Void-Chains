@@ -1,5 +1,5 @@
-function map:game/anchor/reset_charge
 function map:game/powerup/reset_effect
+function map:game/anchor/reset_charge
 function map:general/gui/close
 
 clear @s *[minecraft:custom_data~{map:{item:1b}}]

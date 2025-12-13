@@ -6,6 +6,7 @@ execute if entity @s[tag=map.warrior] run data modify storage map:data kit set v
 execute if entity @s[tag=map.miner] run data modify storage map:data kit set value "Miner"
 execute if entity @s[tag=map.alchemist] run data modify storage map:data kit set value "Alchemist"
 execute if entity @s[tag=map.hunter] run data modify storage map:data kit set value "Hunter"
+execute if entity @s[tag=map.acrobat] run data modify storage map:data kit set value "Acrobat"
 execute if entity @s[tag=map.wildcard] run data modify storage map:data kit set value "Wildcard"
 execute if entity @s[tag=map.pyro] run data modify storage map:data kit set value "Pyro"
 

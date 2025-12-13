@@ -1,6 +1,7 @@
 scoreboard players set @s map.shield_damage 0
 scoreboard players set @s map.arrows 0
 scoreboard players set @s map.creeper_eggs 0
+scoreboard players set @s map.wind_charges 0
 
 tag @s remove map.pickaxe
 
