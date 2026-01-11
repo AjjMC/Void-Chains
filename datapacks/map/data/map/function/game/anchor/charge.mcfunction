@@ -26,4 +26,4 @@ xp set @s 62 levels
 xp add @s 20 points
 xp set @s 0 levels
 
-execute at @s run particle minecraft:angry_villager ~ ~2 ~ 0 0 0 0 1 force
+particle minecraft:angry_villager ~ ~2 ~ 0 0 0 0 1 force

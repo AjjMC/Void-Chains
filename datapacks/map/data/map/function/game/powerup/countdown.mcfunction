@@ -1,4 +1,4 @@
-execute if score @s map.powerup_seconds matches 0 run function map:game/powerup/reset_effect_message
+execute if score @s map.powerup_seconds matches 0 run function map:game/powerup/init_reset_effect
 execute if score @s map.powerup_seconds matches 0 run function map:game/powerup/reset_effect
 
 scoreboard players add @s map.powerup_ticks 1

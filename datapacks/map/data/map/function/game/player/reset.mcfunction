@@ -7,6 +7,7 @@ clear @s *[minecraft:custom_data~{map:{armor:1b}}]
 
 effect clear @s minecraft:poison
 effect clear @s minecraft:regeneration
+effect clear @s minecraft:slow_falling
 effect clear @s minecraft:weakness
 
 effect give @s minecraft:instant_health 1 3 true

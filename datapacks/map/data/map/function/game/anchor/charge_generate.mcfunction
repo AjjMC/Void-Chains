@@ -1,6 +1,6 @@
 scoreboard players add @s map.charge_ticks 1
 
-execute if score @s map.charge_ticks = #anchor_generation_duration map.global run function map:game/anchor/charge
+execute if score @s map.charge_ticks = #anchor_generation_duration map.global at @s run function map:game/anchor/charge
 
 execute if score @s map.charge_seconds matches 20 run function map:game/anchor/generate
 

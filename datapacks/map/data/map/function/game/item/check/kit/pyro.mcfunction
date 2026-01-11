@@ -1,0 +1,1 @@
+execute unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{laser:1b}}] run return run function map:game/item/equip/all_kits

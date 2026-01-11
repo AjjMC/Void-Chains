@@ -7,7 +7,7 @@ scoreboard players operation @s map.countdown_seconds = #respawn_duration map.gl
 
 tag @s add map.dead
 
-function map:game/powerup/reset_effect_message
+function map:game/powerup/init_reset_effect
 function map:game/powerup/reset_effect
 
 function map:game/player/spectate

@@ -1,6 +1,6 @@
 setworldspawn ~ ~1 ~
 
-fill ~-37 ~-1 ~-37 ~37 ~-1 ~37 minecraft:barrier replace minecraft:air
+fill ~-37 ~-1 ~-37 ~37 ~-1 ~37 minecraft:barrier
 function map:game/arena/distribute_anchors
 fill ~-37 ~-1 ~-37 ~37 ~-1 ~37 minecraft:air
 

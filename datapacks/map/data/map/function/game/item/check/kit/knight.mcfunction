@@ -1,0 +1,1 @@
+execute unless entity @s[tag=map.invisibility_powerup] unless score @s map.shield_damage matches 192.. unless items entity @s weapon.offhand *[minecraft:custom_data~{map:{shield:1b}}] run return run function map:game/item/equip/all_kits

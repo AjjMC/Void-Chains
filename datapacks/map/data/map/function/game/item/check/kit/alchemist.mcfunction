@@ -1,0 +1,3 @@
+execute if entity @s[tag=map.potion1] unless items entity @s hotbar.1 *[minecraft:custom_data~{map:{potion1:1b}}] run return run function map:game/item/equip/all_kits
+execute if entity @s[tag=map.potion2] unless items entity @s hotbar.2 *[minecraft:custom_data~{map:{potion2:1b}}] run return run function map:game/item/equip/all_kits
+execute if entity @s[tag=map.potion3] unless items entity @s hotbar.3 *[minecraft:custom_data~{map:{potion3:1b}}] run return run function map:game/item/equip/all_kits

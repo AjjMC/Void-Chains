@@ -1,3 +1,4 @@
+gamerule minecraft:fall_damage true
 gamerule minecraft:pvp true
 execute if score #natural_regeneration map.global matches 0 run gamerule minecraft:natural_health_regeneration false
 
@@ -28,6 +29,8 @@ execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/i
 
 execute as @a[team=map.guest] run function map:game/player/spectate
 execute as @a[team=!map.guest] run function map:game/player/respawn
+
+execute as @a at @s run playsound minecraft:entity.wither.spawn master @s
 
 scoreboard players set #game_state map.global 3
 

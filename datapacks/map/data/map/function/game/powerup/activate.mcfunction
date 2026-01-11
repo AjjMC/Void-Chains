@@ -1,6 +1,6 @@
 clear @s minecraft:nether_star[minecraft:custom_data~{map:{powerup:1b}}]
 
-function map:game/powerup/reset_effect_message
+function map:game/powerup/init_reset_effect
 function map:game/powerup/reset_effect
 
 scoreboard players set @s map.powerup_ticks 0
@@ -18,6 +18,6 @@ execute if score #value map.global matches 6 run function map:game/powerup/effec
 execute if score #value map.global matches 7 run function map:game/powerup/effect/thorns
 
 effect give @s[tag=!map.invisibility_powerup] minecraft:glowing infinite 0 true
-execute at @s run playsound minecraft:block.enchantment_table.use master @a
+playsound minecraft:block.enchantment_table.use master @a
 
 scoreboard players add @s map.powerups_activated 1
