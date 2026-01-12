@@ -4,7 +4,7 @@ execute at @e[type=minecraft:marker,tag=map.red_anchor,sort=random,limit=1] run 
 execute at @e[type=minecraft:marker,tag=map.blue_anchor,sort=random,limit=1] run tp @s[team=map.blue] ~ ~1 ~
 execute at @e[type=minecraft:marker,tag=map.arena] positioned ~ ~1 ~ run rotate @s facing ~ ~ ~
 
-execute at @s run tp @s ^ ^ ^0.5
+execute at @s run tp @s ^ ^ ^1
 execute at @s at @n[type=minecraft:marker,tag=map.anchor] run playsound minecraft:block.beacon.activate master @a
 
 gamemode adventure @s
