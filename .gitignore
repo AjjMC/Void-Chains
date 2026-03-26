@@ -1,8 +1,6 @@
-/advancements/
-/DIM-1/
-/DIM1/
-/playerdata/
-/poi/
-/stats/
+/dimensions/minecraft/overworld/poi/
+/dimensions/minecraft/the_end/
+/dimensions/minecraft/the_nether/
+/players/
 /level.dat_old
 /session.lock

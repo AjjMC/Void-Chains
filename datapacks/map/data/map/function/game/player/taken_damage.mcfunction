@@ -9,7 +9,7 @@ data modify storage map:data hp set string storage map:data hp 0 -1
 
 tag @s add map.selected
 
-execute unless data storage map:data {hp:"0.0"} on attacker run tellraw @s[distance=8..] [{text:""},{selector:"@a[tag=map.selected]"},{text:" is on ",color:"gray"},{nbt:"hp",storage:"map:data",color:"gold"},{text:" HP",color:"gray"}]
+execute unless data storage map:data {hp:"0.0"} on attacker run tellraw @s[distance=8..] [{text:""},{selector:"@a[tag=map.selected]"},{text:" is on ",color:"gray"},{storage:"map:data",nbt:"hp",plain:true,color:"gold"},{text:" HP",color:"gray"}]
 
 tag @s remove map.selected
 

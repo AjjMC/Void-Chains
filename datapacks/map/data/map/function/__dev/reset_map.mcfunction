@@ -22,7 +22,6 @@ scoreboard objectives add map.blocked_shield minecraft.custom:minecraft.damage_b
 scoreboard objectives add map.creeper_egg minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add map.death deathCount
 scoreboard objectives add map.hp health HP
-scoreboard objectives add map.hunger food
 scoreboard objectives add map.kill minecraft.custom:minecraft.player_kills
 scoreboard objectives add map.lingering_potion minecraft.used:minecraft.lingering_potion
 scoreboard objectives add map.mined_iron_chain minecraft.mined:minecraft.iron_chain
@@ -143,7 +142,7 @@ team empty map.red
 team empty map.blue
 team empty map.random
 
-time set day
+time set minecraft:day
 
 worldborder damage buffer 0
 worldborder set 59999968

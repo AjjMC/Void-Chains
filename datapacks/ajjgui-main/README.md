@@ -1,6 +1,6 @@
 # A Data-Driven GUI Library for Minecraft Mapmaking
 
-> **AVAILABLE ON 1.21.11**
+> **AVAILABLE ON 26.1**
 >
 > **Click [here](https://github.com/AjjMC/ajjgui/archive/refs/heads/main.zip) to download.**
 >
@@ -38,11 +38,11 @@ After this datapack has been added to the "datapacks" folder of a Minecraft worl
 | Function                                                       | Description                                           |
 |:---------------------------------------------------------------|:------------------------------------------------------|
 | ``/function ajjgui:__compile``                                 | Compiles GUI                                          |
-| ``/function ajjgui:__crediting``                               | Displays datapack crediting information               |
 | ``/function ajjgui:__decompile``                               | Decompiles nearest GUI                                |
 | ``/function ajjgui:__help``                                    | Displays datapack command list                        |
 | ``/function ajjgui:__install``                                 | Installs datapack                                     |
 | ``/function ajjgui:__kit``                                     | Gives GUI design and compilation kit                  |
+| ``/function ajjgui:__license``                                 | Displays datapack license information                 |
 | ``/function ajjgui:__manual``                                  | Displays datapack manual link                         |
 | ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}`` | Opens ported GUI                                      |
 | ``/function ajjgui:__openself {id:<gui_id>}``                  | Opens ported GUI of executing player                  |
@@ -87,7 +87,7 @@ An in-game tutorial on how to create a GUI is available via ``/function ajjgui:_
 > For custom SNBT, it is important to check that the right data types are being used (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:1}}``), that values are within the specified range (e.g., ``{ajjgui:{exit:1b}}`` and not ``{ajjgui:{exit:2b}}``, where ``ajjgui.exit`` here can only be ``0b`` or ``1b``). The GUI compiler is only capable of initializing required SNBT with default values and does not correct errors. While there are cases where errors in custom SNBT, such as incorrect data types, may be internally resolved by the datapack at later stages, this behavior is inconsistent and must not be assumed.
 
 > [!NOTE]
-> The ``ajjgui.command``, ``ajjgui.exit``, ``ajjgui.fixed``, ``ajjgui.page`` and ``ajjgui.relative`` SNBT are covered separately in later sections.
+> The ``ajjgui.command``, ``ajjgui.exit``, ``ajjgui.fixed``, ``ajjgui.lock``, ``ajjgui.page``, and ``ajjgui.relative`` SNBT are covered separately in later sections.
 
 ### Placeholder
 
@@ -127,6 +127,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 | ``ajjgui.command``  | N/A                     | String         |
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                  | Byte (Boolean) |
+| ``ajjgui.lock``     | N/A                     | String         |
 | ``ajjgui.page``     | N/A                     | Byte           |
 | ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.widget``   | Required (``"button"``) | String         |
@@ -139,7 +140,7 @@ The *button* is a widget that changes the GUI page, exits the GUI and/or runs a 
 
 #### Examples
 
-More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs](#exiting-guis) and [running GUI commands](#running-gui-commands-and-accessing-data).
+More information about [changing GUI pages](#changing-gui-pages), [exiting GUIs](#exiting-guis), and [running GUI commands](#running-gui-commands-and-accessing-data).
 
 ### Counter
 
@@ -150,6 +151,7 @@ The *counter* is a widget that changes to a different count of the same item whe
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                   | Byte (Boolean) |
+| ``ajjgui.lock``     | N/A                      | String         |
 | ``ajjgui.page``     | N/A                      | Byte           |
 | ``ajjgui.relative`` | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.state``    | ``0``                    | Int            |
@@ -208,6 +210,7 @@ The *switch* is a widget that changes to a different item when clicked, followin
 | ``ajjgui.exit``     | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.items``    | Required                | Compound List  |
+| ``ajjgui.lock``     | N/A                     | String         |
 | ``ajjgui.page``     | N/A                     | Byte           |
 | ``ajjgui.relative`` | ``0b``                  | Byte (Boolean) |
 | ``ajjgui.state``    | ``0``                   | Int            |
@@ -229,7 +232,7 @@ where N is the number of states.
     /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}]}},minecraft:custom_name={text:"State 0",italic:0b}]
     ```
 
-2. A *switch* changing between a "State 0", a "State 1" and a "State 2" state, starting with "State 0". The default item is the same as the first item in ``ajjgui.items``:
+2. A *switch* changing between a "State 0", a "State 1", and a "State 2" state, starting with "State 0". The default item is the same as the first item in ``ajjgui.items``:
 
     ```
     /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}},{id:"minecraft:purple_dye",count:1,components:{"minecraft:custom_name":{text:"State 2",italic:0b}}}]}},minecraft:custom_name={text:"State 0",italic:0b}]
@@ -267,6 +270,7 @@ The *radiobutton* is a widget that changes between a disabled and an enabled sta
 | ``ajjgui.exit``     | ``0b``                       | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                       | Byte (Boolean) |
 | ``ajjgui.group``    | ``0b``                       | Byte           |
+| ``ajjgui.lock``     | N/A                          | String         |
 | ``ajjgui.page``     | N/A                          | Byte           |
 | ``ajjgui.relative`` | ``0b``                       | Byte (Boolean) |
 | ``ajjgui.state``    | ``0``                        | Int            |
@@ -315,6 +319,7 @@ The *itembin* is a widget that clears all items inserted by the player in a part
 | ``ajjgui.command``  | N/A                      | String         |
 | ``ajjgui.exit``     | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.fixed``    | ``0b``                   | Byte (Boolean) |
+| ``ajjgui.lock``     | N/A                      | String         |
 | ``ajjgui.page``     | N/A                      | Byte           |
 | ``ajjgui.relative`` | ``0b``                   | Byte (Boolean) |
 | ``ajjgui.widget``   | Required (``"itembin"``) | String         |
@@ -353,6 +358,7 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 | ``ajjgui.command``     | N/A                       | String         |
 | ``ajjgui.exit``        | ``0b``                    | Byte (Boolean) |
 | ``ajjgui.fixed``       | ``0b``                    | Byte (Boolean) |
+| ``ajjgui.lock``        | N/A                       | String         |
 | ``ajjgui.page``        | N/A                       | Byte           |
 | ``ajjgui.placeholder`` | Required                  | Compound       |
 | ``ajjgui.relative``    | ``0b``                    | Byte (Boolean) |
@@ -368,10 +374,10 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
 
 #### Examples
 
-1. An empty *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.placeholder`` and a stack size of ``64``:
+1. An empty *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.placeholder`` and a stack size of ``99``:
 
     ```
-    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:64}},minecraft:custom_name={text:"Empty",italic:0b}]
+    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99}},minecraft:custom_name={text:"Empty",italic:0b}]
     ```
 
 2. An empty *itemslot* with a default placeholder item identical to the one specified in ``ajjgui.placeholder`` and a stack size of ``16``:
@@ -380,16 +386,16 @@ The *itemslot* is a widget that stores items inserted by the player in a particu
     /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:16}},minecraft:custom_name={text:"Empty",italic:0b}]
     ```
 
-3. An empty *itemslot* with a default placeholder item different from the one specified in ``ajjgui.placeholder`` and a stack size of ``64``:
+3. An empty *itemslot* with a default placeholder item different from the one specified in ``ajjgui.placeholder`` and a stack size of ``99``:
 
     ```
-    /give @p minecraft:white_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:64}},minecraft:custom_name={text:"Default",italic:0b}]
+    /give @p minecraft:white_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99}},minecraft:custom_name={text:"Default",italic:0b}]
     ```
 
-4. An *itemslot* with an item in it by default and a stack size of ``64``. The value of ``ajjgui.state`` is set to ``1`` as the slot is occupied:
+4. An *itemslot* with an item in it by default and a stack size of ``99``. The value of ``ajjgui.state`` is set to ``1`` as the slot is occupied:
 
     ```
-    /give @p minecraft:diamond[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:64,state:1}}]
+    /give @p minecraft:diamond[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99,state:1}}]
     ```
 
 <p align = "center">
@@ -413,6 +419,7 @@ The *scrollbutton* is a widget that cycles one or more lists of *static* widgets
 | ``ajjgui.exit``     | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.fixed``    | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.items``    | N/A                           | Compound List      |
+| ``ajjgui.lock``     | N/A                           | String             |
 | ``ajjgui.page``     | N/A                           | Byte               |
 | ``ajjgui.relative`` | ``0b``                        | Byte (Boolean)     |
 | ``ajjgui.slots``    | Required                      | Byte List List     |
@@ -430,7 +437,7 @@ where L_x and M_y are the numbers of widgets and slots in each widget list and s
 
 #### Example
 
-A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
+A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13, and 14. Each button leads to a different page when clicked. There is a single widget list of length 6 and a single slot list of length 4:
 
 ```
 /give @p minecraft:spectral_arrow[minecraft:custom_data={ajjgui:{widget:"scrollbutton",widgets:[[{id:"minecraft:paper",count:1,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:0b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:2,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:1b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:3,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:2b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:4,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:3b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:5,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:4b}},"minecraft:custom_name":{text:"Select",italic:0b}}},{id:"minecraft:paper",count:6,components:{"minecraft:custom_data":{ajjgui:{widget:"button",page:5b}},"minecraft:custom_name":{text:"Select",italic:0b}}}]],slots:[[11b,12b,13b,14b]]}},minecraft:custom_name={text:"Next",italic:0b}]
@@ -445,7 +452,7 @@ A *scrollbutton* cycling 6 buttons across GUI slots 11, 12, 13 and 14. Each butt
 </p>
 
 > [!IMPORTANT]
-> The *scrollbutton* only supports the *placeholder*, *button* and *itembin* widgets.
+> The *scrollbutton* only supports the *placeholder*, *button*, and *itembin* widgets.
 
 > [!TIP]
 > If the ``ajjgui.widget`` SNBT of any widget is not specified, it is set to ``"placeholder"`` by default. Therefore, the entire ``ajjgui`` argument for any *placeholder* is optional. This, by extension, applies to a *placeholder* widget specified in the ``ajjgui.widgets`` SNBT of the *scrollbutton*.
@@ -507,6 +514,92 @@ A *button* exiting the GUI:
 > [!IMPORTANT]
 > When this functionality is used in block entity GUIs, it causes the block above to be removed.
 
+## Running GUI Commands and Accessing Data
+
+### Read-Only Data
+
+| Scoreboard Score    | Description       | Type |
+|:--------------------|:------------------|:-----|
+| ``@s ajjgui.count`` | Widget item count | Int  |
+| ``@s ajjgui.page``  | Page number       | Int  |
+| ``@s ajjgui.slot``  | Widget slot       | Int  |
+| ``@s ajjgui.state`` | Widget state      | Int  |
+
+| Data Storage SNBT      | Description                           | Type          |
+|:-----------------------|:--------------------------------------|:--------------|
+| ``ajjgui:data in``     | *Itembin* or *itemslot* item inserted | Compound      |
+| ``ajjgui:data out``    | *Itemslot* item removed               | Compound      |
+| ``ajjgui:data page``   | Page                                  | Compound List |
+| ``ajjgui:data widget`` | Widget                                | Compound      |
+
+### Modifiable Data
+
+| Scoreboard Score                                       | Description | Type |
+|:-------------------------------------------------------|:------------|:-----|
+| ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Int  |
+
+| GUI Marker Entity SNBT                                 | Description        | Type                               |
+|:-------------------------------------------------------|:-------------------|:-----------------------------------|
+| ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String, Compound, or Compound List |
+| ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List                      |
+
+| Data Storage SNBT      | Description                          | Type                               |
+|:-----------------------|:-------------------------------------|:-----------------------------------|
+| ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | String, Compound, or Compound List |
+
+Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` SNBT. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
+
+#### Examples
+
+1. A *button* running a command referencing the player that pressed it:
+
+    ```
+    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:"say pressed button"}},minecraft:custom_name={text:"Command Button",italic:0b}]
+    ```
+
+2. A *switch* running a command based on its current state:
+
+    ```
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}],command:"function name:func"}},minecraft:custom_name={text:"State 0",italic:0b}]
+    ```
+
+    where the following commands are located in a function ``name:func`` within a map's datapack:
+
+    ```
+    execute if score @s ajjgui.state matches 0 run say set switch to State 0
+    execute if score @s ajjgui.state matches 1 run say set switch to State 1
+    ```
+
+## Locked GUI Widgets
+
+Each of the widgets discussed previously, excluding the *placeholder*, can be made to be partially unresponsive when clicked. This is done by setting the ``ajjgui.lock`` SNBT to a scoreboard tag associated with specific players. This blocks all functionality except for exiting GUIs or running GUI commands.
+
+### Examples
+
+1. A *button* that works only if clicked by a player with the ``name.tag`` scoreboard tag:
+
+    ```
+    /give @p minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,relative:1b,lock:"name.tag"}},minecraft:custom_name={text:"Go to Next Page",italic:0b}]
+    ```
+
+2. A *switch* that works only if clicked by a player with the ``name.tag`` scoreboard tag:
+
+    ```
+    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}],lock:"name.tag"}},minecraft:custom_name={text:"State 0",italic:0b}]
+    ```
+
+3. An *itembin* that works only if clicked by a player with the ``name.tag`` scoreboard tag:
+
+    ```
+    /give @p minecraft:bucket[minecraft:custom_data={ajjgui:{widget:"itembin",lock:"name.tag"}},minecraft:custom_name={text:"Item Bin",italic:0b}]
+    ```
+
+4. An *itemslot* that only works if clicked by a player with the ``name.tag`` scoreboard tag:
+
+    ```
+    /give @p minecraft:gray_stained_glass_pane[minecraft:custom_data={ajjgui:{widget:"itemslot",placeholder:{id:"minecraft:gray_stained_glass_pane",count:1,components:{"minecraft:custom_name":{text:"Empty",italic:0b}}},size:99,lock:"name.tag"}},minecraft:custom_name={text:"Empty",italic:0b}]
+    ```
+
 ## Porting GUIs to Players
 
 Compiled GUIs can create copies for specific players. ``/function ajjgui:__port {player:<player_uuid>,id:<gui_id>}`` ports the nearest GUI to a player, to be accessed using ``/function ajjgui:__open {player:<player_uuid>,id:<gui_id>}``. Both commands receive two macro arguments: a player UUID "player", as an Int array, and a GUI ID "id", different for each GUI of the same player. The UUID of the executing player is instead used with ``/function ajjgui:__portself {id:<gui_id>}`` and ``/function ajjgui:__openself {id:<gui_id>}``, which only require a GUI ID.
@@ -542,62 +635,6 @@ Compiled GUIs can create copies for specific players. ``/function ajjgui:__port 
 
 > [!IMPORTANT]
 > These chest boats have an interaction entity surrounding their hitbox and preventing other players from accessing them. If other players come close enough to bypass this, the chest boat is removed (and the user needs to reopen the GUI). These measures are essential in ensuring that GUIs can only be accessed by their specified player.
-
-## Running GUI Commands and Accessing Data
-
-### Read-Only Data
-
-| Scoreboard Score    | Description       | Type |
-|:--------------------|:------------------|:-----|
-| ``@s ajjgui.count`` | Widget item count | Int  |
-| ``@s ajjgui.page``  | Page number       | Int  |
-| ``@s ajjgui.slot``  | Widget slot       | Int  |
-| ``@s ajjgui.state`` | Widget state      | Int  |
-
-| Data Storage SNBT      | Description                           | Type          |
-|:-----------------------|:--------------------------------------|:--------------|
-| ``ajjgui:data in``     | *Itembin* or *itemslot* item inserted | Compound      |
-| ``ajjgui:data out``    | *Itemslot* item removed               | Compound      |
-| ``ajjgui:data page``   | Page                                  | Compound List |
-| ``ajjgui:data widget`` | Widget                                | Compound      |
-
-### Modifiable Data
-
-| Scoreboard Score                                       | Description | Type |
-|:-------------------------------------------------------|:------------|:-----|
-| ``@e[tag=ajjgui.gui_active,limit=1] ajjgui.page``      | Page number | Int  |
-
-| GUI Marker Entity SNBT                                 | Description        | Type                              |
-|:-------------------------------------------------------|:-------------------|:----------------------------------|
-| ``@e[tag=ajjgui.gui_active,limit=1] data.custom_name`` | GUI container name | String, Compound or Compound List |
-| ``@e[tag=ajjgui.gui_active,limit=1] data.gui``         | GUI page list      | Compound List                     |
-
-| Data Storage SNBT      | Description                          | Type                      |
-|:-----------------------|:-------------------------------------|:--------------------------|
-| ``ajjgui:data prompt`` | Actionbar prompt for all ported GUIs | Compound or Compound List |
-
-Each of the widgets discussed previously, excluding the the *placeholder*, can be made to run commands or functions when clicked. This is done by specifying a command in the ``ajjgui.command`` SNBT. This command is executed by the player interacting with the widget. Within the command's execution, it is possible to access data exported from the GUI interaction (e.g., whether a *switch* is toggled on) and use it to make decisions.
-
-#### Examples
-
-1. A *button* running a command referencing the player that pressed it:
-
-    ```
-    /give @p minecraft:pink_dye[minecraft:custom_data={ajjgui:{widget:"button",command:"say pressed button"}},minecraft:custom_name={text:"Command Button",italic:0b}]
-    ```
-
-2. A *switch* running a command based on its current state:
-
-    ```
-    /give @p minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:custom_name":{text:"State 0",italic:0b}}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:custom_name":{text:"State 1",italic:0b}}}],command:"function name:func"}},minecraft:custom_name={text:"State 0",italic:0b}]
-    ```
-
-    where the following commands are located in a function ``name:func`` within a map's datapack:
-
-    ```
-    execute if score @s ajjgui.state matches 0 run say set switch to State 0
-    execute if score @s ajjgui.state matches 1 run say set switch to State 1
-    ```
 
 ## Advanced: Modifying GUIs Post-Compilation
 
@@ -652,6 +689,6 @@ There is a marker entity with the scoreboard tag ``"ajjgui.gui_origin"`` for blo
 > [!NOTE]
 > Decompiling a GUI resets it to its state before compilation.
 
-## Crediting
+## License
 
 Made by Ajj and published under the MIT license. Please share the repository link.
