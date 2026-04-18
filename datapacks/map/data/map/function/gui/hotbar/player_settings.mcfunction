@@ -1,11 +1,9 @@
 scoreboard players set @s map.gui_hard_cooldown_ticks 5
 
-execute if score @s map.gui_soft_cooldown_ticks matches 1.. run return run function map:general/gui/display_cooldown
-
-execute at @s run playsound minecraft:ui.button.click master @s
+execute if score @s map.gui_soft_cooldown_ticks matches 1.. run return run function map:gui/general/display_cooldown
 
 tag @s add map.using_gui
-execute if predicate map:general/using_gui run return run function map:general/gui/close
+execute if predicate map:general/using_gui run return run function map:gui/general/exit
 
 scoreboard players set @s map.gui_soft_cooldown_ticks 20
 
@@ -159,5 +157,12 @@ execute if score @s map.green_wolf_collar matches 1 if score @s map.selected_wol
 execute if score @s map.purple_wolf_collar matches 1 if score @s map.selected_wolf_collar matches 4 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -3 55 3 run data modify entity @s data.gui[7][{Slot:24b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:24b}]
 execute if score @s map.black_wolf_collar matches 1 if score @s map.selected_wolf_collar matches 5 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -3 55 3 run data modify entity @s data.gui[7][{Slot:25b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:25b}]
 execute if score @s map.white_wolf_collar matches 1 if score @s map.selected_wolf_collar matches 6 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -3 55 3 run data modify entity @s data.gui[7][{Slot:26b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:26b}]
+
+execute unless score @s map.metallic_weapon matches 1 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -5 55 7 run data modify entity @s data.gui[8][{Slot:26b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:26b}]
+execute if score @s map.metallic_weapon matches 1 if score @s map.selected_weapon matches 0 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -5 55 5 run data modify entity @s data.gui[8][{Slot:26b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:26b}]
+execute if score @s map.metallic_weapon matches 1 if score @s map.selected_weapon matches 1 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -5 55 3 run data modify entity @s data.gui[8][{Slot:26b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:26b}]
+
+execute if score #play_gui_locked map.global matches 0 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -7 55 7 run data modify entity @s data.gui[9][{Slot:21b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:21b}]
+execute if score #play_gui_locked map.global matches 1 on vehicle on passengers if entity @s[type=minecraft:marker,tag=ajjgui.gui_ported] positioned -7 55 5 run data modify entity @s data.gui[9][{Slot:21b}] set from entity @n[type=minecraft:marker,tag=ajjgui.gui_origin] data.gui[0][{Slot:21b}]
 
 function ajjgui:_reload

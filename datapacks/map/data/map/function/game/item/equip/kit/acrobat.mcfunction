@@ -1,4 +1,6 @@
-item replace entity @s hotbar.0 with minecraft:wooden_sword[minecraft:custom_data={map:{item:1b,weapon:1b}},minecraft:unbreakable={},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers","minecraft:unbreakable"]}]
+execute if score @s map.selected_weapon matches 0 run item replace entity @s hotbar.0 with minecraft:wooden_sword[minecraft:custom_data={map:{item:1b,weapon:1b}},minecraft:unbreakable={},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers","minecraft:unbreakable"]}]
+execute if score @s map.selected_weapon matches 1 run item replace entity @s hotbar.0 with minecraft:golden_sword[minecraft:custom_data={map:{item:1b,weapon:1b}},minecraft:unbreakable={},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers","minecraft:unbreakable"]}]
+
 item replace entity @s hotbar.1 with minecraft:stone_spear[minecraft:custom_data={map:{item:1b,spear:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers","minecraft:unbreakable"]},minecraft:enchantments={"minecraft:lunge":1}]
 
 function map:game/item/equip/wind_charge

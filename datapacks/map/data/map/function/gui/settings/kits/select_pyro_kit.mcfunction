@@ -1,4 +1,4 @@
-execute at @s run playsound minecraft:ui.button.click master @s
+function map:gui/general/sound/radiobutton
 
 execute if entity @s[tag=map.pyro] run tellraw @s [{text:"Already selected "},{text:"Pyro Kit",color:"dark_green"}]
 execute unless entity @s[tag=map.pyro] run tellraw @s [{text:"Selected "},{text:"Pyro Kit",color:"dark_green"}]

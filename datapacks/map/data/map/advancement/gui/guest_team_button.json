@@ -5,13 +5,13 @@
       "conditions": {
         "item": {
           "predicates": {
-            "minecraft:custom_data": "{map:{red_team_button:1b}}"
+            "minecraft:custom_data": "{map:{guest_team_button:1b}}"
           }
         }
       }
     }
   },
   "rewards": {
-    "function": "map:lobby/item/use/red_team_button"
+    "function": "map:gui/hotbar/select_guest_team"
   }
 }

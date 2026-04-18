@@ -1,8 +1,8 @@
 team empty map.random
 
-execute as @a run function map:general/gui/close
+execute as @a run function map:gui/general/exit
 
-function map:general/gui/lock_play
+function map:gui/general/lock_play
 
 title @a times 0s 5s 0s
 title @a title {text:"GAME STARTING!",bold:1b}

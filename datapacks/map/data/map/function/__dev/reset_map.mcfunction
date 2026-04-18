@@ -99,6 +99,9 @@ scoreboard objectives add map.purple_wolf_collar dummy
 scoreboard objectives add map.black_wolf_collar dummy
 scoreboard objectives add map.white_wolf_collar dummy
 
+scoreboard objectives add map.selected_weapon dummy
+scoreboard objectives add map.metallic_weapon dummy
+
 scoreboard players set #-1 map.global -1
 scoreboard players set #2 map.global 2
 scoreboard players set #minute_seconds map.global 60
@@ -173,7 +176,7 @@ execute positioned 20 62 0 as @n[type=minecraft:marker,tag=ajjgui.gui_origin] ru
 execute positioned 0 62 20 run scoreboard players set @n[type=minecraft:marker,tag=ajjgui.gui_origin] ajjgui.page 0
 
 function map:general/settings/reset_all
-function map:general/gui/unlock_play
+function map:gui/general/unlock_play
 
 data remove storage ajjgui:data database
 

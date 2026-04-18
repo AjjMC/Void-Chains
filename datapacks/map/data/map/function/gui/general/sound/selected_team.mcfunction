@@ -1,0 +1,1 @@
+execute at @s run playsound minecraft:entity.item_frame.remove_item master @s

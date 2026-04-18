@@ -4,7 +4,7 @@ worldborder set 59999968
 function map:lobby/stats/main
 
 execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/reset
-execute if score #play_gui_locked map.global matches 0 run function map:general/gui/unlock_play
+execute if score #play_gui_locked map.global matches 0 run function map:gui/general/unlock_play
 
 team empty map.red
 team empty map.blue

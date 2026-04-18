@@ -1,4 +1,4 @@
-execute at @s run playsound minecraft:ui.button.click master @s
+function map:gui/general/sound/reset_settings
 
 function map:general/settings/reset_anchor
 

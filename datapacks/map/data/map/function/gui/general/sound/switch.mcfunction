@@ -1,0 +1,2 @@
+execute if score @s ajjgui.state matches 0 at @s run playsound minecraft:block.wooden_button.click_off master @s
+execute if score @s ajjgui.state matches 1 at @s run playsound minecraft:block.wooden_button.click_on master @s

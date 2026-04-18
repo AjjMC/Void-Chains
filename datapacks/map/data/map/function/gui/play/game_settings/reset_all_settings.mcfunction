@@ -1,8 +1,8 @@
-execute at @s run playsound minecraft:ui.button.click master @s
+function map:gui/general/sound/reset_settings
 
 function map:general/settings/reset_all
 
-execute as @a[team=map.random] run function map:lobby/item/use/guest_team_button
+execute as @a[team=map.random] run function map:gui/hotbar/select_guest_team
 team empty map.random
 
 tellraw @a {text:"Reset All Settings"}

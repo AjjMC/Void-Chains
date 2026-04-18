@@ -1,0 +1,1 @@
+execute at @s run playsound minecraft:entity.zombie.attack_wooden_door master @s

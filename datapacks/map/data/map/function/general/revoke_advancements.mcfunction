@@ -1,6 +1,6 @@
-advancement revoke @s only map:lobby/guest_team_button
-advancement revoke @s only map:lobby/red_team_button
-advancement revoke @s only map:lobby/blue_team_button
-advancement revoke @s only map:lobby/random_team_button
-advancement revoke @s only map:lobby/player_settings
-advancement revoke @s only map:game/developer_tools
+advancement revoke @s only map:gui/guest_team_button
+advancement revoke @s only map:gui/red_team_button
+advancement revoke @s only map:gui/blue_team_button
+advancement revoke @s only map:gui/random_team_button
+advancement revoke @s only map:gui/player_settings_button
+advancement revoke @s only map:gui/developer_tools_button

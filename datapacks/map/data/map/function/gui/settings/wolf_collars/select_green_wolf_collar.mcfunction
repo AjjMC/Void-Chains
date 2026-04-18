@@ -1,4 +1,4 @@
-execute at @s run playsound minecraft:ui.button.click master @s
+function map:gui/general/sound/radiobutton
 
 execute if score @s map.selected_wolf_collar matches 3 run tellraw @s [{text:"Already selected "},{text:"Green Wolf Collar",color:"dark_aqua"}]
 execute unless score @s map.selected_wolf_collar matches 3 run tellraw @s [{text:"Selected "},{text:"Green Wolf Collar",color:"dark_aqua"}]

@@ -1,3 +1,3 @@
-execute at @s run playsound minecraft:ui.button.click master @s
+function map:gui/general/sound/switch
 
 scoreboard players operation #natural_regeneration map.global = @s ajjgui.state

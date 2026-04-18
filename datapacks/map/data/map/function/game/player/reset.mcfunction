@@ -1,6 +1,6 @@
 function map:game/powerup/reset_effect
 function map:game/anchor/reset_charge
-function map:general/gui/close
+function map:gui/general/exit
 
 clear @s *[minecraft:custom_data~{map:{item:1b}}]
 clear @s *[minecraft:custom_data~{map:{armor:1b}}]
