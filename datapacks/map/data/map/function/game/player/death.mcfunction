@@ -1,3 +1,5 @@
+gamemode spectator @s
+
 scoreboard players set @s map.death 0
 
 title @s times 0t 5t 0t
@@ -9,7 +11,5 @@ tag @s add map.dead
 
 function map:game/powerup/init_reset_effect
 function map:game/powerup/reset_effect
-
-function map:game/player/spectate
 
 execute if score #death_animations map.global matches 1 run function map:game/player/init_death_animation

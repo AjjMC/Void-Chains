@@ -1,3 +1,5 @@
+execute if score @s map.countdown_seconds = #respawn_duration map.global if score @s map.countdown_ticks matches 3 run function map:game/player/death_spectate
+
 execute if score @s map.countdown_seconds matches 1.. run title @s subtitle [{text:"Respawning in "},{score:{name:"@s",objective:"map.countdown_seconds"},color:"yellow"}]
 execute if score @s map.countdown_seconds matches 1.. if score @s map.countdown_ticks matches 0 run tellraw @s [{text:"Respawning in ",color:"yellow"},{score:{name:"@s",objective:"map.countdown_seconds"},color:"gold"}]
 

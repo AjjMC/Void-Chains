@@ -6,8 +6,9 @@ execute if entity @s[team=map.red] if entity @e[type=minecraft:marker,tag=map.re
 execute if entity @s[team=map.blue] unless entity @e[type=minecraft:marker,tag=map.blue_anchor] run tag @s add map.no_respawn
 execute if entity @s[team=map.blue] if entity @e[type=minecraft:marker,tag=map.blue_anchor] run tag @s remove map.no_respawn
 
-execute if entity @s[tag=map.no_respawn] run title @s subtitle {text:"Cannot Respawn"}
-execute if entity @s[tag=map.no_respawn] run scoreboard players set @s map.countdown_ticks 0
-execute if entity @s[tag=map.no_respawn] run scoreboard players operation @s map.countdown_seconds = #respawn_duration map.global
+execute unless entity @s[tag=map.no_respawn] run return run function map:game/player/respawn_countdown
 
-execute unless entity @s[tag=map.no_respawn] run function map:game/player/respawn_countdown
+title @s subtitle {text:"Cannot Respawn"}
+
+scoreboard players operation @s map.countdown_seconds = #respawn_duration map.global
+scoreboard players set @s map.countdown_ticks 0
