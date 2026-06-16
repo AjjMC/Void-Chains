@@ -1,0 +1,2 @@
+item replace entity @s hotbar.3 with minecraft:iron_bars[minecraft:custom_data={map:{item:1b,iron_bars:1b}},minecraft:can_place_on=[{blocks:"#map:game/concrete"}],minecraft:tooltip_display={hidden_components:["minecraft:can_place_on"]}]
+item modify entity @s hotbar.3 map:game/set_iron_bars_count

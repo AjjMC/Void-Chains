@@ -8,3 +8,6 @@ tag @s remove map.claiming_anchor
 tag @s add map.generating_anchor
 
 execute unless entity @s[tag=map.active_powerup] run title @s actionbar {text:"Generating Anchor..."}
+
+execute if entity @s[team=map.red] run function map:game/anchor/emit_red_aura
+execute if entity @s[team=map.blue] run function map:game/anchor/emit_blue_aura

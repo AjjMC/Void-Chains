@@ -19,29 +19,35 @@ gamerule minecraft:show_death_messages false
 gamerule minecraft:spectators_generate_chunks false
 
 scoreboard objectives add map.blocked_shield minecraft.custom:minecraft.damage_blocked_by_shield
-scoreboard objectives add map.creeper_egg minecraft.used:minecraft.creeper_spawn_egg
 scoreboard objectives add map.death deathCount
 scoreboard objectives add map.hp health HP
 scoreboard objectives add map.kill minecraft.custom:minecraft.player_kills
-scoreboard objectives add map.lingering_potion minecraft.used:minecraft.lingering_potion
 scoreboard objectives add map.mined_iron_chain minecraft.mined:minecraft.iron_chain
 scoreboard objectives add map.mined_waxed_copper_chain minecraft.mined:minecraft.waxed_copper_chain
 scoreboard objectives add map.mined_waxed_oxidized_copper_chain minecraft.mined:minecraft.waxed_oxidized_copper_chain
-scoreboard objectives add map.splash_potion minecraft.used:minecraft.splash_potion
 scoreboard objectives add map.taken_damage minecraft.custom:minecraft.damage_taken
-scoreboard objectives add map.wind_charge minecraft.used:minecraft.wind_charge
-scoreboard objectives add map.wolf_egg minecraft.used:minecraft.wolf_spawn_egg
+scoreboard objectives add map.used_bow minecraft.used:minecraft.bow
+scoreboard objectives add map.used_creeper_egg minecraft.used:minecraft.creeper_spawn_egg
+scoreboard objectives add map.used_ender_pearl minecraft.used:minecraft.ender_pearl
+scoreboard objectives add map.used_iron_bars minecraft.used:minecraft.iron_bars
+scoreboard objectives add map.used_lingering_potion minecraft.used:minecraft.lingering_potion
+scoreboard objectives add map.used_splash_potion minecraft.used:minecraft.splash_potion
+scoreboard objectives add map.used_wind_charge minecraft.used:minecraft.wind_charge
+scoreboard objectives add map.used_wolf_egg minecraft.used:minecraft.wolf_spawn_egg
 
 scoreboard objectives add map.arrows dummy
+scoreboard objectives add map.cage_ticks dummy
 scoreboard objectives add map.charge_seconds dummy
 scoreboard objectives add map.charge_ticks dummy
 scoreboard objectives add map.corpse_ticks dummy
 scoreboard objectives add map.countdown_seconds dummy
 scoreboard objectives add map.countdown_ticks dummy
 scoreboard objectives add map.creeper_eggs dummy
+scoreboard objectives add map.ender_pearls dummy
 scoreboard objectives add map.global dummy
 scoreboard objectives add map.gui_hard_cooldown_ticks dummy
 scoreboard objectives add map.gui_soft_cooldown_ticks dummy
+scoreboard objectives add map.iron_bars dummy
 scoreboard objectives add map.potion1 dummy
 scoreboard objectives add map.potion2 dummy
 scoreboard objectives add map.potion3 dummy
@@ -52,6 +58,7 @@ scoreboard objectives add map.rotation_pitch dummy
 scoreboard objectives add map.rotation_yaw dummy
 scoreboard objectives add map.shield_damage dummy
 scoreboard objectives add map.wind_charges dummy
+scoreboard objectives add map.wolf_eggs dummy
 
 scoreboard objectives add map.kills minecraft.custom:minecraft.player_kills
 scoreboard objectives add map.deaths deathCount

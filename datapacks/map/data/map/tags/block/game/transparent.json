@@ -1,6 +1,7 @@
 {
   "values": [
     "minecraft:air",
+    "minecraft:iron_bars",
     "#map:game/chain"
   ]
 }

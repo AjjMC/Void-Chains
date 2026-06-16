@@ -15,7 +15,7 @@ execute as @e[type=minecraft:arrow] at @s run function map:game/entity/arrow
 execute as @e[type=minecraft:creeper] at @s run function map:game/entity/creeper
 execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/entity/powerup
 execute as @e[type=minecraft:mannequin,tag=map.corpse] at @s run function map:game/entity/corpse
-execute as @e[type=minecraft:marker,tag=map.anchor] at @s run function map:game/border/destroy_anchors
+execute as @e[type=minecraft:marker] at @s run function map:game/entity/marker
 execute as @e[type=minecraft:wolf] at @s run function map:game/entity/wolf
 
 execute as @a at @s run function map:game/entity/player

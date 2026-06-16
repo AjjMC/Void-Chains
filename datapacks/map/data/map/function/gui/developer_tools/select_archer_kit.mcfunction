@@ -4,3 +4,4 @@ function map:general/kit/set/archer
 
 function map:game/item/set_default/reset_kits
 function map:game/item/set_default/all_kits
+function map:game/item/set_default/ender_pearl

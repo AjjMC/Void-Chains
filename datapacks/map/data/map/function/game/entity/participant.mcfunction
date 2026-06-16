@@ -12,14 +12,17 @@ execute positioned ~-37.5 ~-64 ~-37.5 unless entity @e[type=minecraft:marker,tag
 execute unless entity @s[tag=map.charged_crossbow] if items entity @s hotbar.1 *[minecraft:custom_data={map:{item:1b,crossbow:1b}},minecraft:unbreakable={},minecraft:enchantment_glint_override=false,minecraft:tooltip_display={hidden_components:["minecraft:unbreakable"]},minecraft:enchantments={"minecraft:piercing":1},minecraft:charged_projectiles=[{id:"minecraft:arrow",count:1,components:{"minecraft:custom_data":{map:{item:1b,arrow:1b}}}}]] run function map:game/item/use/charged_crossbow
 
 execute if score @s map.blocked_shield matches 1.. run function map:game/item/use/shield
-execute if score @s map.creeper_egg matches 1.. run function map:game/item/use/creeper_egg
-execute if score @s map.lingering_potion matches 1.. run function map:game/item/use/lingering_potion
 execute if score @s map.mined_iron_chain matches 1.. run function map:game/item/use/stone_pickaxe
 execute if score @s map.mined_waxed_copper_chain matches 1.. run function map:game/item/use/stone_pickaxe
 execute if score @s map.mined_waxed_oxidized_copper_chain matches 1.. run function map:game/item/use/stone_pickaxe
-execute if score @s map.splash_potion matches 1.. run function map:game/item/use/splash_potion
-execute if score @s map.wind_charge matches 1.. run function map:game/item/use/wind_charge
-execute if score @s map.wolf_egg matches 1.. run function map:game/item/use/wolf_egg
+execute if score @s map.used_bow matches 1.. run function map:game/item/use/bow
+execute if score @s map.used_creeper_egg matches 1.. run function map:game/item/use/creeper_egg
+execute if score @s map.used_ender_pearl matches 1.. run function map:game/item/use/ender_pearl
+execute if score @s map.used_iron_bars matches 1.. run function map:game/item/use/iron_bars
+execute if score @s map.used_lingering_potion matches 1.. run function map:game/item/use/lingering_potion
+execute if score @s map.used_splash_potion matches 1.. run function map:game/item/use/splash_potion
+execute if score @s map.used_wind_charge matches 1.. run function map:game/item/use/wind_charge
+execute if score @s map.used_wolf_egg matches 1.. run function map:game/item/use/wolf_egg
 
 execute if score @s map.kill matches 1.. run function map:game/player/kill
 execute if score @s map.death matches 1.. run function map:game/player/death

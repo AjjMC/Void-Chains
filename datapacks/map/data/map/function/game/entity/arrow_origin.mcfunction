@@ -1,4 +1,3 @@
-execute if entity @s[tag=map.archer] run scoreboard players remove @s map.arrows 1
 tag @s remove map.charged_crossbow
 
 scoreboard players operation #value map.global = @s map.selected_arrow_trail

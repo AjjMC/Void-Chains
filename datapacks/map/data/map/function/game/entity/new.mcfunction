@@ -1,0 +1,1 @@
+execute unless block ~ ~ ~ minecraft:air at @n[type=minecraft:marker,tag=map.anchor] positioned ~ ~3 ~ run function map:game/arena/move_entity

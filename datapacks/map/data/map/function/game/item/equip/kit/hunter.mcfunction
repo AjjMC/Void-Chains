@@ -3,4 +3,4 @@ execute if score @s map.selected_weapon matches 1 run item replace entity @s hot
 
 function map:game/item/equip/crossbow
 function map:game/item/equip/arrow
-execute if entity @s[tag=map.wolf_egg] positioned 0 55 0 run function map:game/item/equip/wolf_egg
+execute positioned 0 55 0 run function map:game/item/equip/wolf_egg

@@ -9,6 +9,4 @@ execute if entity @s[team=map.blue] on owner if entity @s[team=map.red] as @e[ty
 
 tag @s remove map.selected
 
-execute if entity @s[tag=map.new] if block ~ ~ ~ #map:game/chain run function map:game/arena/move_entity
-
-tag @s remove map.new
+execute if entity @s[tag=map.new] run function map:game/entity/new

@@ -25,5 +25,3 @@ execute if score @s map.charge_seconds matches 20 run playsound minecraft:block.
 xp set @s 62 levels
 xp add @s 20 points
 xp set @s 0 levels
-
-particle minecraft:angry_villager ~ ~2 ~ 0 0 0 0 1 force

@@ -3,3 +3,4 @@ execute if score @s map.selected_weapon matches 1 run item replace entity @s hot
 
 execute if entity @s[tag=map.pickaxe] run function map:game/item/equip/stone_pickaxe
 execute positioned 0 55 0 run function map:game/item/equip/creeper_egg
+function map:game/item/equip/iron_bars
