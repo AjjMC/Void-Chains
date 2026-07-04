@@ -85,18 +85,18 @@ execute if score #value map.global matches 26 if entity @e[tag=map.attacker] run
 execute if score #value map.global matches 27 unless entity @e[tag=map.attacker] unless entity @e[type=minecraft:item,tag=map.powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" was startled and fell"}]
 execute if score #value map.global matches 27 if entity @e[tag=map.attacker] unless entity @s[type=minecraft:item,tag=map.powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" was startled and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
 
-execute if score #value map.global matches 27 unless entity @e[tag=map.attacker] if entity @e[type=minecraft:item,tag=map.powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" was distracted by the powerup and fell"}]
-execute if score #value map.global matches 27 if entity @e[tag=map.attacker] if entity @s[type=minecraft:item,tag=map.powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" was distracted by the powerup and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
+execute if score #value map.global matches 27 unless entity @e[tag=map.attacker] if entity @e[type=minecraft:item,tag=map.powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" was distracted by the Powerup and fell"}]
+execute if score #value map.global matches 27 if entity @e[tag=map.attacker] if entity @s[type=minecraft:item,tag=map.powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" was distracted by the Powerup and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
 
 
 execute if score #value map.global matches 28 unless entity @e[tag=map.attacker] unless entity @s[tag=map.active_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" got tired and fell"}]
 execute if score #value map.global matches 28 if entity @e[tag=map.attacker] unless entity @s[tag=map.active_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" got tired and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
 
-execute if score #value map.global matches 28 unless entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] unless entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" couldn't be saved by the powerup and fell"}]
-execute if score #value map.global matches 28 if entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] unless entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" couldn't be saved by the powerup and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
+execute if score #value map.global matches 28 unless entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] unless entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" couldn't be saved by the Powerup and fell"}]
+execute if score #value map.global matches 28 if entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] unless entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" couldn't be saved by the Powerup and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
 
-execute if score #value map.global matches 28 unless entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] if entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" wasted the best powerup and fell"}]
-execute if score #value map.global matches 28 if entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] if entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" wasted the best powerup and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
+execute if score #value map.global matches 28 unless entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] if entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" wasted the best Powerup and fell"}]
+execute if score #value map.global matches 28 if entity @e[tag=map.attacker] if entity @s[tag=map.active_powerup] if entity @s[tag=map.laser_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" wasted the best Powerup and fell while fighting "},{selector:"@e[tag=map.attacker]"}]
 
 
 execute if score #value map.global matches 29 unless entity @e[tag=map.attacker] unless entity @s[name=Ajj] run tellraw @a [{text:""},{selector:"@s"},{text:" fell and blamed the game"}]

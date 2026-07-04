@@ -1,5 +1,6 @@
 effect clear @s minecraft:glowing
 effect clear @s minecraft:invisibility
+effect clear @s minecraft:resistance
 effect clear @s minecraft:speed
 
 attribute @s minecraft:armor base set 0.0

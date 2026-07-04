@@ -20,4 +20,6 @@ execute if score #value map.global matches 7 run function map:game/powerup/effec
 effect give @s[tag=!map.invisibility_powerup] minecraft:glowing infinite 0 true
 playsound minecraft:block.enchantment_table.use master @a
 
+execute if score #powerup_activation_reward map.global matches 1 run function map:game/player/reward_powerup_activation
+
 scoreboard players add @s map.powerups_activated 1

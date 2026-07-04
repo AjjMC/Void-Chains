@@ -1,3 +1,5 @@
+execute if predicate map:general/probability_1 run summon minecraft:lightning_bolt ~ ~ ~
+
 particle minecraft:white_smoke ~ ~ ~ 0.5 0.5 0.5 0 10 force
 playsound minecraft:block.lava.extinguish master @a
 

@@ -7,6 +7,7 @@ defaultgamemode adventure
 gamerule minecraft:advance_time false
 gamerule minecraft:advance_weather false
 gamerule minecraft:block_drops false
+gamerule minecraft:fire_spread_radius_around_player 0
 gamerule minecraft:immediate_respawn true
 gamerule minecraft:keep_inventory true
 gamerule minecraft:locator_bar false

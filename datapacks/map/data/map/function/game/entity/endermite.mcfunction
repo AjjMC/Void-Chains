@@ -1,0 +1,1 @@
+function map:game/arena/remove_entity

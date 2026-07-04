@@ -1,4 +1,5 @@
 gamerule minecraft:fall_damage true
+gamerule minecraft:fire_damage true
 gamerule minecraft:pvp true
 execute if score #natural_regeneration map.global matches 0 run gamerule minecraft:natural_health_regeneration false
 

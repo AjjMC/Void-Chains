@@ -2,6 +2,7 @@ bossbar set map:timer value 0
 bossbar set map:timer players
 
 gamerule minecraft:fall_damage false
+gamerule minecraft:fire_damage false
 gamerule minecraft:pvp false
 gamerule minecraft:natural_health_regeneration true
 

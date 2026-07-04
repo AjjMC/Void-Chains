@@ -13,6 +13,7 @@ execute if score #developer_tools map.global matches 0 if entity @e[type=minecra
 
 execute as @e[type=minecraft:arrow] at @s run function map:game/entity/arrow
 execute as @e[type=minecraft:creeper] at @s run function map:game/entity/creeper
+execute as @e[type=minecraft:endermite] at @s run function map:game/entity/endermite
 execute as @e[type=minecraft:item,tag=map.powerup] at @s run function map:game/entity/powerup
 execute as @e[type=minecraft:mannequin,tag=map.corpse] at @s run function map:game/entity/corpse
 execute as @e[type=minecraft:marker] at @s run function map:game/entity/marker
