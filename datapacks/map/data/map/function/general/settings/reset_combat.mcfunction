@@ -1,4 +1,4 @@
-scoreboard players set #natural_regeneration map.global 1
+scoreboard players set #natural_player_hp_regeneration map.global 1
 scoreboard players set #player_kill_reward map.global 1
 scoreboard players set #anchor_claiming_reward map.global 1
 scoreboard players set #anchor_generation_reward map.global 1
