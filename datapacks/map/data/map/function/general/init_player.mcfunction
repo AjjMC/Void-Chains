@@ -7,6 +7,6 @@ scoreboard players add @s map.selected_boots 0
 scoreboard players add @s map.selected_shield 0
 scoreboard players add @s map.selected_arrow_trail 0
 scoreboard players add @s map.selected_wolf_collar 0
-scoreboard players add @s map.selected_weapon 0
+scoreboard players add @s map.selected_metallic_weapon 0
 
 function map:general/kit/set/knight

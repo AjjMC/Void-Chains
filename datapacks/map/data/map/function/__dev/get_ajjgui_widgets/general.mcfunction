@@ -4,6 +4,7 @@ give @s minecraft:white_stained_glass_pane[minecraft:item_name={text:"Unavailabl
 
 give @s minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:0b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Back...",color:"green"}]
 give @s minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:1b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Back...",color:"green"}]
-give @s minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",page:2b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Back...",color:"green"}]
+
+give @s minecraft:arrow[minecraft:custom_data={ajjgui:{widget:"button",exit:1b}},minecraft:item_name={text:"Exit...",color:"green"}]
 
 tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}

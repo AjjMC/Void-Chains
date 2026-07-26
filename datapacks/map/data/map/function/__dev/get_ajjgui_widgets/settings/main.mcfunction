@@ -1,5 +1,0 @@
-give @s minecraft:iron_chestplate[minecraft:custom_data={ajjgui:{widget:"button",page:1b,command:"function map:gui/general/sound/changed_page"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Kits...",color:"green"}]
-give @s minecraft:emerald[minecraft:custom_data={ajjgui:{widget:"button",page:2b,command:"function map:gui/settings/main/cosmetics",lock:"map.cosmetics"}},minecraft:item_name={text:"Cosmetics...",color:"green"}]
-give @s minecraft:mace[minecraft:custom_data={ajjgui:{widget:"button",page:9b,command:"function map:gui/settings/main/moderation",lock:"map.moderation"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Moderation...",color:"green"}]
-
-tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}

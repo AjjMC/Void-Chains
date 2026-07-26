@@ -1,7 +1,0 @@
-give @s minecraft:iron_door[minecraft:item_name={text:"Locked Play GUI",color:"green"}]
-give @s minecraft:gray_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"Enable",color:"yellow"},"minecraft:lore":[{text:"Disabled",color:"red",italic:0b}]}},{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"Disable",color:"yellow"},"minecraft:lore":[{text:"Enabled",color:"green",italic:0b}]}}],command:"function map:gui/settings/moderation/locked_play_gui"}},minecraft:item_name={text:"Enable",color:"yellow"},minecraft:lore=[{text:"Disabled",color:"red",italic:0b}]]
-give @s minecraft:lime_dye[minecraft:custom_data={ajjgui:{widget:"switch",items:[{id:"minecraft:lime_dye",count:1,components:{"minecraft:item_name":{text:"Disable",color:"yellow"},"minecraft:lore":[{text:"Enabled",color:"green",italic:0b}]}},{id:"minecraft:gray_dye",count:1,components:{"minecraft:item_name":{text:"Enable",color:"yellow"},"minecraft:lore":[{text:"Disabled",color:"red",italic:0b}]}}],command:"function map:gui/settings/moderation/locked_play_gui",state:1}},minecraft:item_name={text:"Disable",color:"yellow"},minecraft:lore=[{text:"Enabled",color:"green",italic:0b}]]
-
-give @s minecraft:firework_rocket[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/play/main/start_game"}},minecraft:tooltip_display={hidden_components:["minecraft:fireworks"]},minecraft:item_name={text:"Start Game",color:"yellow"}]
-
-tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}

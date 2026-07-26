@@ -1,5 +1,8 @@
 function map:gui/general/sound/switch
 
+execute if score @s ajjgui.state matches 0 run tellraw @a [{text:"Set Random Team Assignment to Disabled"}]
+execute if score @s ajjgui.state matches 1 run tellraw @a [{text:"Set Random Team Assignment to Enabled"}]
+
 scoreboard players operation #random_team_assignment map.global = @s ajjgui.state
 
 execute if score #random_team_assignment map.global matches 0 as @a[team=map.random] run function map:gui/hotbar/select_guest_team

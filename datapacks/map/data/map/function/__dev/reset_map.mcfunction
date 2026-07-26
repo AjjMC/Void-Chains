@@ -107,7 +107,7 @@ scoreboard objectives add map.purple_wolf_collar dummy
 scoreboard objectives add map.black_wolf_collar dummy
 scoreboard objectives add map.white_wolf_collar dummy
 
-scoreboard objectives add map.selected_weapon dummy
+scoreboard objectives add map.selected_metallic_weapon dummy
 scoreboard objectives add map.metallic_weapon dummy
 
 scoreboard players set #-1 map.global -1

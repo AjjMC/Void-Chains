@@ -1,3 +1,5 @@
+clear @a *[minecraft:custom_data~{map:{item:1b}}]
+
 team empty map.random
 
 execute as @a run function map:gui/general/exit

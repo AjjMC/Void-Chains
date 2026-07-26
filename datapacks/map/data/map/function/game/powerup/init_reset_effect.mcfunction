@@ -1,6 +1,7 @@
 execute unless entity @s[tag=map.active_powerup] run return fail
 
-playsound minecraft:entity.warden.death master @a
+execute unless entity @s[tag=map.dead] run particle minecraft:poof ~ ~1 ~ 0.5 1 0.5 0 50 force
+execute unless entity @s[tag=map.dead] run playsound minecraft:entity.warden.death master @a
 
 execute if entity @s[tag=map.anchor_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Anchor Powerup",color:"aqua"}]
 execute if entity @s[tag=map.bridge_powerup] run tellraw @a [{text:""},{selector:"@s"},{text:" is no longer affected by the ",color:"gray"},{text:"Bridge Powerup",color:"aqua"}]

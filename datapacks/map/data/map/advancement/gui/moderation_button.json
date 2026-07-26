@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "predicates": {
+            "minecraft:custom_data": "{map:{moderation_button:1b}}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "map:gui/hotbar/moderation"
+  }
+}

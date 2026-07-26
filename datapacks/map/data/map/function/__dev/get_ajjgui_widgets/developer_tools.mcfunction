@@ -19,6 +19,6 @@ give @s minecraft:brewing_stand[minecraft:custom_data={ajjgui:{widget:"button",c
 give @s minecraft:crossbow[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/developer_tools/select_hunter_kit",exit:1b}},minecraft:item_name=[{text:"Select ",color:"yellow"},{text:"Hunter Kit",color:"dark_green"}]]
 give @s minecraft:stone_spear[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/developer_tools/select_acrobat_kit",exit:1b}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name=[{text:"Select ",color:"yellow"},{text:"Acrobat Kit",color:"dark_green"}]]
 give @s minecraft:hopper[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/developer_tools/select_wildcard_kit",exit:1b}},minecraft:item_name=[{text:"Select ",color:"yellow"},{text:"Wildcard Kit",color:"dark_green"}]]
-give @s minecraft:blaze_rod[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/developer_tools/select_pyro_kit",exit:1b}},minecraft:item_name=[{text:"Select ",color:"yellow"},{text:"Pyro Kit ",color:"dark_green"},{"text":"(Unused)","color":"gray"}]]
+give @s minecraft:blaze_rod[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/developer_tools/select_pyro_kit",exit:1b}},minecraft:item_name=[{text:"Select ",color:"yellow"},{text:"Pyro Kit ",color:"dark_green"},{text:"(Unused)",color:"gray"}]]
 
 tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}

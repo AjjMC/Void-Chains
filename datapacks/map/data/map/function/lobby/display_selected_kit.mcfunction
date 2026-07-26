@@ -1,0 +1,8 @@
+execute if entity @s[tag=map.knight] run title @s actionbar [{text:"Selected Kit: "},{text:"Knight",color:"dark_green"}]
+execute if entity @s[tag=map.archer] run title @s actionbar [{text:"Selected Kit: "},{text:"Archer",color:"dark_green"}]
+execute if entity @s[tag=map.warrior] run title @s actionbar [{text:"Selected Kit: "},{text:"Warrior",color:"dark_green"}]
+execute if entity @s[tag=map.miner] run title @s actionbar [{text:"Selected Kit: "},{text:"Miner",color:"dark_green"}]
+execute if entity @s[tag=map.alchemist] run title @s actionbar [{text:"Selected Kit: "},{text:"Alchemist",color:"dark_green"}]
+execute if entity @s[tag=map.hunter] run title @s actionbar [{text:"Selected Kit: "},{text:"Hunter",color:"dark_green"}]
+execute if entity @s[tag=map.acrobat] run title @s actionbar [{text:"Selected Kit: "},{text:"Acrobat",color:"dark_green"}]
+execute if entity @s[tag=map.wildcard] run title @s actionbar [{text:"Selected Kit: "},{text:"Wildcard",color:"dark_green"}]
