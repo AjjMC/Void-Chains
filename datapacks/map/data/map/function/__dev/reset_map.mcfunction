@@ -143,15 +143,15 @@ team modify map.no collisionRule never
 
 team modify map.red color red
 team modify map.red friendlyFire false
-team modify map.no collisionRule never
+team modify map.red collisionRule pushOwnTeam
 
 team modify map.blue color blue
 team modify map.blue friendlyFire false
-team modify map.no collisionRule never
+team modify map.blue collisionRule pushOwnTeam
 
 team modify map.random color dark_purple
 team modify map.random friendlyFire false
-team modify map.no collisionRule never
+team modify map.random collisionRule never
 
 team empty map.red
 team empty map.blue
