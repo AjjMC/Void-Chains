@@ -2,4 +2,4 @@ give @s minecraft:player_head[minecraft:custom_data={ajjgui:{widget:"button",com
 give @s minecraft:filled_map[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/links/map_github_repository"}},minecraft:item_name={text:"Void Chains",color:"green"},minecraft:lore=[{text:"Download and feedback page.",color:"gray",italic:0b},{text:""},{text:"View GitHub Repository",color:"yellow",italic:0b}]]
 give @s minecraft:command_block[minecraft:custom_data={ajjgui:{widget:"button",command:"function map:gui/links/ajjgui_github_repository"}},minecraft:item_name={text:"ajjgui Datapack",color:"green"},minecraft:lore=[{text:"A data-driven GUI library for mapmaking.",color:"gray",italic:0b},{text:""},{text:"View GitHub Repository",color:"yellow",italic:0b}]]
 
-tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}
+tellraw @s {text:"Got ajjgui widgets",color:"yellow"}

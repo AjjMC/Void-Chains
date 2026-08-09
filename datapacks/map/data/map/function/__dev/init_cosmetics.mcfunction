@@ -20,4 +20,4 @@ scoreboard players set Ajj map.white_wolf_collar 1
 
 scoreboard players set Ajj map.metallic_weapon 1
 
-tellraw @s {text:"Initialized Cosmetics",color:"light_purple"}
+tellraw @s {text:"Initialized Cosmetics",color:"yellow"}

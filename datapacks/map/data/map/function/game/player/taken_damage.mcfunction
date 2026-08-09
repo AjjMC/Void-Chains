@@ -1,5 +1,7 @@
 scoreboard players set @s map.taken_damage 0
 
+effect give @s[tag=map.invisibility_powerup] minecraft:glowing 5 0 true
+
 execute if score #player_hp map.global matches 0 run return fail
 
 execute store result storage map:data hp int 1 run data get entity @s Health 10

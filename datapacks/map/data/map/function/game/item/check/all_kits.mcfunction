@@ -8,4 +8,4 @@ execute if entity @s[tag=map.pyro] run function map:game/item/check/kit/pyro
 
 execute unless items entity @s hotbar.0 *[minecraft:custom_data~{map:{weapon:1b}}] run return run function map:game/item/equip/all_kits
 
-execute if score #developer_tools map.global matches 1 unless items entity @s hotbar.8 *[minecraft:custom_data~{map:{developer_tools_button:1b}}] run function map:game/item/equip/all_kits
+execute if score #sandbox map.global matches 1 unless items entity @s hotbar.8 *[minecraft:custom_data~{map:{sandbox_button:1b}}] run function map:game/item/equip/all_kits

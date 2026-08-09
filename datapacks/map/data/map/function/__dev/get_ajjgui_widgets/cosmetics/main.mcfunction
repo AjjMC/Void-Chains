@@ -1,8 +1,8 @@
-give @s minecraft:leather_helmet[minecraft:custom_data={ajjgui:{widget:"button",page:1b,command:"function map:gui/general/sound/changed_page"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Caps...",color:"green"}]
-give @s minecraft:leather_boots[minecraft:custom_data={ajjgui:{widget:"button",page:2b,command:"function map:gui/general/sound/changed_page"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Boots...",color:"green"}]
-give @s minecraft:shield[minecraft:custom_data={ajjgui:{widget:"button",page:3b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Shields...",color:"green"}]
-give @s minecraft:feather[minecraft:custom_data={ajjgui:{widget:"button",page:4b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Arrow Trails...",color:"green"}]
-give @s minecraft:lead[minecraft:custom_data={ajjgui:{widget:"button",page:5b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Wolf Collars...",color:"green"}]
-give @s minecraft:golden_sword[minecraft:custom_data={ajjgui:{widget:"button",page:6b,command:"function map:gui/general/sound/changed_page"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Special...",color:"green"}]
+give @s minecraft:leather_helmet[minecraft:custom_data={ajjgui:{widget:"button",page:1b,command:"function map:gui/general/sound/changed_page"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Caps...",color:"yellow"}]
+give @s minecraft:leather_boots[minecraft:custom_data={ajjgui:{widget:"button",page:2b,command:"function map:gui/general/sound/changed_page"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Boots...",color:"yellow"}]
+give @s minecraft:shield[minecraft:custom_data={ajjgui:{widget:"button",page:3b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Shields...",color:"yellow"}]
+give @s minecraft:feather[minecraft:custom_data={ajjgui:{widget:"button",page:4b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Arrow Trails...",color:"yellow"}]
+give @s minecraft:lead[minecraft:custom_data={ajjgui:{widget:"button",page:5b,command:"function map:gui/general/sound/changed_page"}},minecraft:item_name={text:"Wolf Collars...",color:"yellow"}]
+give @s minecraft:golden_sword[minecraft:custom_data={ajjgui:{widget:"button",page:6b,command:"function map:gui/general/sound/changed_page"}},minecraft:tooltip_display={hidden_components:["minecraft:attribute_modifiers"]},minecraft:item_name={text:"Special...",color:"yellow"}]
 
-tellraw @s {text:"Got ajjgui widgets",color:"light_purple"}
+tellraw @s {text:"Got ajjgui widgets",color:"yellow"}

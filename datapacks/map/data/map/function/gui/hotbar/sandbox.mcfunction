@@ -7,5 +7,5 @@ execute if predicate map:general/using_gui run return run function map:gui/gener
 
 scoreboard players set @s map.gui_soft_cooldown_ticks 20
 
-execute positioned 0 55 -1 run function ajjgui:_portself {id:"developer_tools"}
-function ajjgui:_openself {id:"developer_tools"}
+execute positioned 0 55 -1 run function ajjgui:_portself {id:"sandbox"}
+function ajjgui:_openself {id:"sandbox"}

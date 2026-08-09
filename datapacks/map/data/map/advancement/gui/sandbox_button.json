@@ -5,13 +5,13 @@
       "conditions": {
         "item": {
           "predicates": {
-            "minecraft:custom_data": "{map:{developer_tools_button:1b}}"
+            "minecraft:custom_data": "{map:{sandbox_button:1b}}"
           }
         }
       }
     }
   },
   "rewards": {
-    "function": "map:gui/hotbar/developer_tools"
+    "function": "map:gui/hotbar/sandbox"
   }
 }

@@ -132,22 +132,26 @@ scoreboard players reset #value map.global
 
 setworldspawn 0 63 0
 
-team add map.guest {text:"Guest Team"}
+team add map.no {text:"No Team"}
 team add map.red {text:"Red Team"}
 team add map.blue {text:"Blue Team"}
 team add map.random {text:"Random Team"}
 
-team modify map.guest color yellow
-team modify map.guest friendlyFire false
+team modify map.no color light_purple
+team modify map.no friendlyFire false
+team modify map.no collisionRule never
 
 team modify map.red color red
 team modify map.red friendlyFire false
+team modify map.no collisionRule never
 
 team modify map.blue color blue
 team modify map.blue friendlyFire false
+team modify map.no collisionRule never
 
 team modify map.random color dark_purple
 team modify map.random friendlyFire false
+team modify map.no collisionRule never
 
 team empty map.red
 team empty map.blue
@@ -196,4 +200,4 @@ scoreboard players reset @a
 
 tag @s remove map.init
 
-tellraw @s {text:"Reset Void Chains",color:"light_purple"}
+tellraw @s {text:"Reset Void Chains",color:"yellow"}

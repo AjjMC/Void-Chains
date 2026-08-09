@@ -7,9 +7,9 @@ execute as @a run function map:gui/general/exit
 function map:gui/general/lock_play
 
 title @a times 0s 5s 0s
-title @a title {text:"GAME STARTING!",bold:1b}
+title @a title {text:"GAME STARTING!",color:"yellow",bold:1b}
 
-execute if score #developer_tools map.global matches 1 run tellraw @a {text:"Starting the game with Developer Tools enabled",color:"light_purple"}
+execute if score #sandbox map.global matches 1 run tellraw @a {text:"Sandbox is enabled",color:"yellow"}
 
 scoreboard players set #countdown_seconds map.global 5
 

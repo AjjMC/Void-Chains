@@ -1,4 +1,4 @@
-title @s title {text:"YOU DIED!",color:"red",bold:1b}
+title @s title {text:"YOU DIED!",color:"yellow",bold:1b}
 
 execute if entity @s[team=map.red] unless entity @e[type=minecraft:marker,tag=map.red_anchor] run tag @s add map.no_respawn
 execute if entity @s[team=map.red] if entity @e[type=minecraft:marker,tag=map.red_anchor] run tag @s remove map.no_respawn

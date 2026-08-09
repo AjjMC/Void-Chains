@@ -1,0 +1,1 @@
+function map:game/border/destroy_anchor

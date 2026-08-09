@@ -28,8 +28,8 @@ scoreboard players operation #count map.global = #anchor_starting_count map.glob
 
 execute at @e[type=minecraft:marker,tag=map.arena] run function map:game/arena/init_create
 
-execute as @a[team=map.guest] run function map:game/player/guest_spectate
-execute as @a[team=!map.guest] run function map:game/player/respawn
+execute as @a[team=map.no] run function map:game/player/no_team_spectate
+execute as @a[team=!map.no] run function map:game/player/respawn
 
 execute as @a at @s run playsound minecraft:entity.wither.spawn master @s
 
