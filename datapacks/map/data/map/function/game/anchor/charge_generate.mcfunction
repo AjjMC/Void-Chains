@@ -1,9 +1,3 @@
-scoreboard players add @s map.charge_ticks 1
-
-execute if score @s map.charge_ticks = #anchor_generation_duration map.global at @s run function map:game/anchor/charge
-
-execute if score @s map.charge_seconds matches 20 run function map:game/anchor/generate
-
 tag @s remove map.claiming_anchor
 tag @s add map.generating_anchor
 
@@ -11,3 +5,9 @@ execute unless entity @s[tag=map.active_powerup] run title @s actionbar {text:"G
 
 execute if entity @s[team=map.red] run function map:game/anchor/emit_red_aura
 execute if entity @s[team=map.blue] run function map:game/anchor/emit_blue_aura
+
+scoreboard players add @s map.charge_ticks 1
+
+execute if score @s map.charge_ticks = #anchor_generation_duration map.global at @s run function map:game/anchor/charge
+
+execute if score @s map.charge_seconds matches 20 run function map:game/anchor/generate
