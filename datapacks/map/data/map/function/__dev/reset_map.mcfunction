@@ -198,6 +198,6 @@ scoreboard players set #progress_count map.global 0
 
 scoreboard players reset @a
 
-tag @s remove map.init
+tag @a remove map.init
 
 tellraw @s {text:"Reset Void Chains",color:"yellow"}
