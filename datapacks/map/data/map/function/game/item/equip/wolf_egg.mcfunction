@@ -9,15 +9,8 @@ data modify block ~ ~ ~ Items[].components.minecraft:entity_data.Owner set from 
 execute if entity @s[team=map.red] run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.Team set value "map.red"
 execute if entity @s[team=map.blue] run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.Team set value "map.blue"
 
-execute if score @s map.selected_wolf_collar matches 0 if entity @s[team=map.red] run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 14b
-execute if score @s map.selected_wolf_collar matches 0 if entity @s[team=map.blue] run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 11b
-
-execute if score @s map.selected_wolf_collar matches 1 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 4b
-execute if score @s map.selected_wolf_collar matches 2 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 1b
-execute if score @s map.selected_wolf_collar matches 3 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 13b
-execute if score @s map.selected_wolf_collar matches 4 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 10b
-execute if score @s map.selected_wolf_collar matches 5 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 15b
-execute if score @s map.selected_wolf_collar matches 6 run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 0b
+execute if entity @s[team=map.red] run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 14b
+execute if entity @s[team=map.blue] run data modify block ~ ~ ~ Items[].components.minecraft:entity_data.CollarColor set value 11b
 
 item replace entity @s hotbar.3 from block ~ ~ ~ container.0
 item modify entity @s hotbar.3 map:game/set_wolf_egg_count

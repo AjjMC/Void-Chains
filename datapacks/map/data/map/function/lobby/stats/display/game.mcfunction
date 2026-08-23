@@ -1,3 +1,4 @@
+data modify entity @s data.gui[0] set from storage map:data default_gui.stats
 data modify entity @s data.gui[0][{Slot:4b}].id set value "minecraft:book"
 
 execute if score #game_winner map.global matches 0 run function map:lobby/stats/display/draw

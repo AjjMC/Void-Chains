@@ -67,49 +67,6 @@ scoreboard objectives add map.anchors_claimed dummy
 scoreboard objectives add map.anchors_generated dummy
 scoreboard objectives add map.powerups_activated dummy
 
-scoreboard objectives add map.selected_cap dummy
-scoreboard objectives add map.yellow_cap dummy
-scoreboard objectives add map.orange_cap dummy
-scoreboard objectives add map.green_cap dummy
-scoreboard objectives add map.purple_cap dummy
-scoreboard objectives add map.black_cap dummy
-scoreboard objectives add map.white_cap dummy
-
-scoreboard objectives add map.selected_boots dummy
-scoreboard objectives add map.yellow_boots dummy
-scoreboard objectives add map.orange_boots dummy
-scoreboard objectives add map.green_boots dummy
-scoreboard objectives add map.purple_boots dummy
-scoreboard objectives add map.black_boots dummy
-scoreboard objectives add map.white_boots dummy
-
-scoreboard objectives add map.selected_shield dummy
-scoreboard objectives add map.yellow_shield dummy
-scoreboard objectives add map.orange_shield dummy
-scoreboard objectives add map.green_shield dummy
-scoreboard objectives add map.purple_shield dummy
-scoreboard objectives add map.black_shield dummy
-scoreboard objectives add map.white_shield dummy
-
-scoreboard objectives add map.selected_arrow_trail dummy
-scoreboard objectives add map.yellow_arrow_trail dummy
-scoreboard objectives add map.orange_arrow_trail dummy
-scoreboard objectives add map.green_arrow_trail dummy
-scoreboard objectives add map.purple_arrow_trail dummy
-scoreboard objectives add map.black_arrow_trail dummy
-scoreboard objectives add map.white_arrow_trail dummy
-
-scoreboard objectives add map.selected_wolf_collar dummy
-scoreboard objectives add map.yellow_wolf_collar dummy
-scoreboard objectives add map.orange_wolf_collar dummy
-scoreboard objectives add map.green_wolf_collar dummy
-scoreboard objectives add map.purple_wolf_collar dummy
-scoreboard objectives add map.black_wolf_collar dummy
-scoreboard objectives add map.white_wolf_collar dummy
-
-scoreboard objectives add map.selected_metallic_weapon dummy
-scoreboard objectives add map.metallic_weapon dummy
-
 scoreboard players set #-1 map.global -1
 scoreboard players set #2 map.global 2
 scoreboard players set #minute_seconds map.global 60

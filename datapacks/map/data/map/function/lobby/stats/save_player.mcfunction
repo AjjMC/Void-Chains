@@ -39,5 +39,3 @@ data modify block ~ ~ ~ Items[-1].components.minecraft:lore append from entity @
 data modify block ~ ~ ~ Items[-1].components.minecraft:lore append from entity @e[type=minecraft:text_display,tag=map.stats7,limit=1] text
 
 kill @e[type=minecraft:text_display,tag=map.stats]
-
-tag @s add map.cached
