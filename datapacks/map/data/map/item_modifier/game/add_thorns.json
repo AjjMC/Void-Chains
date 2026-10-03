@@ -1,14 +1,17 @@
-[
-  {
-    "function": "minecraft:set_components",
-    "components": {
-      "!minecraft:enchantment_glint_override": {}
+{
+  "type": "minecraft:sequence",
+  "functions": [
+    {
+      "type": "minecraft:set_components",
+      "components": {
+        "!minecraft:enchantment_glint_override": {}
+      }
+    },
+    {
+      "type": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:thorns": 3
+      }
     }
-  },
-  {
-    "function": "minecraft:set_enchantments",
-    "enchantments": {
-      "minecraft:thorns": 3
-    }
-  }
-]
+  ]
+}
