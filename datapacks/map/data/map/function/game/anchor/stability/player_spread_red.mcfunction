@@ -1,4 +1,4 @@
-scoreboard players add #count map.global 1
+scoreboard players add #red_blocks map.global 1
 
 fill ~ ~ ~ ~ ~ ~ minecraft:light_gray_wool replace #map:game/red_wool
 

@@ -48,7 +48,6 @@ Void Chains is a unique PvP minigame inspired by KOTH, Spleef, and other game mo
 
 * begins to shrink after some time.
 * kills players and destroys Anchors.
-* stops eventually, leaving enough space.
 
 ## Getting Started
 

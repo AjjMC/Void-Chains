@@ -1,4 +1,4 @@
-execute if block ~ ~ ~ #map:game/blue run scoreboard players add #count map.global 1
+execute if block ~ ~ ~ #map:game/blue run scoreboard players add #blue_blocks map.global 1
 
 fill ~ ~ ~ ~ ~ ~ minecraft:black_wool replace #map:game/blue_wool
 fill ~ ~ ~ ~ ~ ~ minecraft:black_concrete replace minecraft:blue_concrete

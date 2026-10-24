@@ -72,6 +72,7 @@ scoreboard players set #2 map.global 2
 scoreboard players set #minute_seconds map.global 60
 scoreboard players set #minute_ticks map.global 1200
 
+scoreboard players reset #blue_blocks map.global
 scoreboard players reset #border_shrinking_ticks map.global
 scoreboard players reset #count map.global
 scoreboard players reset #countdown_seconds map.global
@@ -85,6 +86,7 @@ scoreboard players reset #length map.global
 scoreboard players reset #position map.global
 scoreboard players reset #powerup_seconds map.global
 scoreboard players reset #powerup_ticks map.global
+scoreboard players reset #red_blocks map.global
 scoreboard players reset #value map.global
 
 setworldspawn 0 63 0

@@ -3,4 +3,4 @@ tag @s add map.speed_powerup
 
 effect give @s minecraft:speed infinite 1 true
 
-tellraw @a [{text:""},{selector:"@s"},{text:" has activated the ",color:"green"},{text:"Speed Powerup",color:"dark_green"}]
+tellraw @a [{text:""},{selector:"@s"},{text:" has activated ",color:"green"},{text:"Speed Powerup",color:"dark_green"}]
