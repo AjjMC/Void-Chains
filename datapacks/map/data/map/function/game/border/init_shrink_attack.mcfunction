@@ -16,7 +16,7 @@ scoreboard players operation #dz map.global -= #z map.global
 kill @e[type=minecraft:marker,tag=map.border_vector_start]
 kill @e[type=minecraft:marker,tag=map.border_vector_end]
 
-data modify storage map:data args.motion set value [0.0,0.0,0.0]
+data modify storage map:data args.motion set value [0d,0d,0d]
 
 execute store result storage map:data args.motion[0] double 0.001 run scoreboard players get #dx map.global
 execute store result storage map:data args.motion[1] double 0.001 run scoreboard players get #dy map.global
