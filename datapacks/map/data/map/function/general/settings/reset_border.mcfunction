@@ -1,4 +1,5 @@
 scoreboard players set #border_shrinking map.global 1
+scoreboard players set #border_shrinking_attack map.global 1
 scoreboard players set #border_shrinking_start_time map.global 6
 scoreboard players set #border_shrinking_duration map.global 4
 

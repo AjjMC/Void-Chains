@@ -1,1 +1,1 @@
-function map:game/border/destroy_anchor
+function map:game/anchor/check_border

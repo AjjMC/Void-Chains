@@ -76,6 +76,9 @@ scoreboard players reset #blue_blocks map.global
 scoreboard players reset #border_shrinking_ticks map.global
 scoreboard players reset #count map.global
 scoreboard players reset #countdown_seconds map.global
+scoreboard players reset #dx map.global
+scoreboard players reset #dy map.global
+scoreboard players reset #dz map.global
 scoreboard players reset #game_duration_ticks map.global
 scoreboard players reset #game_minutes map.global
 scoreboard players reset #game_seconds map.global
@@ -88,6 +91,9 @@ scoreboard players reset #powerup_seconds map.global
 scoreboard players reset #powerup_ticks map.global
 scoreboard players reset #red_blocks map.global
 scoreboard players reset #value map.global
+scoreboard players reset #x map.global
+scoreboard players reset #y map.global
+scoreboard players reset #z map.global
 
 setworldspawn 0 63 0
 

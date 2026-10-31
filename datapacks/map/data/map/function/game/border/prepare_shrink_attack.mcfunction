@@ -1,0 +1,8 @@
+execute if predicate map:general/probability_1 positioned ~-37 ~ ~-37 as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
+execute if predicate map:general/probability_1 positioned ~-37 ~ ~ as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
+execute if predicate map:general/probability_1 positioned ~-37 ~ ~37 as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
+execute if predicate map:general/probability_1 positioned ~ ~ ~-37 as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
+execute if predicate map:general/probability_1 positioned ~ ~ ~37 as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
+execute if predicate map:general/probability_1 positioned ~37 ~ ~-37 as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
+execute if predicate map:general/probability_1 positioned ~37 ~ ~ as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
+execute if predicate map:general/probability_1 positioned ~37 ~ ~37 as @r[team=!map.no,tag=!map.dead,distance=..24] positioned ~ ~4 ~ run function map:game/border/init_shrink_attack
