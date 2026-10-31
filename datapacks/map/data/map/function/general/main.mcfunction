@@ -1,6 +1,6 @@
 execute as @e[type=minecraft:item] if data entity @s {Item:{components:{"minecraft:custom_data":{map:{item:1b}}}}} run kill @s
 execute as @e[type=minecraft:falling_block] at @s positioned ~-37.5 ~4 ~-37.5 if entity @e[type=minecraft:marker,tag=map.arena,dx=74,dy=64,dz=74] run kill @s
-execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-37 ~1 ~-37 ~37 ~1 ~37 minecraft:air replace minecraft:fire
+execute at @e[type=minecraft:marker,tag=map.arena] run fill ~-37 ~ ~-37 ~37 ~1 ~37 minecraft:air replace minecraft:fire
 
 execute as @a at @s run function map:general/player
 
